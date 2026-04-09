@@ -1,13 +1,23 @@
 // render-projects.js
 document.addEventListener("DOMContentLoaded", () => {
 
+  // const ICON_GROUPS = [
+  //   { key: "web",      label: "Web Development" },
+  //   { key: "design",   label: "Front-End & Design" },
+  //   { key: "data",     label: "Data & AI" },
+  //   { key: "systems",  label: "Systems" },
+  //   { key: "embedded", label: "Embedded Systems" },
+  //   { key: "cloud",    label: "Cloud" },
+  // ];
+
   const ICON_GROUPS = [
-    { key: "web",      label: "Web Development" },
-    { key: "design",   label: "Design & UI/UX" },
-    { key: "data",     label: "Data & AI" },
-    { key: "systems",  label: "Systems & Networking" },
-    { key: "embedded", label: "Embedded Systems" },
-    { key: "cloud",    label: "Cloud & IoT" },
+    { key: "backend",  label: "Back-End Development" },
+    { key: "design",   label: "Front-End & Design" },
+    { key: "ai",       label: "AI & ML" },
+    { key: "data",     label: "Data Algo & Analytics" },
+    { key: "systems",  label: "Systems" },
+    { key: "iot",      label: "IoT & Networking" },
+    { key: "cloud",    label: "Cloud" },
   ];
 
   const schoolLabels = {

@@ -93,28 +93,32 @@
   font-size: 16px;
 }
 
-.thumb-icon.web {
-  background: #faf0e8;
+.thumb-icon.backend {
+  background: var(--pastelred);
 }
 
 .thumb-icon.systems {
-  background: #e8f0fa;
+  background: var(--pastelblue);
 }
 
 .thumb-icon.design {
-  background: #f0e8fa;
+  background: var(--pastelpurple);
+}
+
+.thumb-icon.ai {
+  background: var(--pastelpink);
 }
 
 .thumb-icon.data {
-  background: #e8faf0;
+  background: var(--pastelyellow);
 }
 
-.thumb-icon.embedded {
-  background: #faf5e8;
+.thumb-icon.iot {
+  background: var(--pastelgreen);
 }
 
 .thumb-icon.cloud {
-  background: #e8f8fa;
+  background: var(--pastelorange);
 }
 
 .thumb-upload-hint {
@@ -320,12 +324,13 @@ a.project-card {
 }
 
 /* Dot colours matching icon types (using the green palette) */
-.filter-dot.web,   .type-dot.web      { background: var(--accent); }
-.filter-dot.design,.type-dot.design   { background: var(--stone); }
-.filter-dot.data,  .type-dot.data     { background: var(--accent-warm); }
-.filter-dot.systems,.type-dot.systems { background: var(--forest-deep); }
-.filter-dot.embedded,.type-dot.embedded{ background: var(--border-strong); }
-.filter-dot.cloud, .type-dot.cloud    { background: var(--forest-light); }
+.filter-dot.backend,   .type-dot.backend      { background: var(--pastelred); }
+.filter-dot.design,.type-dot.design   { background: var(--pastelpurple); }
+.filter-dot.ai,  .type-dot.ai     { background: var(--pastelpink); }
+.filter-dot.data,  .type-dot.data     { background: var(--pastelyellow); }
+.filter-dot.systems,.type-dot.systems { background: var(--pastelblue); }
+.filter-dot.iot,.type-dot.iot{ background: var(--pastelgreen); }
+.filter-dot.cloud, .type-dot.cloud    { background: var(--pastelorange); }
 
 /* ── School badge on card ─────────────────────────────────────── */
 .project-number-row {
@@ -588,8 +593,9 @@ a.project-card {
   align-items: center;
   justify-content: center;
 }
-.detail-feature-wall.placeholder.web      { background: var(--accent-pale); }
+.detail-feature-wall.placeholder.backend      { background: var(--accent-pale); }
 .detail-feature-wall.placeholder.design   { background: #e8ede8; }
+.detail-feature-wall.placeholder.ai     { background: var(--accent-light); }
 .detail-feature-wall.placeholder.data     { background: var(--accent-light); }
 .detail-feature-wall.placeholder.systems  { background: #e4ecf0; }
 .detail-feature-wall.placeholder.embedded { background: #dde8e0; }

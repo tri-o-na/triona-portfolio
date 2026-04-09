@@ -10,17 +10,7 @@
 <link rel="stylesheet" href="assets/css/projects.css">
 </head>
 <body>
-<nav>
-  <a class="nav-logo" href="index.html">Triona Lee</a>
-  <ul class="nav-tabs">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="experience.html">Experience</a></li>
-    <li><a href="education.html">Education</a></li>
-    <li><a class="active" href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+<nav id="main-nav"></nav>
 
 <main class="page page-standalone" id="page-projects">
   <div class="inner-page">
@@ -30,23 +20,26 @@
     <!-- Icon-type filter pills -->
     <div class="proj-filter-bar">
       <button class="proj-filter-btn active" data-filter="all">All</button>
-      <button class="proj-filter-btn" data-filter="web">
-        <span class="filter-dot web"></span>Web
+      <button class="proj-filter-btn" data-filter="backend">
+        <span class="filter-dot backend"></span>Back-End Development
       </button>
       <button class="proj-filter-btn" data-filter="design">
-        <span class="filter-dot design"></span>Design &amp; UI/UX
+        <span class="filter-dot design"></span>Front-End &amp; Design
+      </button>
+      <button class="proj-filter-btn" data-filter="ai">
+        <span class="filter-dot ai"></span>AI &amp; ML
       </button>
       <button class="proj-filter-btn" data-filter="data">
-        <span class="filter-dot data"></span>Data &amp; AI
+        <span class="filter-dot data"></span>Data Algo &amp; Analytics
       </button>
       <button class="proj-filter-btn" data-filter="systems">
         <span class="filter-dot systems"></span>Systems
       </button>
-      <button class="proj-filter-btn" data-filter="embedded">
-        <span class="filter-dot embedded"></span>Embedded
+      <button class="proj-filter-btn" data-filter="iot">
+        <span class="filter-dot iot"></span>Iot &amp; Networking
       </button>
       <button class="proj-filter-btn" data-filter="cloud">
-        <span class="filter-dot cloud"></span>Cloud &amp; IoT
+        <span class="filter-dot cloud"></span>Cloud
       </button>
     </div>
 
@@ -57,5 +50,6 @@
 
 <script src="assets/js/data-projects.js"></script>
 <script src="assets/js/render-projects.js"></script>
+<script src="assets/js/nav-bar.js"></script>
 </body>
 </html>

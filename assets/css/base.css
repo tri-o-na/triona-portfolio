@@ -26,6 +26,15 @@
   --leaf: #cfe0c3;            /* highlight backgrounds */
   --stone: #84a98c;           /* icons, tags, neutral mid-green */
 
+  /* ── Pastel Rainbow ────────────────────────────────────── */
+  --pastelred:    #f1b3b3;
+  --pastelpink:   #f7c5d2;
+  --pastelorange: #f7c5a0;
+  --pastelyellow: #f9e8a5; 
+  --pastelgreen:  #b8e1c4; 
+  --pastelblue:   #b0d7f5; 
+  --pastelpurple: #d1c1f0; 
+
   /* ── Typography ──────────────────────────────────────────────── */
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'DM Sans', sans-serif;
