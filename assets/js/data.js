@@ -17,6 +17,7 @@ const PORTFOLIO = {
   phoneNumber: "+65 9766 6962",
   languages: ["English", "Chinese"],
   photo: "assets/images/profile.jpg",
+  resumeUrl: "https://drive.google.com/file/d/1X8TIW7_S29HYqqIbf_HZNZqXRUOZY9up/view",
 
   // ── Stats (home page hero) ─────────────────────────────────
   stats: [
