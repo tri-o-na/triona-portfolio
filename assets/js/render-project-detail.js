@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     project.tags.map(t => `<span class="tag">${t}</span>`).join("");
 
   // ── ④ Description ─────────────────────────────────────────
-  document.getElementById("detail-full-desc").textContent =
+  document.getElementById("detail-full-desc").innerHTML =
     project.fullDesc || project.desc;
 
   // ── ⑤ Google Drive embeds ─────────────────────────────────
@@ -122,6 +122,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     project.extraLinks.forEach(link => {
       const embedUrl = driveEmbedUrl(link.url);
+      const urlLower = link.url.toLowerCase();
+      const isVideo = urlLower.endsWith('.mp4') || link.url.toLowerCase().endsWith('.webm');
+      const isImage = urlLower.endsWith('.jpg') || urlLower.endsWith('.jpeg') || 
+                  urlLower.endsWith('.png') || urlLower.endsWith('.gif') || 
+                  urlLower.endsWith('.webp');
 
       // Always add to sidebar as a clickable link
       linksEl.insertAdjacentHTML("beforeend", `
@@ -142,6 +147,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 loading="lazy"
                 title="${link.label}">
               </iframe>
+            </div>
+          </div>`);
+      }
+
+      else if (isVideo) {
+        embedsContainer.insertAdjacentHTML("beforeend", `
+          <div class="detail-embed-block">
+            <div class="detail-section-label">${link.label}</div>
+            <div class="detail-embed-wrap">
+              <video controls class="detail-embed-frame" style="background: #000;">
+                <source src="${link.url}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>`);
+      }
+      else if (isImage) {
+        embedsContainer.insertAdjacentHTML("beforeend", `
+          <div class="detail-embed-block">
+            <div class="detail-section-label">${link.label}</div>
+            <div class="detail-embed-wrap">
+              <img src="${link.url}" class="detail-embed-frame" 
+                  style="object-fit: contain; background: var(--cream);" 
+                  alt="${link.label}">
             </div>
           </div>`);
       }
