@@ -236,7 +236,7 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "design", iconLabel: "MOB",
             tags: ["Kotlin", "Android", "CI/CD"],
-            image: "", 
+            image: "assets/images/MAD-MorphLearn.jpg", 
             githubLink: "", 
             extraLinks: [
 

@@ -159,4 +159,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("detail-sidebar-github-wrap").style.display = "block";
     document.getElementById("detail-sidebar-github").href = project.githubLink;
   }
+
+  // ── Header image (next to title) ──────────────────────────
+  if (project.image) {
+    const wrap = document.getElementById("detail-header-image");
+    const img  = document.getElementById("detail-header-img");
+    img.src = project.image;
+    img.alt = project.title;
+    wrap.style.display = "block";
+  }
 });

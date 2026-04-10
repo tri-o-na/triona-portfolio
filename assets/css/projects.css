@@ -47,7 +47,7 @@
 
 .projects-row {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
@@ -57,6 +57,9 @@
   border-radius: 4px;
   background: var(--warm-white);
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
   transition: box-shadow 0.25s, transform 0.2s;
 }
 
@@ -65,15 +68,34 @@
   transform: translateY(-2px);
 }
 
+/* Thumb — square on the left for icon cards */
 .project-thumb {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 120px;
+  flex: 0 0 110px;
+  width: 110px;
+  height: 110px;
   overflow: hidden;
-  border-bottom: 1px solid var(--border);
+  border-bottom: none;
+  border-right: 1px solid var(--border);
   background: var(--cream);
+  flex-shrink: 0;
+  align-self: center;
+  margin: 12px 0 12px 12px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+
+.project-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .project-thumb-placeholder {
@@ -252,9 +274,16 @@
 .proj-year-panel.active { display: block; }
 /* ── Fix: project cards are now <a> tags ──────────────────────── */
 a.project-card {
-  display: block;
+  display: flex;
+  flex-direction: row;
   text-decoration: none;
   color: inherit;
+}
+
+@media (max-width: 700px) {
+  .projects-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── Filter bar ───────────────────────────────────────────────── */
@@ -372,10 +401,89 @@ a.project-card {
 .breadcrumb-sep { color: var(--ink-faint); }
 .breadcrumb-current { color: var(--ink-muted); }
 
+/* ── Detail header: two-col when image present ────────────────── */
 .detail-header {
   margin-bottom: 40px;
   padding-bottom: 32px;
   border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.detail-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.detail-header-image {
+  flex: 0 0 200px;
+  width: 200px;
+  aspect-ratio: 3 / 4;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--cream);
+  display: none; /* shown by JS when image exists */
+}
+
+.detail-header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .detail-header {
+    flex-direction: column-reverse;
+  }
+  .detail-header-image {
+    flex: 0 0 auto;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+  }
+}
+
+.detail-header-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.detail-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Square image in the header, right-aligned, same height as title block */
+.detail-header-image {
+  flex: 0 0 160px;
+  width: 160px;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--cream);
+  flex-shrink: 0;
+}
+
+.detail-header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .detail-header-inner {
+    flex-direction: column-reverse;
+  }
+  .detail-header-image {
+    width: 100%;
+    flex: none;
+    aspect-ratio: 3 / 2;
+  }
 }
 
 .detail-meta-row {
@@ -506,6 +614,7 @@ a.project-card {
   flex-direction: column;
   gap: 0;
 }
+
 
 .detail-sidebar-block {
   padding: 16px 0;

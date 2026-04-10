@@ -1,15 +1,5 @@
 // render-projects.js
 document.addEventListener("DOMContentLoaded", () => {
-
-  // const ICON_GROUPS = [
-  //   { key: "web",      label: "Web Development" },
-  //   { key: "design",   label: "Front-End & Design" },
-  //   { key: "data",     label: "Data & AI" },
-  //   { key: "systems",  label: "Systems" },
-  //   { key: "embedded", label: "Embedded Systems" },
-  //   { key: "cloud",    label: "Cloud" },
-  // ];
-
   const ICON_GROUPS = [
     { key: "design",   label: "Front-End & Design" },
     { key: "ai",       label: "AI & ML" },
@@ -52,19 +42,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const moduleLabel = p.moduleName
       ? `<div class="project-module">${p.moduleName}</div>`
       : "";
-    const thumb = p.image
-      ? `<img src="${p.image}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;">`
-      : `<div class="project-thumb-placeholder">
-           <div class="thumb-icon ${p.icon}">${p.iconLabel}</div>
-         </div>`;
 
-    // Use the raw id as the URL key (unique per project from data file)
+    const hasImage = !!p.image;
+
+    // Left thumb: image if available, otherwise icon
+    const thumb = hasImage
+      ? `<img src="${p.image}" alt="${p.title}">`
+      : `<div class="project-thumb-placeholder">
+          <div class="thumb-icon ${p.icon}">${p.iconLabel}</div>
+        </div>`;
+
+    // No more inline floating image
+    const inlineImage = "";
+
     const detailUrl = `project-detail.html?id=${encodeURIComponent(displayId)}`;
 
     return `
       <a class="project-card" href="${detailUrl}" data-icon="${p.icon}">
         <div class="project-thumb">${thumb}</div>
         <div class="project-body">
+          ${inlineImage}
           <div class="project-number-row">
             <span class="project-number">${displayId}</span>
             ${schoolBadge}
