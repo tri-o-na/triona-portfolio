@@ -349,10 +349,8 @@ a.project-card {
   border-radius: 2px;
 }
 
-.card-school-badge.sit  { background: var(--accent-pale); color: var(--accent); }
-.card-school-badge.tp   { background: var(--accent-light); color: var(--forest-deep); }
-.card-school-badge.dbs  { background: #e8f0e4; color: var(--forest-mid); }
-
+.card-school-badge.sit  { background: var(--accent-light); color: var(--forest-mid); }
+.card-school-badge.tp   { background: var(--border); color: var(--forest-deep); }
 /* ── Project detail page ──────────────────────────────────────── */
 .detail-breadcrumb {
   display: flex;
@@ -491,6 +489,7 @@ a.project-card {
   font-size: 10.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  font-weight: 1000;
 }
 
 .detail-full-desc {
@@ -519,7 +518,7 @@ a.project-card {
 
 .detail-sidebar-label {
   margin-bottom: 5px;
-  color: var(--ink-faint);
+  color: var(--forest-light);
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.14em;

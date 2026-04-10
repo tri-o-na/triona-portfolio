@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // ];
 
   const ICON_GROUPS = [
-    { key: "backend",  label: "Back-End Development" },
     { key: "design",   label: "Front-End & Design" },
     { key: "ai",       label: "AI & ML" },
-    { key: "data",     label: "Data Algo & Analytics" },
-    { key: "systems",  label: "Systems" },
-    { key: "iot",      label: "IoT & Networking" },
+    { key: "backend",  label: "Back-End Development" },
     { key: "cloud",    label: "Cloud" },
+    { key: "data",     label: "Data Algo" },
+    { key: "iot",      label: "IoT & Networking" },
+    { key: "systems",  label: "Systems" },
   ];
 
   const schoolLabels = {
@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ? `<img src="${p.image}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;">`
       : `<div class="project-thumb-placeholder">
            <div class="thumb-icon ${p.icon}">${p.iconLabel}</div>
-           <div class="thumb-upload-hint">Add image / video</div>
          </div>`;
 
     // Use the raw id as the URL key (unique per project from data file)

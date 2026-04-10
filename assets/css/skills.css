@@ -1,53 +1,130 @@
+/* ── Skills grid — 3 cols wide so groups breathe ─────────────── */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* ── Individual group card ────────────────────────────────────── */
+.skill-group {
+  padding: 22px 22px 20px;
   border: 1px solid var(--border);
   border-radius: 4px;
-  background: var(--border);
-}
-
-.skill-group {
-  padding: 28px 24px;
   background: var(--warm-white);
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.skill-group-title {
-  margin-bottom: 14px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border);
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+.skill-group:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 2px 12px rgba(47, 62, 70, 0.06);
 }
 
-.skill-list {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.skill-item {
+/* ── Group header: icon + title + count ───────────────────────── */
+.skill-group-header {
   display: flex;
   align-items: center;
   gap: 9px;
-  color: var(--ink-soft);
-  font-size: 13px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
 }
 
+.skill-group-icon {
+  color: var(--accent);
+  font-size: 14px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.skill-group-title {
+  flex: 1;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.skill-group-count {
+  color: var(--ink-faint);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  background: var(--cream);
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+
+/* ── Single-column list ───────────────────────────────────────── */
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ── Two-column list (for groups with > 5 tags) ───────────────── */
+.skill-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+
+.skill-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ── Tag item ─────────────────────────────────────────────────── */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+/* ── Languages card spans full grid width ─────────────────────── */
+.skill-group--wide {
+  grid-column: 1 / -1;
+}
+
+/* 4 columns inside the wide languages card */
+.skill-group--wide .skill-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ── Category-coloured dots ───────────────────────────────────── */
 .skill-dot {
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: var(--accent-warm);
 }
 
-@media (max-width: 900px) {
+.skill-dot.languages { background: var(--ink-faint); }
+.skill-dot.design    { background: var(--accent); }
+.skill-dot.ai        { background: var(--stone); }
+.skill-dot.backend   { background: var(--accent-warm); }
+.skill-dot.cloud     { background: var(--forest-light); }
+.skill-dot.data      { background: var(--forest-mid); }
+.skill-dot.iot       { background: var(--border-strong); }
+.skill-dot.systems   { background: var(--forest-deep); }
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 1100px) {
   .skills-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .skill-cols {
+    grid-template-columns: 1fr;
   }
 }

@@ -36,19 +36,19 @@ document.addEventListener("DOMContentLoaded", () => {
   document.title = `${project.title} | Triona Lee`;
 
   // ── ① Feature wall ────────────────────────────────────────
-  const wall = document.getElementById("detail-feature-wall");
-  if (project.image) {
-    wall.style.backgroundImage = `url('${project.image}')`;
-    wall.classList.add("has-image");
-  } else {
-    // Coloured placeholder based on icon type
-    wall.classList.add("placeholder", project.icon);
-    wall.innerHTML = `
-      <div class="wall-placeholder-inner">
-        <div class="thumb-icon ${project.icon} wall-icon">${project.iconLabel}</div>
-        <span class="wall-placeholder-hint">No cover image yet</span>
-      </div>`;
-  }
+//   const wall = document.getElementById("detail-feature-wall");
+//   if (project.image) {
+//     wall.style.backgroundImage = `url('${project.image}')`;
+//     wall.classList.add("has-image");
+//   } else {
+//     // Coloured placeholder based on icon type
+//     wall.classList.add("placeholder", project.icon);
+//     wall.innerHTML = `
+//       <div class="wall-placeholder-inner">
+//         <div class="thumb-icon ${project.icon} wall-icon">${project.iconLabel}</div>
+//         <span class="wall-placeholder-hint">No cover image yet</span>
+//       </div>`;
+//   }
 
   // ── ② Breadcrumb ──────────────────────────────────────────
   document.getElementById("detail-breadcrumb-title").textContent = project.title;

@@ -25,7 +25,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "systems", iconLabel: "SYS",
             tags: ["C", "Assembly", "Raspberry Pi"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Backend Dev & DevOps",
@@ -37,7 +41,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "systems", iconLabel: "SYS",
             tags: ["C"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Networks & IoT",
@@ -49,7 +57,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "iot", iconLabel: "NET",
             tags: ["Cisco", "IoT", "Networking", "Raspberry Pi"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Algorithms",
@@ -61,7 +73,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "data", iconLabel: "ALG",
             tags: ["Python", "Algorithms"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Web, Database & OS",
@@ -72,8 +88,12 @@ const PROJECT_DATA = [
             desc: "Design and implementation of a Hospital Management System using the object-oriented programming paradigm in Java.",
             fullDesc: "",
             icon: "backend", iconLabel: "OOP",
-            tags: ["Java"],
-            image: "", githubLink: "", extraLinks: [],
+            tags: ["Java", "OOP"],
+            image: "", githubLink: "https://github.com/tri-o-na/OOP-Hospital-Management.git", 
+            extraLinks: [
+                { label: "Phase 1 Report (team of 6)", url: "https://docs.google.com/document/d/163U--2pIx-x_klNpg4zraARYNlEW9gFVsg9fBfXDtzY/edit?usp=sharing" },
+                { label: "Phase 2 Report (group of 12)", url: "https://docs.google.com/document/d/1-DiJSAj1ZVFlJtA6vgOYnBSYy-EYVzHEAukI1v2s2Rg/edit?usp=sharing" }
+            ],
           },
           {
             type: "Web, Database & OS",
@@ -85,7 +105,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "design", iconLabel: "WEB",
             tags: ["Rust", "Actix", "SQLite"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Web, Database & OS",
@@ -97,7 +121,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "backend", iconLabel: "DB",
             tags: ["Rust", "TypeScript", "SQL", "NoSQL"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "OS",
@@ -109,7 +137,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "systems", iconLabel: "SYS",
             tags: ["Bash", "Python"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Design Innovation (Glasgow)",
@@ -121,7 +153,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "design", iconLabel: "OIP",
             tags: ["Design Thinking", "HCI", "OIP", "Glasgow"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
         ],
       },
@@ -138,7 +174,9 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "design", iconLabel: "WEB",
             tags: ["Client Project", "Python", "SQL"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [],
           },
           {
             type: "Cloud",
@@ -150,7 +188,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "cloud", iconLabel: "CLD",
             tags: ["HTML", "CSS", "JavaScript", "Docker", "Kubernetes", "Firebase"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Networks & IoT",
@@ -162,7 +204,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "iot", iconLabel: "IOT",
             tags: ["C", "Raspberry Pi Pico", "IoT"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "UI/UX & Social Innovation",
@@ -174,7 +220,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "design", iconLabel: "UX",
             tags: ["UI/UX", "Adobe XD", "HCI"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Mobile & Design",
@@ -186,7 +236,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "design", iconLabel: "MOB",
             tags: ["Kotlin", "Android", "CI/CD"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Data & IoT",
@@ -198,7 +252,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "data", iconLabel: "DA",
             tags: ["Python", "Data Analytics"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Networks & IoT",
@@ -210,7 +268,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "iot", iconLabel: "IOT",
             tags: ["Arduino", "IoT"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
         ],
       },
@@ -234,7 +296,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "design", iconLabel: "WEB",
             tags: ["HTML", "CSS", "SQL", "JavaScript"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Systems & Networking",
@@ -246,7 +312,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "iot", iconLabel: "NET",
             tags: ["Cisco Packet Tracer", "Networking"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Mobile & Design",
@@ -258,7 +328,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "design", iconLabel: "MOB",
             tags: ["Java", "Adobe XD", "Android Studio"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
         ],
       },
@@ -275,7 +349,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "ai", iconLabel: "AI",
             tags: ["NLP", "LLMs", "Python", "ML"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
         ],
       },
@@ -292,7 +370,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "design", iconLabel: "MOB",
             tags: ["Flutter", "Dart", "Adobe XD"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Web, Database & OS",
@@ -304,7 +386,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "design", iconLabel: "WEB",
             tags: ["MongoDB", "Angular", "Node.js"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Cloud",
@@ -316,7 +402,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "cloud", iconLabel: "CLD",
             tags: ["AWS", "JavaScript", "Postman"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Networks & IoT",
@@ -328,7 +418,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "iot", iconLabel: "IOT",
             tags: ["IoT", "AWS", "JavaScript"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "Backend Dev & DevOps",
@@ -340,7 +434,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "backend", iconLabel: "DEV",
             tags: ["Jenkins", "Selenium", "Jira"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
           {
             type: "AI & Machine Learning",
@@ -352,7 +450,11 @@ const PROJECT_DATA = [
             fullDesc: "",
             icon: "ai", iconLabel: "ML",
             tags: ["Python", "JupyterLab", "ML", "HTML", "CSS"],
-            image: "", githubLink: "", extraLinks: [],
+            image: "", 
+            githubLink: "", 
+            extraLinks: [
+
+            ],
           },
         ],
       },
