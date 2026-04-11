@@ -1,8 +1,7 @@
 #page-home {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100%;
-  overflow: hidden;
+  min-height: calc(100vh - 58px);
 }
 
 .hero-left {
@@ -10,7 +9,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
   padding: 60px 64px;
   background: var(--cream);
 }
@@ -251,7 +249,24 @@
     grid-template-columns: 1fr;
   }
 
+  .hero-left {
+    padding: 48px 28px 40px;
+  }
+
+  .hero-photo-wrap {
+    top: 24px;
+    right: 24px;
+    width: 72px;
+    height: 72px;
+  }
+
   .hero-right {
-    display: none;
+    display: flex; /* show below instead of hiding */
+    min-height: 260px;
+    padding: 40px 28px;
+  }
+
+  .hero-stat-grid {
+    max-width: 100%;
   }
 }
