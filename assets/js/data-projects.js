@@ -24,6 +24,7 @@ const PROJECT_DATA = [
             moduleCode: "PSD",
             desc: "Six-month client-facing team project with an external industry partner.",
             fullDesc: `
+            <p><b>Module Details:</b></p>
             <ul>
               <li>A two trimesters, (roughly) eight-months second year module in the Computing Science bachelor degree.</li>
               <li>Students will work in a team of size from 4 - 8.</li>
@@ -37,7 +38,21 @@ const PROJECT_DATA = [
               <li>Select, and employ industry standard software practices and tools as appropriate within a software process;</li>
               <li>Present project progress through short demonstrations;</li>
               <li>Review, analyse and adapt project processes within a process improvement framework.</li>
-            </ol>`,
+            </ol>
+            
+            <p><b>Learning Journey Buddy:</b></p>
+            <p>The customer is seeking to strengthen cross-cultural engagement between Singaporean and international students through technology. With increasing student exchanges and cultural immersion programs, there is a need for an AI-driven platform that not only facilitates communication in multiple languages but also nurtures empathy, cultural sensitivity, and collaboration. The project envisions a web-based chatbot application equipped with smart features such as:</p>
+
+            <ul>
+              <li>Language support for Chinese and Thai (with possible extension to Korean).</li>
+              <li>A framework to guide students through structured learning and problem-solving (e.g., robotics coding exercises).</li>
+              <li>Administrative functions including automated mailing lists, user input fields, integration for certifications, and time zone adaptation for international groups.</li>
+              <li>Administrative functions should display thoughtfulness in planning morning, afternoon, and evening activity blocks with buffer time.</li>
+            </ul>
+
+            <p>This initiative represents a step forward in using AI to improve student experiences across borders, making global learning more inclusive, interactive, and adaptive.</p>
+            
+            `,
             icon: "design", iconLabel: "WEB",
             tags: ["Client Project", "Python", "SQL"],
             image: "assets/images/PSD-chatbot.gif",
@@ -58,16 +73,27 @@ const PROJECT_DATA = [
             moduleName: "Cloud and Distributed Computing",
             moduleCode: "CLOUD",
             desc: "Design and implement a cloud-based distributed system.",
-            fullDesc: ``,
+            fullDesc: `
+            <p>Design and implement a smart, intelligent, reliable, and secure cloud-based distributed system incorporating cloud native frameworks such as containers and/or Kubernetes. The system must demonstrate an original contribution documented in a research article format, comparing it to related research or industrial work.</p>
+
+            <p>You may choose one of two problem statements from Lion Befrienders or propose your own idea, such as:</p>
+            <ul>
+              <li>A distributed application utilizing cloud computing.</li>
+              <li>An integrated system employing AI, cloud computing, and embedded systems.</li>
+              <li>A distributed data collection and analytic framework for environmental monitoring.</li>
+            </ul>
+
+            <p>Working in groups, you will apply knowledge from Dell’s online courses to derive your own specification and design. Groups are responsible for dividing work and managing the project to deliver novel functionality and tangible outcomes.</p>
+            `,
             icon: "cloud", iconLabel: "CLD",
             tags: ["HTML", "CSS", "JavaScript", "Docker", "Kubernetes", "Firebase"],
-            image: "",
+            image: "assets/images/CLOUD-ArchitecturalDiagram.png",
             githubLink: "",
             extraLinks: [
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
+              { label: "Project Proposal", url: "https://drive.google.com/file/d/1yHbQPZlhqy4_cfH0li9l_sKUbDEHJJs5/view?usp=sharing" , caption: `` },
+              { label: "Architectural Diagram", url: "assets/images/CLOUD-ArchitecturalDiagram.png" , caption: `` },
+              { label: "Final Presentation", url: "assets/videos/CLOUD-FinalProjectVideo.mp4" , caption: `` },
+              { label: "Final Report", url: "https://drive.google.com/file/d/1HV8lzVeeaX0a3zHouXgxBUUg-cvkJqhw/view?usp=sharing" , caption: `` },
               { label: "", url: "" , caption: `` },
 
             ],
@@ -79,39 +105,82 @@ const PROJECT_DATA = [
             moduleName: "Embedded Systems Programming",
             moduleCode: "ESP",
             desc: "Develop an autonomous robot that follows a line, responds to encoded commands, avoids obstacles, and reports telemetry remotely.",
-            fullDesc: ``,
+            fullDesc: `
+            <p><b>Background:</b></p>
+              <p>Line-following robots are a classic benchmark in embedded systems, testing sensor integration, control algorithms, and real-time decision making.</p>
+            <br>
+            <p><b>Objectives:</b></p>
+            <ul>
+              <li>Develop an autonomous robot that follows a line, responds to encoded commands, avoids obstacles, and reports telemetry remotely.</li>
+            </ul>
+
+            <p><b>Key Features:</b></p>
+            <ul>
+              <li>Single IR sensor + PID controller for line following.</li>
+              <li>Barcode commands to trigger IMU-based precise turns.</li>
+              <li>Ultrasonic sensor for obstacle detection/avoidance.</li>
+              <li>MQTT communication to send live status and mapping data.</li>
+            </ul>
+
+            <p><b>Deliverables:</b></p>
+            <ul>
+              <li>Hardware and firmware implementing all features.</li>
+              <li>Telemetry logs visualised on a PC or web dashboard.</li>
+              <li>Demo run on a fixed test track with line + barcodes + obstacles.</li>
+            </ul>
+
+            <p><b>Constraints & Notes:</b></p>
+            <ul>
+              <li>Robot control must be stable.</li>
+              <li>Telemetry should not interfere with line-following control.</li>
+              <li>Required calibration and noise filtering for sensors.</li>
+            </ul>
+            `,
             icon: "iot", iconLabel: "IOT",
             tags: ["C", "Raspberry Pi Pico", "IoT"],
-            image: "",
+            image: "assets/images/ESP-RobotCar.jpg",
             githubLink: "",
             extraLinks: [
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
+              { label: "Robot Car Model", url: "assets/images/ESP-RobotCar.jpg" , caption: `` },
+              { label: "Final Video Demo", url: "assets/videos/ESP-FinalVideoDemo.mp4" , caption: `` },
+              { label: "Final Report", url: "https://drive.google.com/file/d/1DmzlJlvD2Uof6ShFjlb1uSFb1ZqIIMv8/view?usp=sharing" , caption: `` },
               { label: "", url: "" , caption: `` },
               { label: "", url: "" , caption: `` },
 
             ],
           },
           {
-            type: "UI/UX & Social Innovation",
+            type: "Social Innovation & UI/UX",
             id: "SIT · Y2 · T1/2", term: "Trimester 1/2",
             title: "SITogether",
             moduleName: "Social Innovation Project",
             moduleCode: "SIP",
             desc: "Cross-course group project solving a real societal problem: design the full UI/UX prototype for the app.",
-            fullDesc: ``,
+            fullDesc: `
+            <ul>
+              <li>The Social Innovation Project (USI2001) is a 3-credit, student-led independent learning module and a graduation requirement.</li>
+              <li>Working in interdisciplinary teams of 3 to 5, students use a multi-pronged, problem-solving approach to address multi-faceted issues in our pluralistic society, such as diversity, inclusivity, and sustainable practices.</li>
+              <li>The project draws on design thinking principles to create a positive social impact for a specific community.</li>
+              <li>To ensure sustainability and continuity, projects can extend from one cohort to another, leading to tangible outcomes.</li>
+              <li>Teams may take up to 3 consecutive trimesters to complete the module, consulting with resource persons who act as consultants rather than supervisors.</li>
+              <li>All registration and project communication are managed through xSiTe.</li>
+            </ul>
+
+            <p><b>Chosen Problem Statement:</b></p>
+            <ul>
+              <li>How might we create a more supportive academic environment for SIT students (freshmen) through the use of technology?</li>
+            </ul>
+
+            <p><b>Our group was selected for a showcase, however due to scheduling conflicts, were unable to make it.</b></p>
+            `,
             icon: "design", iconLabel: "UX",
             tags: ["UI/UX", "Adobe XD", "HCI"],
             image: "assets/images/SIP-SITogether.jpg",
             githubLink: "",
             extraLinks: [
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-
+              { label: "Project Proposal Plan", url: "https://drive.google.com/file/d/19tYuC4qRGbdz4RUVRAK26NAirdFgv1EV/view?usp=sharing" , caption: `` },
+              { label: "Final Poster", url: "https://drive.google.com/file/d/1emV1cVgbIU6zewwGt_ifoA6_2GIgxTpB/view?usp=sharing" , caption: `` },
+              { label: "Final Video", url: "assets/videos/SIP-SITogether-FinalProjectVideo.mp4" , caption: `` },
             ],
           },
           {
@@ -121,15 +190,26 @@ const PROJECT_DATA = [
             moduleName: "Mobile App Development",
             moduleCode: "MAD",
             desc: "Develop and implement a real, fully featured mobile application in Android tailored to users' learning style.",
-            fullDesc: ``,
+            fullDesc: `
+            <p><b>Objectives:</b></p>
+            <p>The project is a trimester long implementation of a real, fully featured mobile application in Android. The main objectives are to:</p>
+            <ul>
+              <li>Learn to develop a working mobile application in Android</li>
+              <li>Gain experience with some Agile software development methods such as Continuous Integration (CI), stand-up meetings and sprints</li>
+              <li>Work in a team to develop a mobile application of moderate complexity</li>
+            </ul>
+
+            <p><b>Requirements:</b></p>
+            <p>The mobile application should be a 100% native Android application. (No hybrid applications or hybrid app frameworks). The form factor can be a phone, tablet or wearable (watch), or any combination of form factors.</p>
+            `,
             icon: "design", iconLabel: "MOB",
             tags: ["Kotlin", "Android", "CI/CD"],
             image: "assets/images/MAD-MorphLearn.jpg",
             githubLink: "",
             extraLinks: [
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
+              { label: "Project Proposal", url: "https://drive.google.com/file/d/1_Knq_CwsZE3rKkXwdqDpCyzKPA6cE1Pg/view?usp=sharing" , caption: `` },
+              { label: "Final Architectural Diagram", url: "assets/images/MAD-FinalArchitecturalDiagram.png" , caption: `` },
+              { label: "Final Report", url: "https://drive.google.com/file/d/1S9R_aJreMR9MU638tFnng7r4BkSYxC6H/view?usp=sharing" , caption: `` },
               { label: "", url: "" , caption: `` },
               { label: "", url: "" , caption: `` },
 
@@ -142,15 +222,15 @@ const PROJECT_DATA = [
             moduleName: "Data Analytics",
             moduleCode: "DATA",
             desc: "Demonstrate the three stages of Data Analytics: Data Preparation, Data Mining, and Data Visualisation.",
-            fullDesc: ``,
+            fullDesc: `<p>A machine learning pipeline for Ultra-Wideband (UWB) indoor localisation, tackling LOS/NLOS signal classification and distance estimation across 7 diverse indoor environments. </p>z
+            <p> I focused on the Cross-Environment Validation and creating the final architectural diagram </p>`,
             icon: "data", iconLabel: "DA",
             tags: ["Python", "Data Analytics"],
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
+              { label: "Final Presentation Video", url: "assets/videos/DATA-FinalPresentationVideo.mp4" , caption: `` },
+              { label: "Final Report", url: "https://drive.google.com/file/d/1Fr0Z1wqfundEyxLKvYqSpoU2IcqUpocS/view?usp=sharing" , caption: `` },
               { label: "", url: "" , caption: `` },
               { label: "", url: "" , caption: `` },
 
@@ -163,17 +243,27 @@ const PROJECT_DATA = [
             moduleName: "Internet of Things (Protocols & Networks)",
             moduleCode: "IOT",
             desc: "Design and implement a wireless button for a quiz game that allows players to answer questions and interact in real time.",
-            fullDesc: ``,
+            fullDesc: `
+            <p><b>Wireless Button:</b></p>
+            <p>Design and implement a wireless button for a quiz game that allows players to answer questions and interact with the game in real-time. The system should be able to determine who pressed the button first. The button should be easy to use, reliable, and able to communicate with the quiz game system wirelessly. The device should be usable face-to-face or remotely. Ensure the button is easy to use and intuitive for players. Implement reliable wireless communication between the button and the quiz game system. Conduct testing and evaluation to determine the effectiveness and usability of the button. The system should be secure and protected against unauthorised access and tampering.</p>
+            <br>
+            <p><b>Technical Considerations:</b></p>
+            <ul>
+              <li>BLE and WiFi</li>
+              <li>Look into latency</li>
+              <li>Ensure sufficient security</li>
+            </ul>
+            `,
             icon: "iot", iconLabel: "IOT",
             tags: ["Arduino", "IoT"],
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
+              { label: "Project Proposal", url: "https://drive.google.com/file/d/1lSWG9xHDNvLt48kG4ODd4BDMo1azFBcH/view?usp=sharing" , caption: `` },
+              { label: "Final Report", url: "https://drive.google.com/file/d/1apUYfF28GwIHocCDmpm0jq43qk0iYhb6/view?usp=sharing" , caption: `` },
+              { label: "Final Video Demo", url: "assets/videos/IOT-VideoDemo.mp4" , caption: `` },
+              { label: "Final Presentation", url: "" , caption: `` },
+              { label: "Final Poster", url: "https://drive.google.com/file/d/1PBT5kEW7zzKLwODzhtgy0v0YB6CHOj0O/view?usp=sharing" , caption: `` },
 
             ],
           },
@@ -216,7 +306,7 @@ const PROJECT_DATA = [
             id: "SIT · Y1 · T1", term: "Trimester 1",
             title: "Tic Tac Toe Game Program",
             moduleName: "Programming Methodology",
-            moduleCode: "PM",
+            moduleCode: "PGM",
             desc: "Implement with testing and demonstrate your AI/ML enabled Tic Tac Toe game algorithm in C programming.",
             fullDesc: `
               <p>Write a C program to develop a 3x3 Tic Tac Toe game program. The design of the game will come with user-friendly graphical user interface (GUI). The GUI will minimally display player 1 (having symbol X) and player 2 (having symbol O), and the winner declared.</p>
@@ -226,11 +316,11 @@ const PROJECT_DATA = [
             `,
             icon: "systems", iconLabel: "SYS",
             tags: ["C"],
-            image: "",
+            image: "assets/images/PGM-TicTacToe.jpg",
             githubLink: "",
             extraLinks: [
               { label: "Final Report", url: "https://docs.google.com/document/d/19ET7QotK00rYyQR8tr3LbrEVfy1_4xy8N24NJHhc750/edit?authuser=0&usp=sharing" , caption: `` },
-              { label: "Final Video Demo", url: "https://drive.google.com/file/d/1E0yo_Gbkbmhr4BzETHePTe2t2vjlEyMR/view" , caption: `` },
+              { label: "Final Video Demo", url: "assets/videos/PGM-FinalVideoDemo.mp4" , caption: `` },
               { label: "", url: "" , caption: `` },
               { label: "", url: "" , caption: `` },
               { label: "", url: "" , caption: `` },
@@ -241,7 +331,7 @@ const PROJECT_DATA = [
             id: "SIT · Y1 · T2", term: "Trimester 2",
             title: "FloodShield: IoT-based Underground Pipe Monitoring System",
             moduleName: "Computer Networks",
-            moduleCode: "COMNET",
+            moduleCode: "CNET",
             desc: "Design, implement, and test an application implemented with 2–3 Raspberry Pis connected via wired/wireless LAN.",
             fullDesc: `<p>This project provides a hands-on application of computer network knowledge by challenging teams of 4–6 students to design, implement, and test a network application. The primary technical objective is to create a solution for device communication that simulates real-world challenges in network architecture and configuration. Teams must utilize 2-3 Raspberry Pi devices connected via wired or wireless LAN, and these devices must communicate exclusively through the team\'s developed program, with serial communication strictly prohibited. </p>
             
@@ -249,12 +339,12 @@ const PROJECT_DATA = [
             `,
             icon: "iot", iconLabel: "NET",
             tags: ["Cisco", "IoT", "Networking", "Raspberry Pi"],
-            image: "",
+            image: "assets/images/CNET-FloodShield.png",
             githubLink: "",
             extraLinks: [
-              { label: "Proposal", url: "https://docs.google.com/document/d/1uQl0bJd6u8_Qhv_rJ4Sn4pXuuizZp36ufTkhtY0hn3Y/edit?authuser=0&usp=sharing" , caption: `` },
-              { label: "Presentation", url: "https://drive.google.com/file/d/1GdlaxtL83ZwOxxhXK9FgRrIkfQT9JGvI/view?authuser=0&usp=sharing" , caption: `` },
-              { label: "Poster", url: "assets/images/CNET-FloodShield-Poster.png" },
+              { label: "Project Proposal", url: "https://docs.google.com/document/d/1uQl0bJd6u8_Qhv_rJ4Sn4pXuuizZp36ufTkhtY0hn3Y/edit?authuser=0&usp=sharing" , caption: `` },
+              { label: "Final Poster", url: "assets/images/CNET-FloodShield-Poster.png" },
+              { label: "Final Presentation", url: "https://drive.google.com/file/d/1GdlaxtL83ZwOxxhXK9FgRrIkfQT9JGvI/view?authuser=0&usp=sharing" , caption: `` },
 
             ],
           },
@@ -278,7 +368,7 @@ const PROJECT_DATA = [
             image: "assets/images/DSA-RouteRadar.jpg",
             githubLink: "",
             extraLinks: [
-              { label: "Final Video Presentation", url: "https://drive.google.com/file/d/18m34hWpIvJFjAO8hwfDgGTfgLvysXEWv/view" },
+              { label: "Final Video Presentation", url: "assets/videos/DSA-PresentationVideo.mp4" },
 
             ],
           },
@@ -308,10 +398,10 @@ const PROJECT_DATA = [
             fullDesc: "This project involved developing a Bug Tracking System using Rust and the Actix Web framework with SQLite for data storage, emphasizing robust design, security, and scalability. My main responsibility was implementing the core functionality of Project List State Management, which required designing a mechanism to hold a mutable, shared list of project names (such as 'Project A,' 'Project B,' etc.) across the application. This task required the correct application of Rust's concurrency primitives, such as the Arc (Atomically Reference Counted) and Mutex (Mutual Exclusion) wrappers, to ensure thread-safe read and write access to the shared project data by multiple, concurrent server processes. This hands-on experience demonstrated my ability to apply advanced concurrency and state management concepts in a modern, high-performance web framework.",
             icon: "design", iconLabel: "WEB",
             tags: ["Rust", "Actix", "SQLite"],
-            image: "assets/images/CNET-FloodShield.png",
+            image: "",
             githubLink: "",
             extraLinks: [
-              { label: "Video Demo", url: "https://drive.google.com/file/d/1s2v0WvjSs-7ZNoeuwEA2FZe0twiQse6w/view" },
+              { label: "Video Demo", url: "assets/videos/WEB-VideoDemo.mp4" },
 
             ],
           },
@@ -325,12 +415,12 @@ const PROJECT_DATA = [
             fullDesc: "This group project involved the design and development of a full-stack database application that integrates both a relational (SQL) and a non-relational (NoSQL) database as its back-end, offering practical experience in complex, modern data architecture. My responsibilities included constructing the conceptual Entity-Relationship (ER) diagram and relational schema, implementing core functionalities using advanced SQL features (like nested queries and triggers), and designing and implementing the NoSQL component with appropriate data models. The final application, preferably with a GUI, demonstrated the system's ability to manage and query data across these two distinct technologies, requiring a detailed justification of the dual-backend modeling choices.",
             icon: "backend", iconLabel: "DB",
             tags: ["Rust", "TypeScript", "SQL", "NoSQL"],
-            image: "",
+            image: "assets/images/DB-ArchitecturalDiagram.png",
             githubLink: "",
             extraLinks: [
               { label: "Progress Report", url: "https://drive.google.com/file/d/1ZZ2sDmc-B3dh0tPrdisJpgEYfhHdukBp/view" , caption: `` },
               { label: "Final Report", url: "https://drive.google.com/file/d/1jo-LKZPyqjNBZci5_XgqgHxPz_bUSooM/view" , caption: `` },
-              { label: "Presentation Video", url: "https://drive.google.com/file/u/0/d/1aXbaILnPiv6m6DeBNrGtcm-8GfJP03sa/view" },
+              { label: "Presentation Video", url: "assets/videos/DB-FinalPresentationVideo.mp4" },
 
             ],
           },
@@ -348,8 +438,8 @@ const PROJECT_DATA = [
             githubLink: "",
             extraLinks: [
               { label: "Final Report", url: "https://docs.google.com/document/d/1gqFAvFQ8ofjcQHc4MHvq6U36EXuhEXJOh0wsoHKXoyg/edit?authuser=0&usp=sharing" , caption: `` },
-              { label: "Presentation Video", url: "https://drive.google.com/file/d/1JfEaO_Gom-5ET9nhH-DkPH8lnaE_71-M/view" , caption: `` },
-              { label: "Video Demo", url: "https://drive.google.com/file/d/1v1gSQ2dcW95CQsHu-xt4dKmJ6sD-MKuJ/view" },
+              { label: "Final Presentation Video", url: "assets/videos/OS-FinalPresentationVideo.mp4" , caption: `` },
+              { label: "Final Video Demo", url: "assets/videos/OS-FinalVideoDemo.mp4" },
 
             ],
           },
@@ -632,7 +722,7 @@ const PROJECT_DATA = [
             </ul>`,
             icon: "iot", iconLabel: "IOT",
             tags: ["IoT", "AWS", "JavaScript"],
-            image: "",
+            image: "assets/images/ITAD-ArchitecturalDiagram.png",
             githubLink: "",
             extraLinks: [
               { label: "Architectural Diagram", url: "assets/images/ITAD-ArchitecturalDiagram.png" , caption: `` },
