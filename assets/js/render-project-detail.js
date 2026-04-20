@@ -128,53 +128,57 @@ document.addEventListener("DOMContentLoaded", () => {
                   urlLower.endsWith('.png') || urlLower.endsWith('.gif') || 
                   urlLower.endsWith('.webp');
 
-      // Always add to sidebar as a clickable link
-      linksEl.insertAdjacentHTML("beforeend", `
-        <a class="detail-sidebar-link" href="${link.url}" target="_blank" rel="noreferrer">
-          ${link.label} &rarr;
-        </a>`);
+      // Only add to sidebar if label is non-empty
+      if (link.label) {
+        linksEl.insertAdjacentHTML("beforeend", `
+          <a class="detail-sidebar-link" href="${link.url}" target="_blank" rel="noreferrer">
+            ${link.label} &rarr;
+          </a>`);
+      }
 
-      // If it's a Drive link, also embed it inline below the description
+      // caption shown below embed — optional
+      const captionHtml = link.caption
+        ? `<p class="detail-embed-caption">${link.caption}</p>`
+        : "";
+      const labelHtml = link.label
+        ? `<div class="detail-section-label">${link.label}</div>`
+        : "";
+
       if (embedUrl) {
         embedsContainer.insertAdjacentHTML("beforeend", `
           <div class="detail-embed-block">
-            <div class="detail-section-label">${link.label}</div>
+            ${labelHtml}
             <div class="detail-embed-wrap">
-              <iframe
-                src="${embedUrl}"
-                class="detail-embed-frame"
-                allowfullscreen
-                loading="lazy"
-                title="${link.label}">
+              <iframe src="${embedUrl}" class="detail-embed-frame"
+                allowfullscreen loading="lazy" title="${link.label || ''}">
               </iframe>
             </div>
+            ${captionHtml}
           </div>`);
-      }
-
-      else if (isVideo) {
+      } else if (isVideo) {
         embedsContainer.insertAdjacentHTML("beforeend", `
           <div class="detail-embed-block">
-            <div class="detail-section-label">${link.label}</div>
+            ${labelHtml}
             <div class="detail-embed-wrap">
-              <video controls class="detail-embed-frame" style="background: #000;">
+              <video controls class="detail-embed-frame" style="background:#000;">
                 <source src="${link.url}" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
+            ${captionHtml}
           </div>`);
-      }
-      else if (isImage) {
+      } else if (isImage) {
         embedsContainer.insertAdjacentHTML("beforeend", `
           <div class="detail-embed-block">
-            <div class="detail-section-label">${link.label}</div>
-            <div class="detail-embed-wrap">
-              <img src="${link.url}" class="detail-embed-frame" 
-                  style="object-fit: contain; background: var(--cream);" 
-                  alt="${link.label}">
+            ${labelHtml}
+            <div class="detail-embed-wrap detail-embed-wrap--image">
+              <img src="${link.url}"
+                style="width:100%;height:auto;display:block;object-fit:contain;background:var(--cream);"
+                alt="${link.caption || link.label || ''}">
             </div>
+            ${captionHtml}
           </div>`);
-      }
-    });
+    }});
   }
 
   // ── Sidebar ────────────────────────────────────────────────

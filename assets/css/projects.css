@@ -418,7 +418,7 @@ a.project-card {
 
 .detail-header-image {
   flex: 0 0 auto;
-  width: clamp(180px, 28%, 300px);
+  width: clamp(180px, 24%, 300px);
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -612,21 +612,21 @@ a.project-card {
   margin-bottom: 5px;
   color: var(--forest-light);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
 .detail-sidebar-value {
   color: var(--ink-soft);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
 }
 
 .detail-sidebar-link {
   display: block;
   color: var(--accent);
-  font-size: 13px;
+  font-size: 14px;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -744,4 +744,17 @@ a.project-card {
   .detail-feature-wall {
     height: 180px;
   }
+}
+/* ── Embed caption ────────────────────────────────────────────── */
+.detail-embed-caption {
+  margin-top: 10px;
+  color: var(--ink-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ── Image embed: natural height, no fixed ratio ─────────────── */
+.detail-embed-wrap--image {
+  padding-top: 0 !important; /* override the 75% ratio used for iframes */
+  position: static !important;
 }

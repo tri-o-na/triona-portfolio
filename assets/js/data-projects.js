@@ -23,17 +23,17 @@ const PROJECT_DATA = [
             moduleName: "Professional Software Development & Team Project",
             moduleCode: "PSD",
             desc: "Six-month client-facing team project with an external industry partner.",
-            fullDesc: "",
+            fullDesc: ``,
             icon: "design", iconLabel: "WEB",
             tags: ["Client Project", "Python", "SQL"],
             image: "assets/images/PSD-chatbot.gif",
             githubLink: "",
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
             ],
           },
           {
@@ -43,18 +43,18 @@ const PROJECT_DATA = [
             moduleName: "Cloud and Distributed Computing",
             moduleCode: "CLOUD",
             desc: "Design and implement a cloud-based distributed system.",
-            fullDesc: "",
+            fullDesc: ``,
             icon: "cloud", iconLabel: "CLD",
             tags: ["HTML", "CSS", "JavaScript", "Docker", "Kubernetes", "Firebase"],
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+
             ],
           },
           {
@@ -64,17 +64,17 @@ const PROJECT_DATA = [
             moduleName: "Embedded Systems Programming",
             moduleCode: "ESP",
             desc: "Develop an autonomous robot that follows a line, responds to encoded commands, avoids obstacles, and reports telemetry remotely.",
-            fullDesc: "",
+            fullDesc: ``,
             icon: "iot", iconLabel: "IOT",
             tags: ["C", "Raspberry Pi Pico", "IoT"],
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
 
             ],
           },
@@ -85,17 +85,17 @@ const PROJECT_DATA = [
             moduleName: "Social Innovation Project",
             moduleCode: "SIP",
             desc: "Cross-course group project solving a real societal problem: design the full UI/UX prototype for the app.",
-            fullDesc: "",
+            fullDesc: ``,
             icon: "design", iconLabel: "UX",
             tags: ["UI/UX", "Adobe XD", "HCI"],
             image: "assets/images/SIP-SITogether.jpg",
             githubLink: "",
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
 
             ],
           },
@@ -106,17 +106,17 @@ const PROJECT_DATA = [
             moduleName: "Mobile App Development",
             moduleCode: "MAD",
             desc: "Develop and implement a real, fully featured mobile application in Android tailored to users' learning style.",
-            fullDesc: "",
+            fullDesc: ``,
             icon: "design", iconLabel: "MOB",
             tags: ["Kotlin", "Android", "CI/CD"],
             image: "assets/images/MAD-MorphLearn.jpg",
             githubLink: "",
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
 
             ],
           },
@@ -127,17 +127,17 @@ const PROJECT_DATA = [
             moduleName: "Data Analytics",
             moduleCode: "DATA",
             desc: "Demonstrate the three stages of Data Analytics: Data Preparation, Data Mining, and Data Visualisation.",
-            fullDesc: "",
+            fullDesc: ``,
             icon: "data", iconLabel: "DA",
             tags: ["Python", "Data Analytics"],
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
 
             ],
           },
@@ -148,17 +148,17 @@ const PROJECT_DATA = [
             moduleName: "Internet of Things (Protocols & Networks)",
             moduleCode: "IOT",
             desc: "Design and implement a wireless button for a quiz game that allows players to answer questions and interact in real time.",
-            fullDesc: "",
+            fullDesc: ``,
             icon: "iot", iconLabel: "IOT",
             tags: ["Arduino", "IoT"],
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
 
             ],
           },
@@ -191,7 +191,7 @@ const PROJECT_DATA = [
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "Final Report", url: "https://docs.google.com/document/d/1_rVGtRqkQdU1MOqdLKJIeST3dKo_NkMf/edit?authuser=0&ouid=113774774617297771803&rtpof=true&sd=true&usp=sharing" },
+              { label: "Final Report", url: "https://docs.google.com/document/d/1_rVGtRqkQdU1MOqdLKJIeST3dKo_NkMf/edit?authuser=0&ouid=113774774617297771803&rtpof=true&sd=true&usp=sharing" , caption: `` },
               { label: "Final Presentation", url: "https://docs.google.com/presentation/d/1dMs8ssCZesVW-en13FiGfB0b7wXwOZJgsBS1ebJ_6Rg/present" },
 
             ],
@@ -214,11 +214,11 @@ const PROJECT_DATA = [
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
+              { label: "Final Report", url: "https://docs.google.com/document/d/19ET7QotK00rYyQR8tr3LbrEVfy1_4xy8N24NJHhc750/edit?authuser=0&usp=sharing" , caption: `` },
+              { label: "Final Video Demo", url: "https://drive.google.com/file/d/1E0yo_Gbkbmhr4BzETHePTe2t2vjlEyMR/view" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
+              { label: "", url: "" , caption: `` },
             ],
           },
           {
@@ -228,15 +228,18 @@ const PROJECT_DATA = [
             moduleName: "Computer Networks",
             moduleCode: "COMNET",
             desc: "Design, implement, and test an application implemented with 2–3 Raspberry Pis connected via wired/wireless LAN.",
-            fullDesc: "",
+            fullDesc: `<p>This project provides a hands-on application of computer network knowledge by challenging teams of 4–6 students to design, implement, and test a network application. The primary technical objective is to create a solution for device communication that simulates real-world challenges in network architecture and configuration. Teams must utilize 2-3 Raspberry Pi devices connected via wired or wireless LAN, and these devices must communicate exclusively through the team\'s developed program, with serial communication strictly prohibited. </p>
+            
+            <p> <b>Final Product</b>: A completed and functional pipe monitoring system that detects blockages, alerting the homeowner  </p>
+            `,
             icon: "iot", iconLabel: "NET",
             tags: ["Cisco", "IoT", "Networking", "Raspberry Pi"],
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "Proposal", url: "https://docs.google.com/document/d/1uQl0bJd6u8_Qhv_rJ4Sn4pXuuizZp36ufTkhtY0hn3Y/edit?authuser=0&usp=sharing"},
-              { label: "Presentation", url: "https://drive.google.com/file/d/1GdlaxtL83ZwOxxhXK9FgRrIkfQT9JGvI/view?authuser=0&usp=sharing"},
-              { label: "Poster", url: "assets/images/CNET-FloodShield-Poster.png"},
+              { label: "Proposal", url: "https://docs.google.com/document/d/1uQl0bJd6u8_Qhv_rJ4Sn4pXuuizZp36ufTkhtY0hn3Y/edit?authuser=0&usp=sharing" , caption: `` },
+              { label: "Presentation", url: "https://drive.google.com/file/d/1GdlaxtL83ZwOxxhXK9FgRrIkfQT9JGvI/view?authuser=0&usp=sharing" , caption: `` },
+              { label: "Poster", url: "assets/images/CNET-FloodShield-Poster.png" },
 
             ],
           },
@@ -247,13 +250,20 @@ const PROJECT_DATA = [
             moduleName: "Data Structures and Algorithms",
             moduleCode: "DSA",
             desc: "Design and implement an efficient system for finding and ranking flight routes between airports.",
-            fullDesc: "",
+            fullDesc: `<p> This was a Flight Map Routing Project done in a team of six students to design and implement an efficient system for finding and ranking flight routes between airports. The core implementation, which had to be developed in Python, required the application of data structures like graphs (e.g., adjacency lists) to model airport connections, and relevant algorithms to find the shortest, lowest-cost, or most cost-effective paths. A crucial deliverable was a user-friendly UI/visualization, potentially using a map, to display route options, total distance, ticket prices, and travel time. The project emphasized practical application of theoretical knowledge, effective teamwork, and was assessed based on the correct use of data structures and algorithms, features implemented, and the quality of the visualization. </p>
+            <br>
+            <p><b>Final Product:</b></p>
+            <ul>
+              <li>A completed and functional Flight Map Routing Application to calculate the shortest route, lowest cost and most effective path between airports</li>
+              <li>I mainly focused on the algorithms part for this project, working on getting the shortest route using our custom algorithm inspired by the Floyd-Warshall Algorithm which mainly finds the best route for both direct and layover flights</li>
+            </ul>
+            `,
             icon: "data", iconLabel: "ALG",
             tags: ["Python", "Algorithms"],
-            image: "",
+            image: "assets/images/DSA-RouteRadar.jpg",
             githubLink: "",
             extraLinks: [
-              { label: "Final Video Presentation", url: "https://drive.google.com/file/d/18m34hWpIvJFjAO8hwfDgGTfgLvysXEWv/view"},
+              { label: "Final Video Presentation", url: "https://drive.google.com/file/d/18m34hWpIvJFjAO8hwfDgGTfgLvysXEWv/view" },
 
             ],
           },
@@ -269,7 +279,7 @@ const PROJECT_DATA = [
             tags: ["Java", "OOP"],
             image: "", githubLink: "https://github.com/tri-o-na/OOP-Hospital-Management.git",
             extraLinks: [
-              { label: "Phase 1 Report (team of 6)", url: "https://docs.google.com/document/d/163U--2pIx-x_klNpg4zraARYNlEW9gFVsg9fBfXDtzY/edit?usp=sharing" },
+              { label: "Phase 1 Report (team of 6)", url: "https://docs.google.com/document/d/163U--2pIx-x_klNpg4zraARYNlEW9gFVsg9fBfXDtzY/edit?usp=sharing" , caption: `` },
               { label: "Phase 2 Report (group of 12)", url: "https://docs.google.com/document/d/1-DiJSAj1ZVFlJtA6vgOYnBSYy-EYVzHEAukI1v2s2Rg/edit?usp=sharing" }
             ],
           },
@@ -286,7 +296,7 @@ const PROJECT_DATA = [
             image: "assets/images/CNET-FloodShield.png",
             githubLink: "",
             extraLinks: [
-              { label: "Video Demo", url: "https://drive.google.com/file/d/1s2v0WvjSs-7ZNoeuwEA2FZe0twiQse6w/view"},
+              { label: "Video Demo", url: "https://drive.google.com/file/d/1s2v0WvjSs-7ZNoeuwEA2FZe0twiQse6w/view" },
 
             ],
           },
@@ -303,9 +313,9 @@ const PROJECT_DATA = [
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "Progress Report", url: "https://drive.google.com/file/d/1ZZ2sDmc-B3dh0tPrdisJpgEYfhHdukBp/view"},
-              { label: "Final Report", url: "https://drive.google.com/file/d/1jo-LKZPyqjNBZci5_XgqgHxPz_bUSooM/view"},
-              { label: "Presentation Video", url: "https://drive.google.com/file/u/0/d/1aXbaILnPiv6m6DeBNrGtcm-8GfJP03sa/view"},
+              { label: "Progress Report", url: "https://drive.google.com/file/d/1ZZ2sDmc-B3dh0tPrdisJpgEYfhHdukBp/view" , caption: `` },
+              { label: "Final Report", url: "https://drive.google.com/file/d/1jo-LKZPyqjNBZci5_XgqgHxPz_bUSooM/view" , caption: `` },
+              { label: "Presentation Video", url: "https://drive.google.com/file/u/0/d/1aXbaILnPiv6m6DeBNrGtcm-8GfJP03sa/view" },
 
             ],
           },
@@ -322,9 +332,9 @@ const PROJECT_DATA = [
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "Final Report", url: "https://docs.google.com/document/d/1gqFAvFQ8ofjcQHc4MHvq6U36EXuhEXJOh0wsoHKXoyg/edit?authuser=0&usp=sharing"},
-              { label: "Presentation Video", url: "https://drive.google.com/file/d/1JfEaO_Gom-5ET9nhH-DkPH8lnaE_71-M/view"},
-              { label: "Video Demo", url: "https://drive.google.com/file/d/1v1gSQ2dcW95CQsHu-xt4dKmJ6sD-MKuJ/view"},
+              { label: "Final Report", url: "https://docs.google.com/document/d/1gqFAvFQ8ofjcQHc4MHvq6U36EXuhEXJOh0wsoHKXoyg/edit?authuser=0&usp=sharing" , caption: `` },
+              { label: "Presentation Video", url: "https://drive.google.com/file/d/1JfEaO_Gom-5ET9nhH-DkPH8lnaE_71-M/view" , caption: `` },
+              { label: "Video Demo", url: "https://drive.google.com/file/d/1v1gSQ2dcW95CQsHu-xt4dKmJ6sD-MKuJ/view" },
 
             ],
           },
@@ -349,9 +359,9 @@ const PROJECT_DATA = [
             image: "assets/images/DI-FuturAir-Map-Layout.png",
             githubLink: "",
             extraLinks: [
-              { label: "Panel Slide: Overview of Project", url: "https://drive.google.com/file/d/11tyVpg-OoErcIOO5mRvCkO3ZFr7CYX_U/view"},
-              { label: "Final Report", url: "https://drive.google.com/file/d/1CFwUWpxiOMnqkazMdmucbAizdzMJoiNy/view"},
-              { label: "Final Presentation Slides", url: "https://drive.google.com/file/d/1crH0xueWD1-fKd_vQ_UEcTppnEvIPkzW/view"},
+              { label: "Panel Slide: Overview of Project", url: "https://drive.google.com/file/d/11tyVpg-OoErcIOO5mRvCkO3ZFr7CYX_U/view" , caption: `` },
+              { label: "Final Report", url: "https://drive.google.com/file/d/1CFwUWpxiOMnqkazMdmucbAizdzMJoiNy/view" , caption: `` },
+              { label: "Final Presentation Slides", url: "https://drive.google.com/file/d/1crH0xueWD1-fKd_vQ_UEcTppnEvIPkzW/view" },
 
             ],
           },
@@ -368,23 +378,46 @@ const PROJECT_DATA = [
         year: "y1",
         projects: [
           {
+            type: "Mobile & Design",
+            id: "TP · Y1 · S1", term: "Semester 1",
+            title: "Clarity Music App",
+            moduleName: "Computational Thinking",
+            moduleCode: "COMT",
+            desc: "Propose, design, develop, test and implement a music player application for a selected target audience using Android Studio.",
+            fullDesc: `
+              <ul>
+                <li>Propose, design, develop, test and implement a music player application for the selected target audience using Android Development Platform.</li>
+                <li>An Integrated Mobile Application with a suitable user interface that enhances students' experience.</li>
+              </ul>
+              <p><b>Final Product:</b>  A completed and functional Music Player application, which follows closely the Hi-Fi design, planned and designed in Adobe XD.</p>`,
+            icon: "design", iconLabel: "MOB",
+            tags: ["Java", "Adobe XD", "Android Studio"],
+            image: "assets/images/COMT-Clarity.jpeg",
+            githubLink: "",
+            extraLinks: [
+              { label: "Final UI App Demo on Adobe XD", url: "assets/videos/UXID-ClarityMusicApp.mp4" , caption: `` },
+              { label: "Final App Demo on Android Studio", url: "assets/videos/COMT-ClarityFinalApp.mp4" },
+
+            ],
+          },
+          {
             type: "Web, Database & OS",
             id: "TP · Y1 · S2", term: "S2",
             title: "Review.Hut: Restaurant Review Webapp",
             moduleName: "Coding / Database Development",
             moduleCode: "CDEV",
             desc: "Design and implement an application with an SQL database.",
-            fullDesc: "",
+            fullDesc: `I made a restaurant review website consisting of a list of restaurants that users can add reviews to, authentication, the add to favourites function and more.`,
             icon: "design", iconLabel: "WEB",
             tags: ["HTML", "CSS", "SQL", "JavaScript"],
             image: "assets/images/CDEV-Review.hut.jpeg",
             githubLink: "",
             extraLinks: [
-              { label: "Proposal", url: "https://drive.google.com/file/d/1VztfyDpS3DpaInq6nmaJVJCXIfVMi5wy/view"},
-              { label: "ER Diagram", url: "assets/images/CDEV-ER-Diagram.png"},
-              { label: "Adobe XD: Low-Fi Prototype", url: "https://xd.adobe.com/view/238fa63b-0d03-4ea4-846e-6bc73c0ab65d-76dc/?fullscreen&hints=off"},
-              { label: "Adobe XD: Hi-Fi Prototype", url: "https://xd.adobe.com/view/0e883a9e-c639-44bb-81d9-17f60de99fc7-5bdb/?fullscreen&hints=off"},
-              { label: "Final Video Demo", url: "https://youtu.be/BvBPp_CO-FI"},
+              { label: "Proposal", url: "https://drive.google.com/file/d/1VztfyDpS3DpaInq6nmaJVJCXIfVMi5wy/view" , caption: `` },
+              { label: "ER Diagram", url: "assets/images/CDEV-ER-Diagram.png" , caption: `` },
+              { label: "Adobe XD: Low-Fidelity Prototype", url: "https://xd.adobe.com/view/238fa63b-0d03-4ea4-846e-6bc73c0ab65d-76dc/?fullscreen&hints=off" , caption: `` },
+              { label: "Adobe XD: Hi-Fidelity Prototype", url: "https://xd.adobe.com/view/0e883a9e-c639-44bb-81d9-17f60de99fc7-5bdb/?fullscreen&hints=off" , caption: `` },
+              { label: "Final Video Demo", url: "assets/videos/CDEV_DBAV_-FinalProjectVideo.mp4" },
 
             ],
           },
@@ -395,35 +428,28 @@ const PROJECT_DATA = [
             moduleName: "Network Technology",
             moduleCode: "NETY",
             desc: "Configure the WAN network connecting Southeast Asia to cloud service facilities, and the LAN network for the respective offices.",
-            fullDesc: "",
+            fullDesc: `
+              <ul>
+                <li>Engaged by a MNC company to implement their Network Infrastructure as a Network Consultant Role.</li>
+                <li>Tasked to configure the WAN network connecting the Southeast-Asia to clouds service facility in other countries as well as the LAN network configuration for the respective offices for the Southeast-Asia offices.</li>
+              </ul>
+              <br>
+              <p><b>Final Product:</b></p>
+              <ul>
+                <li>Research and recommended the appropriate hardware such as routers and switches taking into consideration of cost-effectiveness and scalability.</li>
+                <li>Implement the network configuration ensuring hosts from each country are able to communicate with each other.</li>
+              </ul>`,
             icon: "iot", iconLabel: "NET",
             tags: ["Cisco Packet Tracer", "Networking"],
-            image: "",
+            image: "assets/images/NETY-NetworkDiagram.jpg",
             githubLink: "",
             extraLinks: [
-              { label: "Network Diagram", url: "assets/images/NETY-NetworkDiagram.jpg"},
-              { label: "Final Report", url: "https://docs.google.com/document/d/1stHQmEXgxLw1ywKAN6MY1KwZ78SEJ0ew/edit?rtpof=true&sd=true&tab=t.0"},
-              { label: "Final Presentation Slides", url: "https://docs.google.com/presentation/d/1vRKWwXiiboQOnms4LhCu-8wOeuCwwrW4/present?slide=id.p1"},
+              { label: "Network Diagram", url: "assets/images/NETY-NetworkDiagram.jpg" , caption: `` },
+              { label: "Final Report", url: "https://docs.google.com/document/d/1stHQmEXgxLw1ywKAN6MY1KwZ78SEJ0ew/edit?rtpof=true&sd=true&tab=t.0" , caption: `` },
+              { label: "Final Presentation Slides", url: "https://docs.google.com/presentation/d/1vRKWwXiiboQOnms4LhCu-8wOeuCwwrW4/present?slide=id.p1" },
             ],
           },
-          {
-            type: "Mobile & Design",
-            id: "TP · Y1 · S1", term: "Semester 1",
-            title: "Clarity Music App",
-            moduleName: "Computational Thinking",
-            moduleCode: "COMT",
-            desc: "Propose, design, develop, test and implement a music player application for a selected target audience using Android Studio.",
-            fullDesc: "",
-            icon: "design", iconLabel: "MOB",
-            tags: ["Java", "Adobe XD", "Android Studio"],
-            image: "assets/images/COMT-Clarity.jpeg",
-            githubLink: "",
-            extraLinks: [
-              { label: "Final UI App Demo on Adobe XD", url: "https://youtu.be/K6NaDIBPkQs"},
-              { label: "Final App Demo on Android Studio", url: "https://youtu.be/rx7AffqwVD0"},
 
-            ],
-          },
         ],
       },
       {
@@ -435,17 +461,23 @@ const PROJECT_DATA = [
             title: "HelpLah!: AI-Powered Chatbot Optimisation",
             moduleName: "AI & Machine Learning Engineering Intern — DBS Bank",
             moduleCode: "INT",
-            desc: "Improved an AI chatbot's ability to recognise and interpret error messages from screenshots using ML algorithms and NLP. Reduced processing times by 60%.",
-            fullDesc: "",
+            desc: "Improved an AI's ability to recognise and interpret error messages from screenshots using ML algorithms and NLP. Reduced processing times by 60%.",
+            fullDesc: `<p><b>Main Function:</b> Streamlines the debugging process.</p>
+
+            <p><b>Target Users:</b> Developers in DBS. </p>
+
+            <p><b>Purpose:</b> Solve code errors quickly and efficiently with GenAI. </p>
+            
+            **Improve the current project's accuracy of detecting the correct error from a screenshot`,
             icon: "ai", iconLabel: "AI",
             tags: ["NLP", "LLMs", "Python", "ML"],
             image: "assets/images/DBS-HelpLah!.png",
             githubLink: "",
             extraLinks: [
-              { label: "Final Report", url: "https://docs.google.com/document/d/1EoZUTf6ecQZPY7h-9GsXRNhs-2nEhyp8yQKYQGh_BM0/edit?usp=sharing"},
-              { label: "Final Presentation", url: "https://drive.google.com/file/d/1n6cljT819m-5LPcixtoSVzQNhPY8FXrn/view?usp=sharing"},
-              { label: "Final Video Demo", url: "assets/videos/DBS-FinalVideoDemo.mp4"},
-              { label: "More Details", url: "https://sites.google.com/view/gwbl-triona-portfolio"},
+              { label: "Final Report", url: "https://docs.google.com/document/d/1EoZUTf6ecQZPY7h-9GsXRNhs-2nEhyp8yQKYQGh_BM0/edit?usp=sharing" , caption: `` },
+              { label: "Final Presentation", url: "https://drive.google.com/file/d/1n6cljT819m-5LPcixtoSVzQNhPY8FXrn/view?usp=sharing" },
+              // { label: "Final Video Demo", url: "assets/videos/DBS-FinalVideoDemo.mp4" , caption: `` },
+              { label: "More Details", url: "https://sites.google.com/view/gwbl-triona-portfolio" },
 
             ],
           },
@@ -461,17 +493,29 @@ const PROJECT_DATA = [
             moduleName: "Mobile App Development",
             moduleCode: "MBAP",
             desc: "Develop a working mobile application using the Flutter framework.",
-            fullDesc: "",
+            fullDesc: `
+              <ul>
+                <li>The purpose of this project is to understand and apply the knowledge of mobile application development.</li>
+                <li>The project consists of three parts and involves developing a working mobile application using the Flutter framework:</li>
+                <ul>
+                  <li>Part 1 is to produce a proposal for your mobile application and develop a high-fidelity prototype.</li>
+                  <li>Part 2 is to develop a self-contained basic Flutter application based on the proposed functionalities, navigation and design layout.</li>
+                  <li>Part 3 is to personalise and enhance the Flutter application from Part 2 with basic authentication, data persistency and additional features.</li>
+                </ul>
+              </ul>
+              <br>
+              <p><b>Final Product:</b></p>
+              <ul>
+                <li>A completed and functional Book Review application, which follows closely the Hi-Fi design, planned and designed in Adobe XD.</li>
+              </ul>`,
             icon: "design", iconLabel: "MOB",
-            tags: ["Flutter", "Dart", "Adobe XD"],
+            tags: ["Flutter", "Dart", "Adobe XD", "Android Studio"],
             image: "assets/images/MBAP-Readium.jpeg",
             githubLink: "",
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
+              { label: "Adobe XD: Hi-Fidelity Prototype", url: "https://xd.adobe.com/view/035ee033-aea4-4491-9ed2-b0e1db529794-560d/?fullscreen" , caption: `` },
+              { label: "ER Diagram", url: "assets/images/MBAP-ER-Diagram.png" , caption: `` },
+              { label: "Final Video Demo", url: "assets/videos/MBAP-ReadiumDemo.mp4" },
 
             ],
           },
@@ -482,17 +526,24 @@ const PROJECT_DATA = [
             moduleName: "Full Stack Web Development",
             moduleCode: "FWEB",
             desc: "Develop a dynamic web application using MongoDB, Express, Angular, and Node.js.",
-            fullDesc: "",
+            fullDesc: `<ul>
+                <li>This project aims to understand and apply the knowledge of dynamic web application development to develop a web application using Mongo, Express, Angular, and Node.js.</li>
+              </ul>
+              <br>
+              <p><b>Final Product:</b></p>
+              <ul>
+                <li>A completed and functional Clothing E-commerce Web Application, which follows closely the Hi-Fi design, planned and designed in Adobe XD.</li>
+              </ul>`,
             icon: "design", iconLabel: "WEB",
-            tags: ["MongoDB", "Angular", "Node.js"],
+            tags: ["HTML", "CSS", "MongoDB", "Angular", "Node.js"],
             image: "assets/images/FWEB-Clotho.jpeg",
             githubLink: "",
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
+              { label: "Adobe XD: Low-Fidelity Prototype", url: "https://xd.adobe.com/view/06f8f57a-590c-4e6d-a96d-09348457d1eb-53ab/?fullscreen" , caption: `` },
+              { label: "Use Case Diagram", url: "assets/images/FWEB-UseCaseDiagram.png" , caption: `` },
+              { label: "Mongo DB Data Modelling Diagram / ER Diagram", url: "assets/images/FWEB-ERDiagram.png" , caption: `` },
+              { label: "Final Presentation", url: "https://docs.google.com/presentation/d/1M8e8MVAZLlM_g17-M2Oyn_oiZe_57BLy/present?slide=id.p1" , caption: `` },
+              { label: "", url: "" , caption: `` },
 
             ],
           },
@@ -503,17 +554,37 @@ const PROJECT_DATA = [
             moduleName: "Cloud Application Development",
             moduleCode: "CADV",
             desc: "Develop a cloud-based web application using services from Amazon Web Services (AWS).",
-            fullDesc: "",
+            fullDesc: `<ul>
+              <li>The purpose of this project is to understand and apply the knowledge of cloud application development.</li>
+              <li>The project consists of three parts and involves developing a cloud-based web application using services from Amazon Web Services (AWS):</li>
+              <ul>
+                <li>Part 1 is to produce a proposal for your cloud-based web application and develop a high-fidelity prototype.</li>
+                <li>Part 2 is to implement at least two microservices that provide HTTP GET, POST, PUT and DELETE functions/API that link(s) to the manipulation of a database with the inclusion of business logic when applicable.</li>
+                <li>Part 3 is to develop a cloud-based web application that consumes the microservices created in Part 2. It also involves a Self-Directed Learning (SDL) report and a Quiz.</li>
+              </ul>
+            </ul>
+            <br>
+            <p><b>Final Product:</b> A completed and functional Hotel Reservation Web Application, which follows closely the Hi-Fi design, planned and designed in Adobe XD </p>`,
             icon: "cloud", iconLabel: "CLD",
             tags: ["AWS", "JavaScript", "Postman"],
             image: "assets/images/CADV-eleganceia.png",
             githubLink: "",
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
+              { label: "Use Case Diagram", url: "assets/images/CADV-UseCaseDiagram.png", 
+                caption: `<p>The app targets vacationers and staycationers with guest and registered user roles. Guests have limited access, mainly to sign up or view all hotels. Registered users, who've signed up and logged in, enjoy full site access, including reservations, room views, and favorites.</p>
+
+                <p>The database stores vital data about hotels, rooms, user profiles, favourites, and reservations. It's closely linked to reservation-making since it provides necessary user details, like names and email addresses. The credit payment service focuses solely on payments, letting users choose between credit card and on-site payment during reservations.</p>
+                <br>
+                <ul>
+                  <li><b>Microservice1</b> - User Info: Purple</li>
+                  <li><b>Microservice2</b> - Hotels, rooms, reservations: Dark blue</li>
+                  <li><b>Microservice3</b> - Favourites: Green</li>
+                </ul>` },
+              { label: "Microservices Architectural Diagram", url: "assets/images/CADV-ArchitecturalDiagram.png" , caption: `The client is linked to the Amazon S3 storage, the AWS Elastic Load Balancing for security and filtering purposes and the Amazon API Gateway which ensures only selected data can pass through. This then leads to the 3 microservices I have created User Info, Hotels, Rooms & Reservations and Favourites. ` },
+              { label: "ER Diagram", url: "assets/images/CADV-ER-Diagram.png" , caption: `` },
+              { label: "Adobe XD: Hi-Fidelity Prototype", url: "https://xd.adobe.com/view/b339f52a-432d-4795-bf25-2dc9dbd303a3-e66a/" , caption: `` },
+              { label: "Adobe XD: Low-Fidelity Prototype", url: "https://xd.adobe.com/view/3fa75de2-63a5-4e74-b4dd-8599801b498b-6af4/?fullscreen&hints=off" , caption: `` },
+              { label: "Final Video Demo", url: "assets/videos/CADV-EleganceiaDemo.mp4" },
 
             ],
           },
@@ -524,17 +595,33 @@ const PROJECT_DATA = [
             moduleName: "IoT Application Development",
             moduleCode: "ITAD",
             desc: "Propose, design, build and test a smart IoT solution for a real-life problem.",
-            fullDesc: "",
+            fullDesc: `
+            <ul>
+              <li>The purpose of this project is to understand and apply the knowledge of Internet of Things (IoT).</li>
+              <li>You are to propose, design, build and test a smart IoT solution for a real-life problem.</li>
+              <li>There is no restriction to the nature of the IoT solution. It can be of any business domain.</li>
+              <li>You are to be as creative as you can, but do be realistic and ensure that you can complete the IoT solution within the specified timeframe.</li>
+              <li>As a minimum requirement, your IoT solution must apply the following knowledge that you have learnt:</li>
+              <ul>
+                <li>Setup of IoT Thing</li>
+                <li>Storing of data into DynamoDB</li>
+                <li>Usage of Simple Notification Service</li>
+                <li>Usage of Lambda functions</li>
+              </ul>
+            </ul>
+            <br>
+            <p><b>Final Product:</b></p>
+            <ul>
+              <li>A sensor to detect pool water's temperature, pH and chlorine levels which can be set by the owner or user via a mobile device or tablet.</li>
+              <li>Alerts will also be sent to the owner if the pool's quality is not up to standard (when the levels are too low or too high) which may harm the swimmer when swimming.</li>
+            </ul>`,
             icon: "iot", iconLabel: "IOT",
             tags: ["IoT", "AWS", "JavaScript"],
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
+              { label: "Architectural Diagram", url: "assets/images/ITAD-ArchitecturalDiagram.png" , caption: `` },
+              { label: "Final Presentation", url: "https://drive.google.com/file/d/1tsIcPcAFSe5aJ21M9jlCBO0FNQb5GUGQ/view" , caption: `` },
 
             ],
           },
@@ -545,18 +632,28 @@ const PROJECT_DATA = [
             moduleName: "DevOps (Development Operations)",
             moduleCode: "DVOPS",
             desc: "Apply DevOps principles and tooling across the full software development lifecycle.",
-            fullDesc: "",
+            fullDesc: `
+            <ul>
+              <li><b>Part 1:</b></li>
+              <ul>
+                <li>Each group (this project had a group of 2) is tasked to create a web application utilizing standard continuous integration and delivery techniques such as Version Control using Source Code Management tools to create a web application that meets the project specification.</li>
+                <li>Project Contribution was assessed individually. Each member was to generate a report to affirm their web application and understanding of Version Control.</li>
+              </ul>
+              <li><b>Part 2:</b></li>
+              <ul>
+                <li>Each group is tasked to construct a DevOps automation pipeline. You will be configuring Continuous Integration and Delivery (CI/CD) and automated testing tools to enhance the web application created in the previous assignment.</li>
+                <li>Project Contribution was assessed individually. Each member was to generate a report to affirm their web application and understanding of the DevOps automation pipelines, test automation, and your implemented advanced feature.</li>
+              </ul>
+            </ul>
+            <br>
+            <p><b>Final Product:</b> A completed and functional Dog Review Web Application</p>`,
             icon: "backend", iconLabel: "DEV",
-            tags: ["Jenkins", "Selenium", "Jira"],
+            tags: ["Jenkins", "Selenium", "Jira", "Eclipse", "JUnit"],
             image: "assets/images/DVOPS-Dogtopia.jpeg",
-            githubLink: "",
+            githubLink: "", //mirror from master
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-
+              { label: "Final Presentation Part 1", url: "assets/videos/DVOPS-FinalRecordingPart1.mp4" , caption: `` },
+              { label: "Final Presentation Part 2", url: "assets/videos/DVOPS-FinalRecordingPart2.mp4" , caption: `` },
             ],
           },
           {
@@ -566,17 +663,26 @@ const PROJECT_DATA = [
             moduleName: "Machine Learning",
             moduleCode: "MLDP",
             desc: "Understand and apply Machine Learning techniques to build a price prediction model.",
-            fullDesc: "",
+            fullDesc: `
+            <p><b>Background/Description:</b></p>
+            <ul>
+              <li>The purpose of this project is to understand and apply the knowledge of Machine Learning.</li>
+              <li>In this project, I demonstrated my ability to:</li>
+              <ul>
+                <li>Implement the processes of machine learning tasks in Python 3.</li>
+                <li>Explain and document the processes that you have taken in your machine learning tasks.</li>
+                <li>Present the steps that you have taken in your tasks.</li>
+              </ul>
+            </ul>
+
+            <p><b>Final Product: </b> A completed and functional Diamond Prediction Web Application, which predicts the price of a diamond with the given specifications.</p>`,
             icon: "ai", iconLabel: "ML",
             tags: ["Python", "JupyterLab", "ML", "HTML", "CSS"],
             image: "assets/images/MLDP-RadiantRocks.png",
             githubLink: "",
             extraLinks: [
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
-              { label: "", url: ""},
+              { label: "Final Presentation", url: "https://drive.google.com/file/d/1Rrycy_LFoy6povwJsu-OhXQ8CTP4mp2H/view" , caption: `` },
+              { label: "Diamond Prices Dataset", url: "https://docs.google.com/spreadsheets/d/1a8grd8zz97aQLuFvA2H-BdhSdqUconW24JkZEL2vm18/edit?usp=sharing" , caption: `` },
 
             ],
           },
