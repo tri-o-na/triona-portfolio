@@ -584,6 +584,12 @@ a.project-card {
   list-style-position: outside; 
 }
 
+.detail-full-desc ol {
+  padding-left: 2rem;
+  margin: 1rem 0;  
+  list-style-position: outside; 
+}
+
 .detail-full-desc li {
   margin-bottom: 0.5rem; 
   line-height: 1.6;    

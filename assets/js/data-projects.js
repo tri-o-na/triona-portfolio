@@ -23,17 +23,32 @@ const PROJECT_DATA = [
             moduleName: "Professional Software Development & Team Project",
             moduleCode: "PSD",
             desc: "Six-month client-facing team project with an external industry partner.",
-            fullDesc: ``,
+            fullDesc: `
+            <ul>
+              <li>A two trimesters, (roughly) eight-months second year module in the Computing Science bachelor degree.</li>
+              <li>Students will work in a team of size from 4 - 8.</li>
+              <li>Deliver the product as requested by the customer, in the said period, with up to production grade standard.</li>
+            </ul>
+
+            <p><b>Learning Outcomes:</b></p>
+            <ol>
+              <li>Manage a substantial team-based software project in a disciplined and organised manner;</li>
+              <li>Work with a customer in a problem domain to elaborate, specify and refine requirements;</li>
+              <li>Select, and employ industry standard software practices and tools as appropriate within a software process;</li>
+              <li>Present project progress through short demonstrations;</li>
+              <li>Review, analyse and adapt project processes within a process improvement framework.</li>
+            </ol>`,
             icon: "design", iconLabel: "WEB",
             tags: ["Client Project", "Python", "SQL"],
             image: "assets/images/PSD-chatbot.gif",
             githubLink: "",
             extraLinks: [
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
-              { label: "", url: "" , caption: `` },
+              { label: "Final Presentation", url: "https://docs.google.com/presentation/d/17-wKtHYF8zQev-q7qjlCot4PGnqXJCse/edit?usp=sharing&ouid=113774774617297771803&rtpof=true&sd=true" , caption: `` },
+              { label: "General User Flow", url: "https://docs.google.com/document/d/1F7AJVt9pgxScGmN-XS23kxTH5xkM_sPQ/edit?usp=sharing&ouid=113774774617297771803&rtpof=true&sd=true" , caption: `` },
+              { label: "Staff User Guide", url: "https://docs.google.com/document/d/1JY5E1CHENryX2M2Upt0C1zK_zdcVeeYV/edit?usp=sharing&ouid=113774774617297771803&rtpof=true&sd=true" , caption: `` },
+              { label: "Teacher User Guide", url: "https://docs.google.com/document/d/1R_fQfGYHtb3Z4Edyp5lBJZAQYYaZd8l5/edit?usp=sharing&ouid=113774774617297771803&rtpof=true&sd=true" , caption: `` },
+              { label: "Student User Guide", url: "https://docs.google.com/document/d/1XFqwseAfnASZncB2ykTRf_CT64FyZdv9/edit?usp=sharing&ouid=113774774617297771803&rtpof=true&sd=true" , caption: `` },
+              { label: "Technical Documentation", url: "https://docs.google.com/document/d/1RH5rG8Xgrzo2vDCKHHQ4f5xKxnS7jtOc/edit?usp=sharing&ouid=113774774617297771803&rtpof=true&sd=true" , caption: `` },
             ],
           },
           {
@@ -693,15 +708,16 @@ const PROJECT_DATA = [
 ];
 
 // ── Flatten into PORTFOLIO.projects for all render scripts ──
-// Injects school + year into each project object automatically.
-const PORTFOLIO = {
-  projects: PROJECT_DATA.flatMap(schoolGroup =>
-    schoolGroup.years.flatMap(yearGroup =>
-      yearGroup.projects.map(p => ({
-        ...p,
-        school: schoolGroup.school,
-        year: yearGroup.year,
-      }))
-    )
-  ),
-};
+// Works whether data.js has already declared PORTFOLIO or not.
+if (typeof PORTFOLIO === "undefined") {
+  var PORTFOLIO = {};
+}
+PORTFOLIO.projects = PROJECT_DATA.flatMap(schoolGroup =>
+  schoolGroup.years.flatMap(yearGroup =>
+    yearGroup.projects.map(p => ({
+      ...p,
+      school: schoolGroup.school,
+      year: yearGroup.year,
+    }))
+  )
+);

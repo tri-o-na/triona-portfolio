@@ -2,7 +2,7 @@
 //  data.js — all data for Triona Lee's portfolio
 // ============================================================
 
-const PORTFOLIO = {
+var PORTFOLIO = {
 
   // ── Personal info ──────────────────────────────────────────
   name: {
@@ -91,10 +91,8 @@ const PORTFOLIO = {
     // SIT Year 2
     { school:"sit", year:"y2", term:"T1", title:"Professional Software Development & Team Project",   subtitle:"SQL DB, Python" },
     { school:"sit", year:"y2", term:"T1", title:"Embedded Systems Programming",            subtitle:"C, Raspberry Pi Pico" },
-    { school:"sit", year:"y2", term:"T1", title:"Human Computer Interaction",              subtitle:"HCI Principles" },
     { school:"sit", year:"y2", term:"T1", title:"Cloud and Distributed Computing",         subtitle:"HTML, CSS, JavaScript, Docker, Kubernetes, Firebase" },
     { school:"sit", year:"y2", term:"T1", title:"Social Innovation Project",               subtitle:"UI/UX for App Prototype" },
-    { school:"sit", year:"y2", term:"T2", title:"Professional Software Development & Team Project 2", subtitle:"SQL DB, Python" },
     { school:"sit", year:"y2", term:"T2", title:"Internet of Things (Protocols & Networks)",subtitle:"Arduino, .ino" },
     { school:"sit", year:"y2", term:"T2", title:"Mobile App Development",                  subtitle:"Android Studio, Kotlin, CI" },
     { school:"sit", year:"y2", term:"T2", title:"Data Analytics",                          subtitle:"Python, Charts, Data Analytics" },
@@ -114,7 +112,7 @@ const PORTFOLIO = {
     { school:"tp", year:"y2", term:"S2", title:"Cloud Application Development",  subtitle:"HTML, CSS, JavaScript, AWS, Postman" },
     { school:"tp", year:"y2", term:"S2", title:"IoT Application Development",    subtitle:"JavaScript, AWS" },
     // TP Intern
-    { school:"tp", year:"intern", term:"INT", title:"AI / ML Engineering Intern", subtitle:"Natural Language Processing, LLMs" },
+    { school:"tp", year:"intern", term:"INT", title:"AI & Machine Learning Engineering Intern — DBS Bank", subtitle:"Natural Language Processing, LLMs" },
   ],
 
   // ── Work experience ────────────────────────────────────────
