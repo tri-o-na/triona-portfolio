@@ -1,30 +1,30 @@
 :root {
   /* ── Core surfaces ───────────────────────────────────────────── */
-  --cream: #e8f0e4;           /* sage mist — card/panel backgrounds */
-  --warm-white: #f4f6f3;      /* near-white with green tint — page background */
-
+  --cream: #dce8d5;           /* richer sage — card/panel backgrounds */
+  --warm-white: #f5f7f2;      /* crisp white with subtle green tint — page background */
+ 
   /* ── Ink / text ──────────────────────────────────────────────── */
-  --ink: #1c1c1c;             /* near-black — primary text */
-  --ink-soft: #2f3e46;        /* deep teal-slate — body copy */
-  --ink-muted: #354f52;       /* forest mid — secondary text, nav links */
-  --ink-faint: #7a9e8e;       /* muted sage — timestamps, subtitles */
-
+  --ink: #1a2e28;             /* deep forest — primary text (richer than before) */
+  --ink-soft: #1a2e28;        /* deep forest — body copy */
+  --ink-muted: #2d4a40;       /* forest mid — secondary text, nav links */
+  --ink-faint: #52796f;       /* warmer sage — timestamps, subtitles */
+ 
   /* ── Accents ─────────────────────────────────────────────────── */
-  --accent: #354f52;          /* forest teal — primary accent */
+  --accent: #2d4a40;          /* deep forest teal — primary accent */
   --accent-warm: #52796f;     /* warmer forest green — hover, highlights */
-  --accent-light: #cfe0c3;    /* light leaf — hover backgrounds */
-  --accent-pale: #e8f0e4;     /* palest sage — chip/tag backgrounds */
-
+  --accent-light: #b5cba8;    /* mid leaf — hover backgrounds */
+  --accent-pale: #dce8d5;     /* palest sage — chip/tag backgrounds */
+ 
   /* ── Borders ─────────────────────────────────────────────────── */
-  --border: #cad2c5;          /* sage mist */
-  --border-strong: #8ca49a;   /* deeper sage */
-
+  --border: #c2d4bb;          /* sage mist — slightly richer */
+  --border-strong: #7a9e8e;   /* deeper sage */
+ 
   /* ── Extended palette (used in component CSS) ────────────────── */
-  --forest-deep: #2f3e46;     /* darkest — hover states, hero right panel */
-  --forest-mid: #354f52;      /* primary accent alias */
+  --forest-deep: #1a2e28;     /* darkest — hover states, hero right panel */
+  --forest-mid: #2d4a40;      /* primary accent alias */
   --forest-light: #52796f;    /* secondary accent alias */
-  --leaf: #cfe0c3;            /* highlight backgrounds */
-  --stone: #84a98c;           /* icons, tags, neutral mid-green */
+  --leaf: #b5cba8;            /* highlight backgrounds */
+  --stone: #7a9e8e;           /* icons, tags, neutral mid-green */
 
   /* ── Pastel Rainbow ────────────────────────────────────── */
   --pastelred:    #f1b3b3;

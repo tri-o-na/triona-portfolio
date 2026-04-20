@@ -73,7 +73,7 @@
   padding: 40px;
   border: 1px solid var(--border);
   border-radius: 4px;
-  background: var(--cream);
+  background: var(--ink-muted);
 }
 
 .contact-availability {
@@ -81,7 +81,7 @@
   align-items: center;
   gap: 8px;
   margin-bottom: 28px;
-  color: var(--ink-muted);
+  color: var(--cream);
   font-size: 12px;
 }
 
@@ -106,7 +106,7 @@
 
 .contact-quote {
   margin-bottom: 20px;
-  color: var(--ink-soft);
+  color: var(--warm-white);
   font-family: var(--serif);
   font-size: 22px;
   font-style: italic;
@@ -115,7 +115,7 @@
 }
 
 .contact-location {
-  color: var(--ink-faint);
+  color: var(--accent-light);
   font-family: var(--mono);
   font-size: 10.5px;
   letter-spacing: 0.1em;

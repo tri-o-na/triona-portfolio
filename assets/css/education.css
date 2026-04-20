@@ -170,8 +170,8 @@
   padding: 9px 13px;
   border: 1px solid var(--border-strong);
   border-radius: 3px;
-  background: var(--accent-pale);
-  color: var(--ink);
+  background: var(--accent);
+  color: #fff;
   cursor: pointer;
   font-family: var(--serif);
   font-size: 14px;
@@ -182,14 +182,14 @@
 }
 
 .year-toggle:hover {
-  background: var(--accent-light);
+  background: var(--ink-faint);
   border-color: var(--accent-warm);
 }
 
 .year-toggle .chevron {
   font-style: normal;
   font-size: 10px;
-  color: var(--accent);
+  color: var(--accent-pale);
   transition: transform 0.25s;
   font-family: var(--mono);
 }
