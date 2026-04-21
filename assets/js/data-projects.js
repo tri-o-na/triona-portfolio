@@ -92,7 +92,7 @@ const PROJECT_DATA = [
             extraLinks: [
               { label: "Project Proposal", url: "https://drive.google.com/file/d/1yHbQPZlhqy4_cfH0li9l_sKUbDEHJJs5/view?usp=sharing" , caption: `` },
               { label: "Architectural Diagram", url: "assets/images/CLOUD-ArchitecturalDiagram.png" , caption: `` },
-              { label: "Final Presentation", url: "assets/videos/CLOUD-FinalProjectVideo.mp4" , caption: `` },
+              { label: "Final Presentation", url: "https://drive.google.com/file/d/1HJPHMJV1oHYJFhw71DDyrl-2yaALtP7x/view?usp=sharing" , caption: `` },
               { label: "Final Report", url: "https://drive.google.com/file/d/1HV8lzVeeaX0a3zHouXgxBUUg-cvkJqhw/view?usp=sharing" , caption: `` },
               { label: "", url: "" , caption: `` },
 
@@ -142,7 +142,7 @@ const PROJECT_DATA = [
             githubLink: "",
             extraLinks: [
               { label: "Robot Car Model", url: "assets/images/ESP-RobotCar.jpg" , caption: `` },
-              { label: "Final Video Demo", url: "assets/videos/ESP-FinalVideoDemo.mp4" , caption: `` },
+              { label: "Final Video Demo", url: "https://drive.google.com/file/d/17aBa4kkCABS7xlAK9U_EjKjKImzAxYm7/view?usp=sharing" , caption: `` },
               { label: "Final Report", url: "https://drive.google.com/file/d/1DmzlJlvD2Uof6ShFjlb1uSFb1ZqIIMv8/view?usp=sharing" , caption: `` },
               { label: "", url: "" , caption: `` },
               { label: "", url: "" , caption: `` },
@@ -180,7 +180,7 @@ const PROJECT_DATA = [
             extraLinks: [
               { label: "Project Proposal Plan", url: "https://drive.google.com/file/d/19tYuC4qRGbdz4RUVRAK26NAirdFgv1EV/view?usp=sharing" , caption: `` },
               { label: "Final Poster", url: "https://drive.google.com/file/d/1emV1cVgbIU6zewwGt_ifoA6_2GIgxTpB/view?usp=sharing" , caption: `` },
-              { label: "Final Video", url: "assets/videos/SIP-SITogether-FinalProjectVideo.mp4" , caption: `` },
+              { label: "Final Video", url: "https://drive.google.com/file/d/1tDv5nuL4x_iamu6nclsLEQzJS_XFTsc3/view?usp=sharing" , caption: `` },
             ],
           },
           {
@@ -229,7 +229,7 @@ const PROJECT_DATA = [
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "Final Presentation Video", url: "assets/videos/DATA-FinalPresentationVideo.mp4" , caption: `` },
+              { label: "Final Presentation Video", url: "https://drive.google.com/file/d/1nr40WPabd7Jo0egA-fCy7gxCdnnYasjQ/view?usp=sharing" , caption: `` },
               { label: "Final Report", url: "https://drive.google.com/file/d/1Fr0Z1wqfundEyxLKvYqSpoU2IcqUpocS/view?usp=sharing" , caption: `` },
               { label: "", url: "" , caption: `` },
               { label: "", url: "" , caption: `` },
@@ -261,7 +261,7 @@ const PROJECT_DATA = [
             extraLinks: [
               { label: "Project Proposal", url: "https://drive.google.com/file/d/1lSWG9xHDNvLt48kG4ODd4BDMo1azFBcH/view?usp=sharing" , caption: `` },
               { label: "Final Report", url: "https://drive.google.com/file/d/1apUYfF28GwIHocCDmpm0jq43qk0iYhb6/view?usp=sharing" , caption: `` },
-              { label: "Final Video Demo", url: "assets/videos/IOT-VideoDemo.mp4" , caption: `` },
+              { label: "Final Video Demo", url: "https://drive.google.com/file/d/1iI-VmVYge7tlCn1nuT_sy_deRWmAKgrq/view?usp=sharing" , caption: `` },
               { label: "Final Presentation", url: "" , caption: `` },
               { label: "Final Poster", url: "https://drive.google.com/file/d/1PBT5kEW7zzKLwODzhtgy0v0YB6CHOj0O/view?usp=sharing" , caption: `` },
 
@@ -320,7 +320,7 @@ const PROJECT_DATA = [
             githubLink: "",
             extraLinks: [
               { label: "Final Report", url: "https://docs.google.com/document/d/19ET7QotK00rYyQR8tr3LbrEVfy1_4xy8N24NJHhc750/edit?authuser=0&usp=sharing" , caption: `` },
-              { label: "Final Video Demo", url: "assets/videos/PGM-FinalVideoDemo.mp4" , caption: `` },
+              { label: "Final Video Demo", url: "https://drive.google.com/file/d/1HLjXAqaEKGZ8HSb6nMLkC9sN0eO_x6dm/view?usp=sharing" , caption: `` },
               { label: "", url: "" , caption: `` },
               { label: "", url: "" , caption: `` },
               { label: "", url: "" , caption: `` },
@@ -368,7 +368,7 @@ const PROJECT_DATA = [
             image: "assets/images/DSA-RouteRadar.jpg",
             githubLink: "",
             extraLinks: [
-              { label: "Final Video Presentation", url: "assets/videos/DSA-PresentationVideo.mp4" },
+              { label: "Final Video Presentation", url: "https://drive.google.com/file/d/1oolPARnabet44eZ0wK7uqnV_hrpTbNhY/view?usp=sharing" },
 
             ],
           },
@@ -401,7 +401,7 @@ const PROJECT_DATA = [
             image: "",
             githubLink: "",
             extraLinks: [
-              { label: "Video Demo", url: "assets/videos/WEB-VideoDemo.mp4" },
+              { label: "Video Demo", url: "https://drive.google.com/file/d/19kJug7idzTQVRDNRiXhIqAPU8lZI2TOB/view?usp=sharing" },
 
             ],
           },
@@ -420,7 +420,7 @@ const PROJECT_DATA = [
             extraLinks: [
               { label: "Progress Report", url: "https://drive.google.com/file/d/1ZZ2sDmc-B3dh0tPrdisJpgEYfhHdukBp/view" , caption: `` },
               { label: "Final Report", url: "https://drive.google.com/file/d/1jo-LKZPyqjNBZci5_XgqgHxPz_bUSooM/view" , caption: `` },
-              { label: "Presentation Video", url: "assets/videos/DB-FinalPresentationVideo.mp4" },
+              { label: "Presentation Video", url: "https://drive.google.com/file/d/1_jYe-ewTAAP2OIKp2HUCLp_yk-7HM5Wj/view?usp=sharing" },
 
             ],
           },
@@ -438,8 +438,8 @@ const PROJECT_DATA = [
             githubLink: "",
             extraLinks: [
               { label: "Final Report", url: "https://docs.google.com/document/d/1gqFAvFQ8ofjcQHc4MHvq6U36EXuhEXJOh0wsoHKXoyg/edit?authuser=0&usp=sharing" , caption: `` },
-              { label: "Final Presentation Video", url: "assets/videos/OS-FinalPresentationVideo.mp4" , caption: `` },
-              { label: "Final Video Demo", url: "assets/videos/OS-FinalVideoDemo.mp4" },
+              { label: "Final Presentation Video", url: "https://drive.google.com/file/d/1JfEaO_Gom-5ET9nhH-DkPH8lnaE_71-M/view?usp=sharing" , caption: `` },
+              { label: "Final Video Demo", url: "https://drive.google.com/file/d/1v1gSQ2dcW95CQsHu-xt4dKmJ6sD-MKuJ/view?usp=sharing" },
 
             ],
           },
@@ -500,8 +500,8 @@ const PROJECT_DATA = [
             image: "assets/images/COMT-Clarity.jpeg",
             githubLink: "",
             extraLinks: [
-              { label: "Final UI App Demo on Adobe XD", url: "assets/videos/UXID-ClarityMusicApp.mp4" , caption: `` },
-              { label: "Final App Demo on Android Studio", url: "assets/videos/COMT-ClarityFinalApp.mp4" },
+              { label: "Final UI App Demo on Adobe XD", url: "https://drive.google.com/file/d/1WkpqdlObjaLkcTT1cR9k6S0KkMjeuJry/view?usp=sharing" , caption: `` },
+              { label: "Final App Demo on Android Studio", url: "https://drive.google.com/file/d/1dud9MK9SSJxy-l8havk64FbzTLObogrC/view?usp=sharing" },
 
             ],
           },
@@ -522,7 +522,7 @@ const PROJECT_DATA = [
               { label: "ER Diagram", url: "assets/images/CDEV-ER-Diagram.png" , caption: `` },
               { label: "Adobe XD: Low-Fidelity Prototype", url: "https://xd.adobe.com/view/238fa63b-0d03-4ea4-846e-6bc73c0ab65d-76dc/?fullscreen&hints=off" , caption: `` },
               { label: "Adobe XD: Hi-Fidelity Prototype", url: "https://xd.adobe.com/view/0e883a9e-c639-44bb-81d9-17f60de99fc7-5bdb/?fullscreen&hints=off" , caption: `` },
-              { label: "Final Video Demo", url: "assets/videos/CDEV_DBAV_-FinalProjectVideo.mp4" },
+              { label: "Final Video Demo", url: "https://drive.google.com/file/d/1bj5W8HO8iei_BlhgTSpwe6p7m93zKaje/view?usp=sharing" },
 
             ],
           },
@@ -620,7 +620,7 @@ const PROJECT_DATA = [
             extraLinks: [
               { label: "Adobe XD: Hi-Fidelity Prototype", url: "https://xd.adobe.com/view/035ee033-aea4-4491-9ed2-b0e1db529794-560d/?fullscreen" , caption: `` },
               { label: "ER Diagram", url: "assets/images/MBAP-ER-Diagram.png" , caption: `` },
-              { label: "Final Video Demo", url: "assets/videos/MBAP-ReadiumDemo.mp4" },
+              { label: "Final Video Demo", url: "https://drive.google.com/file/d/1YipZ-CGC5TTsSAkM62-CLEQst8i2npAx/view?usp=sharing" },
 
             ],
           },
@@ -689,7 +689,7 @@ const PROJECT_DATA = [
               { label: "ER Diagram", url: "assets/images/CADV-ER-Diagram.png" , caption: `` },
               { label: "Adobe XD: Hi-Fidelity Prototype", url: "https://xd.adobe.com/view/b339f52a-432d-4795-bf25-2dc9dbd303a3-e66a/" , caption: `` },
               { label: "Adobe XD: Low-Fidelity Prototype", url: "https://xd.adobe.com/view/3fa75de2-63a5-4e74-b4dd-8599801b498b-6af4/?fullscreen&hints=off" , caption: `` },
-              { label: "Final Video Demo", url: "assets/videos/CADV-EleganceiaDemo.mp4" },
+              { label: "Final Video Demo", url: "https://drive.google.com/file/d/1rCEnPi4mo4hEebJD5iXz1UBXXSEvMVLz/view?usp=sharing" },
 
             ],
           },
@@ -757,8 +757,8 @@ const PROJECT_DATA = [
             image: "assets/images/DVOPS-Dogtopia.jpeg",
             githubLink: "", //mirror from master
             extraLinks: [
-              { label: "Final Presentation Part 1", url: "assets/videos/DVOPS-FinalRecordingPart1.mp4" , caption: `` },
-              { label: "Final Presentation Part 2", url: "assets/videos/DVOPS-FinalRecordingPart2.mp4" , caption: `` },
+              { label: "Final Presentation Part 1", url: "https://drive.google.com/file/d/17viQfFaV68SmszEzVbfx3mhyNTVEfl-O/view?usp=sharing" , caption: `` },
+              { label: "Final Presentation Part 2", url: "https://drive.google.com/file/d/1u6FpFOLgEhiwAk1dnEJAmSfAHU5IQwpK/view?usp=sharing" , caption: `` },
             ],
           },
           {

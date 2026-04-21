@@ -78,39 +78,31 @@ document.addEventListener("DOMContentLoaded", () => {
     project.fullDesc || project.desc;
 
   // ── ⑤ Google Drive embeds ─────────────────────────────────
-  // Converts a sharing URL to an embeddable preview URL.
-  // Supports: Google Docs, Slides, Sheets, Drive file viewer.
+
+  // Extract Drive file ID from any sharing URL format
+  function driveFileId(url) {
+    if (!url) return null;
+    const m = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) ||
+              url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+    return m ? m[1] : null;
+  }
+
+  // Converts a sharing URL to an embeddable preview URL (docs/slides/sheets only)
   function driveEmbedUrl(url) {
     if (!url) return null;
-
-    // Already an embed/preview URL — use as-is
     if (url.includes("/preview") || url.includes("embedded=true")) return url;
 
-    // Google Docs / Slides / Sheets: /edit → /preview
     const docMatch = url.match(
       /docs\.google\.com\/(document|presentation|spreadsheets)\/d\/([^/]+)/
     );
     if (docMatch) {
       const type = docMatch[1];
       const id   = docMatch[2];
-      if (type === "presentation")  return `https://docs.google.com/presentation/d/${id}/embed?start=false&loop=false`;
-      if (type === "spreadsheets")  return `https://docs.google.com/spreadsheets/d/${id}/preview`;
+      if (type === "presentation") return `https://docs.google.com/presentation/d/${id}/embed?start=false&loop=false`;
+      if (type === "spreadsheets") return `https://docs.google.com/spreadsheets/d/${id}/preview`;
       return `https://docs.google.com/document/d/${id}/preview`;
     }
-
-    // Drive file: /file/d/ID/view → /file/d/ID/preview
-    const driveMatch = url.match(/drive\.google\.com\/file\/d\/([^/]+)/);
-    if (driveMatch) {
-      return `https://drive.google.com/file/d/${driveMatch[1]}/preview`;
-    }
-
-    // Drive open?id= link
-    const openMatch = url.match(/[?&]id=([^&]+)/);
-    if (openMatch && url.includes("drive.google.com")) {
-      return `https://drive.google.com/file/d/${openMatch[1]}/preview`;
-    }
-
-    return null; // not a recognisable Drive link — skip embed, show link only
+    return null; // Drive file links handled separately below
   }
 
   const embedsContainer = document.getElementById("detail-embeds");
@@ -121,14 +113,17 @@ document.addEventListener("DOMContentLoaded", () => {
     linksWrap.style.display = "block";
 
     project.extraLinks.forEach(link => {
-      const embedUrl = driveEmbedUrl(link.url);
-      const urlLower = link.url.toLowerCase();
-      const isVideo = urlLower.endsWith('.mp4') || link.url.toLowerCase().endsWith('.webm');
-      const isImage = urlLower.endsWith('.jpg') || urlLower.endsWith('.jpeg') || 
-                  urlLower.endsWith('.png') || urlLower.endsWith('.gif') || 
-                  urlLower.endsWith('.webp');
+      if (!link.url) return;
 
-      // Only add to sidebar if label is non-empty
+      const urlLower   = link.url.toLowerCase();
+      const embedUrl   = driveEmbedUrl(link.url);
+      const fileId     = driveFileId(link.url);
+      const isDriveFile = !!fileId && link.url.includes("drive.google.com");
+      const isVideo    = urlLower.endsWith('.mp4') || urlLower.endsWith('.webm');
+      const isImage    = urlLower.endsWith('.jpg') || urlLower.endsWith('.jpeg') ||
+                         urlLower.endsWith('.png') || urlLower.endsWith('.gif') ||
+                         urlLower.endsWith('.webp');
+
       if (link.label) {
         linksEl.insertAdjacentHTML("beforeend", `
           <a class="detail-sidebar-link" href="${link.url}" target="_blank" rel="noreferrer">
@@ -136,15 +131,31 @@ document.addEventListener("DOMContentLoaded", () => {
           </a>`);
       }
 
-      // caption shown below embed — optional
-      const captionHtml = link.caption
-        ? `<p class="detail-embed-caption">${link.caption}</p>`
-        : "";
-      const labelHtml = link.label
-        ? `<div class="detail-section-label">${link.label}</div>`
-        : "";
+      const captionHtml = link.caption ? `<p class="detail-embed-caption">${link.caption}</p>` : "";
+      const labelHtml   = link.label   ? `<div class="detail-section-label">${link.label}</div>` : "";
 
-      if (embedUrl) {
+      if (isDriveFile) {
+        // Drive video/file: use /preview with allow="autoplay" so the
+        // built-in Drive player works inline without needing a separate tab.
+        const previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+        embedsContainer.insertAdjacentHTML("beforeend", `
+          <div class="detail-embed-block">
+            ${labelHtml}
+            <div class="detail-embed-wrap">
+              <iframe
+                src="${previewUrl}"
+                class="detail-embed-frame"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+                title="${link.label || ''}">
+              </iframe>
+            </div>
+            ${captionHtml}
+          </div>`);
+
+      } else if (embedUrl) {
+        // Google Docs / Slides / Sheets
         embedsContainer.insertAdjacentHTML("beforeend", `
           <div class="detail-embed-block">
             ${labelHtml}
@@ -155,6 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             ${captionHtml}
           </div>`);
+
       } else if (isVideo) {
         embedsContainer.insertAdjacentHTML("beforeend", `
           <div class="detail-embed-block">
@@ -167,6 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             ${captionHtml}
           </div>`);
+
       } else if (isImage) {
         embedsContainer.insertAdjacentHTML("beforeend", `
           <div class="detail-embed-block">
@@ -178,7 +191,8 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             ${captionHtml}
           </div>`);
-    }});
+      }
+    });
   }
 
   // ── Sidebar ────────────────────────────────────────────────
