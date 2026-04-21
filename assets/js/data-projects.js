@@ -56,7 +56,7 @@ const PROJECT_DATA = [
             icon: "design", iconLabel: "WEB",
             tags: ["Client Project", "Python", "SQL"],
             image: "assets/images/PSD-chatbot.gif",
-            githubLink: "",
+            githubLink: "https://github.com/tri-o-na/PSD-LearningJourneyBuddy",
             extraLinks: [
               { label: "Final Presentation", url: "https://docs.google.com/presentation/d/17-wKtHYF8zQev-q7qjlCot4PGnqXJCse/edit?usp=sharing&ouid=113774774617297771803&rtpof=true&sd=true" , caption: `` },
               { label: "General User Flow", url: "https://docs.google.com/document/d/1F7AJVt9pgxScGmN-XS23kxTH5xkM_sPQ/edit?usp=sharing&ouid=113774774617297771803&rtpof=true&sd=true" , caption: `` },
@@ -88,7 +88,7 @@ const PROJECT_DATA = [
             icon: "cloud", iconLabel: "CLD",
             tags: ["HTML", "CSS", "JavaScript", "Docker", "Kubernetes", "Firebase"],
             image: "assets/images/CLOUD-ArchitecturalDiagram.png",
-            githubLink: "",
+            githubLink: "https://github.com/tri-o-na/CLOUD-AuraLearn",
             extraLinks: [
               { label: "Project Proposal", url: "https://drive.google.com/file/d/1yHbQPZlhqy4_cfH0li9l_sKUbDEHJJs5/view?usp=sharing" , caption: `` },
               { label: "Architectural Diagram", url: "assets/images/CLOUD-ArchitecturalDiagram.png" , caption: `` },
@@ -139,7 +139,7 @@ const PROJECT_DATA = [
             icon: "iot", iconLabel: "IOT",
             tags: ["C", "Raspberry Pi Pico", "IoT"],
             image: "assets/images/ESP-RobotCar.jpg",
-            githubLink: "",
+            githubLink: "https://github.com/tri-o-na/EmbeddedSystems_RobotCar.git",
             extraLinks: [
               { label: "Robot Car Model", url: "assets/images/ESP-RobotCar.jpg" , caption: `` },
               { label: "Final Video Demo", url: "https://drive.google.com/file/d/17aBa4kkCABS7xlAK9U_EjKjKImzAxYm7/view?usp=sharing" , caption: `` },
@@ -205,7 +205,7 @@ const PROJECT_DATA = [
             icon: "design", iconLabel: "MOB",
             tags: ["Kotlin", "Android", "CI/CD"],
             image: "assets/images/MAD-MorphLearn.jpg",
-            githubLink: "",
+            githubLink: "https://github.com/tri-o-na/MAD-MorphLearn",
             extraLinks: [
               { label: "Project Proposal", url: "https://drive.google.com/file/d/1_Knq_CwsZE3rKkXwdqDpCyzKPA6cE1Pg/view?usp=sharing" , caption: `` },
               { label: "Final Architectural Diagram", url: "assets/images/MAD-FinalArchitecturalDiagram.png" , caption: `` },
@@ -226,7 +226,7 @@ const PROJECT_DATA = [
             <p> I focused on the Cross-Environment Validation and creating the final architectural diagram </p>`,
             icon: "data", iconLabel: "DA",
             tags: ["Python", "Data Analytics"],
-            image: "",
+            image: "https://github.com/tri-o-na/DATA-UWBLocalisation",
             githubLink: "",
             extraLinks: [
               { label: "Final Presentation Video", url: "https://drive.google.com/file/d/1nr40WPabd7Jo0egA-fCy7gxCdnnYasjQ/view?usp=sharing" , caption: `` },
@@ -256,7 +256,7 @@ const PROJECT_DATA = [
             `,
             icon: "iot", iconLabel: "IOT",
             tags: ["Arduino", "IoT"],
-            image: "",
+            image: "https://github.com/tri-o-na/IOT-FastReact.git",
             githubLink: "",
             extraLinks: [
               { label: "Project Proposal", url: "https://drive.google.com/file/d/1lSWG9xHDNvLt48kG4ODd4BDMo1azFBcH/view?usp=sharing" , caption: `` },
@@ -294,7 +294,7 @@ const PROJECT_DATA = [
             icon: "systems", iconLabel: "SYS",
             tags: ["C", "Assembly", "Raspberry Pi"],
             image: "",
-            githubLink: "",
+            githubLink: "https://github.com/tri-o-na/COA-AssemblyRaspberryPi",
             extraLinks: [
               { label: "Final Report", url: "https://docs.google.com/document/d/1_rVGtRqkQdU1MOqdLKJIeST3dKo_NkMf/edit?authuser=0&ouid=113774774617297771803&rtpof=true&sd=true&usp=sharing" , caption: `` },
               { label: "Final Presentation", url: "https://docs.google.com/presentation/d/1dMs8ssCZesVW-en13FiGfB0b7wXwOZJgsBS1ebJ_6Rg/present" },
@@ -317,7 +317,7 @@ const PROJECT_DATA = [
             icon: "systems", iconLabel: "SYS",
             tags: ["C"],
             image: "assets/images/PGM-TicTacToe.jpg",
-            githubLink: "",
+            githubLink: "https://github.com/tri-o-na/PGM-TicTacToe",
             extraLinks: [
               { label: "Final Report", url: "https://docs.google.com/document/d/19ET7QotK00rYyQR8tr3LbrEVfy1_4xy8N24NJHhc750/edit?authuser=0&usp=sharing" , caption: `` },
               { label: "Final Video Demo", url: "https://drive.google.com/file/d/1HLjXAqaEKGZ8HSb6nMLkC9sN0eO_x6dm/view?usp=sharing" , caption: `` },
@@ -366,7 +366,7 @@ const PROJECT_DATA = [
             icon: "data", iconLabel: "ALG",
             tags: ["Python", "Algorithms"],
             image: "assets/images/DSA-RouteRadar.jpg",
-            githubLink: "",
+            githubLink: "https://github.com/tri-o-na/DSA-RouteRadar",
             extraLinks: [
               { label: "Final Video Presentation", url: "https://drive.google.com/file/d/1oolPARnabet44eZ0wK7uqnV_hrpTbNhY/view?usp=sharing" },
 
@@ -399,7 +399,7 @@ const PROJECT_DATA = [
             icon: "design", iconLabel: "WEB",
             tags: ["Rust", "Actix", "SQLite"],
             image: "",
-            githubLink: "",
+            githubLink: "https://github.com/tri-o-na/WEB-BugTracker",
             extraLinks: [
               { label: "Video Demo", url: "https://drive.google.com/file/d/19kJug7idzTQVRDNRiXhIqAPU8lZI2TOB/view?usp=sharing" },
 
@@ -416,7 +416,7 @@ const PROJECT_DATA = [
             icon: "backend", iconLabel: "DB",
             tags: ["Rust", "TypeScript", "SQL", "NoSQL"],
             image: "assets/images/DB-ArchitecturalDiagram.png",
-            githubLink: "",
+            githubLink: "https://github.com/tri-o-na/DB-CRYpt",
             extraLinks: [
               { label: "Progress Report", url: "https://drive.google.com/file/d/1ZZ2sDmc-B3dh0tPrdisJpgEYfhHdukBp/view" , caption: `` },
               { label: "Final Report", url: "https://drive.google.com/file/d/1jo-LKZPyqjNBZci5_XgqgHxPz_bUSooM/view" , caption: `` },
@@ -435,7 +435,7 @@ const PROJECT_DATA = [
             icon: "systems", iconLabel: "SYS",
             tags: ["Bash", "Python"],
             image: "",
-            githubLink: "",
+            githubLink: "https://github.com/tri-o-na/OS-UnderstandAI",
             extraLinks: [
               { label: "Final Report", url: "https://docs.google.com/document/d/1gqFAvFQ8ofjcQHc4MHvq6U36EXuhEXJOh0wsoHKXoyg/edit?authuser=0&usp=sharing" , caption: `` },
               { label: "Final Presentation Video", url: "https://drive.google.com/file/d/1JfEaO_Gom-5ET9nhH-DkPH8lnaE_71-M/view?usp=sharing" , caption: `` },
