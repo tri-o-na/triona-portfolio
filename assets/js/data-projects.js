@@ -675,7 +675,7 @@ const PROJECT_DATA = [
             icon: "cloud", iconLabel: "CLD",
             tags: ["AWS", "JavaScript", "Postman", "AWS S3", "AWS DynamoDB"],
             image: "assets/images/CADV-eleganceia.png",
-            githubLink: "",
+            githubLink: "https://github.com/tri-o-na/CADV-Eleganceia",
             extraLinks: [
               { label: "Use Case Diagram", url: "assets/images/CADV-UseCaseDiagram.png", 
                 caption: `<p>The app targets vacationers and staycationers with guest and registered user roles. Guests have limited access, mainly to sign up or view all hotels. Registered users, who've signed up and logged in, enjoy full site access, including reservations, room views, and favorites.</p>
