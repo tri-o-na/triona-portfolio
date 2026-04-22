@@ -139,7 +139,7 @@ const PROJECT_DATA = [
             icon: "iot", iconLabel: "IOT",
             tags: ["C", "Raspberry Pi Pico", "IoT"],
             image: "assets/images/ESP-RobotCar.jpg",
-            githubLink: "https://github.com/tri-o-na/EmbeddedSystems_RobotCar",
+            githubLink: "https://github.com/tri-o-na/ESP-RobotCar",
             extraLinks: [
               { label: "Robot Car Model", url: "assets/images/ESP-RobotCar.jpg" , caption: `` },
               { label: "Final Video Demo", url: "https://drive.google.com/file/d/17aBa4kkCABS7xlAK9U_EjKjKImzAxYm7/view?usp=sharing" , caption: `` },
