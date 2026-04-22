@@ -10,7 +10,7 @@
   border-bottom: 1px solid var(--border-strong);
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -26,14 +26,14 @@
   margin-bottom: 3px;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
 }
 
 .edu-institution {
   margin-bottom: 3px;
   color: var(--accent);
-  font-size: 12.5px;
+  font-size: 13.5px;
   font-weight: 500;
 }
 
@@ -132,7 +132,7 @@
   color: var(--ink-muted);
   cursor: pointer;
   font-family: var(--mono);
-  font-size: 10.5px;
+  font-size: 11.5px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   transition: color 0.2s, border-color 0.2s;
@@ -174,7 +174,7 @@
   color: #fff;
   cursor: pointer;
   font-family: var(--serif);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.02em;
   text-align: left;

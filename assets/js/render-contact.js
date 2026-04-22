@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <span class="contact-value">${d.contact.github.label}</span>
       <span class="contact-arrow">&rarr;</span>
     </a>
-    <a href="${d.contact.portfolio.url}" class="contact-item">
-      <span class="contact-label">Portfolio</span>
-      <span class="contact-value">${d.contact.portfolio.label}</span>
+    <a href="${d.contact.resume.url}" class="contact-item">
+      <span class="contact-label">Resume</span>
+      <span class="contact-value">${d.contact.resume.label}</span>
       <span class="contact-arrow">&rarr;</span>
     </a>
     <div class="contact-item contact-item-static">

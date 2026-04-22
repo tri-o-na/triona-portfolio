@@ -1,27 +1,20 @@
 // render-skills.js
-// Languages get their own group.
-// Category groups (tools/frameworks) can ALSO show languages that are
-// relevant to that domain — languages appear in BOTH places intentionally.
 document.addEventListener("DOMContentLoaded", () => {
 
-  // ── Programming languages — shown as their own group first ────
+  // ── Programming languages — EXACT match only ──────────────────
   const LANGUAGES = [
     "Python", "Java", "JavaScript", "TypeScript",
     "Rust", "C", "Dart", "Kotlin", "HTML", "CSS",
     "SQL", "Assembly", "Bash",
   ];
 
-  // ── Category groups: tools, frameworks, concepts ─────────────
-  // These match tools/concepts AND can repeat languages where relevant.
-  // Languages listed here will appear in both Languages AND the category.
+  // ── Category groups ───────────────────────────────────────────
   const GROUPS = [
     {
       key: "design",
       title: "Front-End & Design",
       icon: "✦",
-      // languages relevant to this domain
       langs: ["HTML", "CSS", "JavaScript", "TypeScript", "Dart", "Kotlin"],
-      // tools / frameworks / concepts only
       tools: [
         "Angular", "React", "Vue", "Flutter", "Vite.js",
         "Android", "Android Studio", "Adobe XD",
@@ -34,8 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       icon: "▣",
       langs: ["Python", "Java", "Rust", "TypeScript", "SQL"],
       tools: [
-        "Node.js", "MongoDB", "NoSQL", "SQLite",
-        "Actix", "Express", "Laravel", "PHP",
+        "Node.js", "Actix", "Express", "Laravel", "PHP",
         "REST", "Postman",
       ],
     },
@@ -88,39 +80,53 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
-  // ── Collect all unique tags from every project ────────────────
-  const allTags = [...new Set(PORTFOLIO.projects.flatMap(p => p.tags))];
+  // ── Databases group (explicit list, not derived from tags) ─────
+  const DATABASE_ITEMS = [
+    "SQL", "SQLite", "MySQL", "PostgreSQL",
+    "MongoDB", "NoSQL", "Firebase", "Firestore", "AWS S3", "AWS DynamoDB"
+  ];
 
-  // ── Helper: does a tag match any keyword? ─────────────────────
-  function matchesAny(tag, keywords) {
-    return keywords.some(kw =>
-      tag.toLowerCase() === kw.toLowerCase() ||
-      tag.toLowerCase().startsWith(kw.toLowerCase())
-    );
+  // ── Tags to exclude from skills entirely ─────────────────────
+  const EXCLUDED_TAGS = ["Client Project", "OIP", "Glasgow"];
+
+  // ── Collect all unique tags from every project ────────────────
+  const allTags = [...new Set(PORTFOLIO.projects.flatMap(p => p.tags))]
+    .filter(t => !EXCLUDED_TAGS.some(ex => ex.toLowerCase() === t.toLowerCase()));
+
+  // ── Exact-match only for languages (no startsWith) ────────────
+  function isLanguage(tag) {
+    return LANGUAGES.some(l => tag.toLowerCase() === l.toLowerCase());
   }
 
-  // ── Build the Languages group from allTags ────────────────────
-  const langTags = allTags.filter(t => matchesAny(t, LANGUAGES));
+  function matchesAny(tag, keywords) {
+    return keywords.some(kw => tag.toLowerCase() === kw.toLowerCase());
+  }
 
-  // ── Build each category group ─────────────────────────────────
-  // Each group = its relevant languages (filtered to what exists in allTags)
-  //            + its tools (filtered to what exists in allTags)
+  // ── Build language tags — exact match only ────────────────────
+  const langTags = allTags.filter(t => isLanguage(t));
+
+  // ── Build database tags — from allTags + explicit list ────────
+  const dbTags = [...new Set([
+    ...allTags.filter(t => matchesAny(t, DATABASE_ITEMS)),
+    ...DATABASE_ITEMS.filter(d => allTags.some(t => t.toLowerCase() === d.toLowerCase())),
+  ])];
+
+  // ── Build category groups ─────────────────────────────────────
   const categoryGroups = GROUPS.map(group => {
     const relevantLangs = allTags.filter(t => matchesAny(t, group.langs));
     const relevantTools = allTags.filter(t => matchesAny(t, group.tools));
-    // Deduplicate, langs first then tools
     const tags = [...new Set([...relevantLangs, ...relevantTools])];
     return { ...group, tags };
   }).filter(g => g.tags.length > 0);
 
   // ── Render helper ─────────────────────────────────────────────
-  function renderGroup(key, icon, title, tags) {
+  function renderGroup(key, icon, title, tags, forceSingleCol) {
     if (!tags.length) return "";
 
     const half    = Math.ceil(tags.length / 2);
     const col1    = tags.slice(0, half);
     const col2    = tags.slice(half);
-    const hasCols = tags.length > 5;
+    const hasCols = !forceSingleCol && tags.length > 5;
 
     const tagItem = t => `
       <div class="skill-item">
@@ -148,15 +154,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // ── Inject into page ──────────────────────────────────────────
   const grid = document.querySelector(".skills-grid");
 
-  // Languages card spans full width — add a special class for that
-  const langsHtml = langTags.length
-    ? renderGroup("languages", "{ }", "Programming Languages", langTags)
-        .replace('class="skill-group"', 'class="skill-group skill-group--wide"')
+  // Languages + Databases side by side in a paired wide row
+  const langsHtml = renderGroup("languages", "{ }", "Programming Languages", langTags);
+  const dbHtml    = renderGroup("databases", "⊞", "Databases", dbTags);
+
+  const pairedHtml = (langsHtml || dbHtml)
+    ? `<div class="skill-group-pair">${langsHtml}${dbHtml}</div>`
     : "";
 
   const categoriesHtml = categoryGroups
     .map(g => renderGroup(g.key, g.icon, g.title, g.tags))
     .join("");
 
-  grid.innerHTML = langsHtml + categoriesHtml;
+  grid.innerHTML = pairedHtml + categoriesHtml;
 });

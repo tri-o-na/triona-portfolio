@@ -32,7 +32,7 @@ var PORTFOLIO = {
     email:    "triona.lee13@gmail.com",
     linkedin: { label: "triona-lee",  url: "https://www.linkedin.com/in/triona-lee/" },
     github:   { label: "tri-o-na",    url: "https://github.com/tri-o-na" },
-    portfolio:{ label: "This site",   url: "index.html" },
+    resume:{ label: "My latest works",   url: "https://drive.google.com/file/d/1X8TIW7_S29HYqqIbf_HZNZqXRUOZY9up/view" },
   },
 
   // ── Education ──────────────────────────────────────────────

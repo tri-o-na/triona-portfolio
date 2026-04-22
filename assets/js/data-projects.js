@@ -86,7 +86,7 @@ const PROJECT_DATA = [
             <p>Working in groups, you will apply knowledge from Dell’s online courses to derive your own specification and design. Groups are responsible for dividing work and managing the project to deliver novel functionality and tangible outcomes.</p>
             `,
             icon: "cloud", iconLabel: "CLD",
-            tags: ["HTML", "CSS", "JavaScript", "Docker", "Kubernetes", "Firebase"],
+            tags: ["HTML", "CSS", "JavaScript", "Docker", "Kubernetes", "Firebase", "Firestore"],
             image: "assets/images/CLOUD-ArchitecturalDiagram.png",
             githubLink: "https://github.com/tri-o-na/CLOUD-AuraLearn",
             extraLinks: [
@@ -139,7 +139,7 @@ const PROJECT_DATA = [
             icon: "iot", iconLabel: "IOT",
             tags: ["C", "Raspberry Pi Pico", "IoT"],
             image: "assets/images/ESP-RobotCar.jpg",
-            githubLink: "https://github.com/tri-o-na/EmbeddedSystems_RobotCar.git",
+            githubLink: "https://github.com/tri-o-na/EmbeddedSystems_RobotCar",
             extraLinks: [
               { label: "Robot Car Model", url: "assets/images/ESP-RobotCar.jpg" , caption: `` },
               { label: "Final Video Demo", url: "https://drive.google.com/file/d/17aBa4kkCABS7xlAK9U_EjKjKImzAxYm7/view?usp=sharing" , caption: `` },
@@ -226,8 +226,8 @@ const PROJECT_DATA = [
             <p> I focused on the Cross-Environment Validation and creating the final architectural diagram </p>`,
             icon: "data", iconLabel: "DA",
             tags: ["Python", "Data Analytics"],
-            image: "https://github.com/tri-o-na/DATA-UWBLocalisation",
-            githubLink: "",
+            image: "",
+            githubLink: "https://github.com/tri-o-na/DATA-UWBLocalisation",
             extraLinks: [
               { label: "Final Presentation Video", url: "https://drive.google.com/file/d/1nr40WPabd7Jo0egA-fCy7gxCdnnYasjQ/view?usp=sharing" , caption: `` },
               { label: "Final Report", url: "https://drive.google.com/file/d/1Fr0Z1wqfundEyxLKvYqSpoU2IcqUpocS/view?usp=sharing" , caption: `` },
@@ -256,8 +256,8 @@ const PROJECT_DATA = [
             `,
             icon: "iot", iconLabel: "IOT",
             tags: ["Arduino", "IoT"],
-            image: "https://github.com/tri-o-na/IOT-FastReact.git",
-            githubLink: "",
+            image: "",
+            githubLink: "https://github.com/tri-o-na/IOT-FastReact",
             extraLinks: [
               { label: "Project Proposal", url: "https://drive.google.com/file/d/1lSWG9xHDNvLt48kG4ODd4BDMo1azFBcH/view?usp=sharing" , caption: `` },
               { label: "Final Report", url: "https://drive.google.com/file/d/1apUYfF28GwIHocCDmpm0jq43qk0iYhb6/view?usp=sharing" , caption: `` },
@@ -382,7 +382,7 @@ const PROJECT_DATA = [
             fullDesc: "This project involved the design and implementation of a Hospital Management System using the object-oriented programming paradigm in Java. Working within a large group of 12 that was subdivided into two six-student programming teams, the project was split into two phases. Phase 1 focused on individual teams developing an automatically assigned core module of the system, including producing a detailed technical report with usage explanation and Javadoc documentation. Phase 2 required the two programming teams in the larger group to consolidate their work into a single main program and integrate two additional modules selected from four modules provided by other groups in an executable object format. This emphasized real-world software development challenges, such as integrating black-box components, effective communication, and collaborative design.",
             icon: "backend", iconLabel: "OOP",
             tags: ["Java", "OOP"],
-            image: "", githubLink: "https://github.com/tri-o-na/OOP-Hospital-Management.git",
+            image: "", githubLink: "https://github.com/tri-o-na/OOP-Hospital-Management",
             extraLinks: [
               { label: "Phase 1 Report (team of 6)", url: "https://docs.google.com/document/d/163U--2pIx-x_klNpg4zraARYNlEW9gFVsg9fBfXDtzY/edit?usp=sharing" , caption: `` },
               { label: "Phase 2 Report (group of 12)", url: "https://docs.google.com/document/d/1-DiJSAj1ZVFlJtA6vgOYnBSYy-EYVzHEAukI1v2s2Rg/edit?usp=sharing" }
@@ -500,6 +500,8 @@ const PROJECT_DATA = [
             image: "assets/images/COMT-Clarity.jpeg",
             githubLink: "https://github.com/tri-o-na/COMT-Clarity",
             extraLinks: [
+              { label: "Adobe XD: Low-Fidelity Prototype", url: "https://xd.adobe.com/view/d244e9bc-1632-4fa5-9455-298daf3b3829-8717/" , caption: `` },
+              { label: "Adobe XD: Hi-Fidelity Prototype", url: "https://xd.adobe.com/view/9b5b04a4-e3cd-48f7-a38c-751cd4a26536-ce08/?fullscreen" , caption: `` },
               { label: "Final UI App Demo on Adobe XD", url: "https://drive.google.com/file/d/1WkpqdlObjaLkcTT1cR9k6S0KkMjeuJry/view?usp=sharing" , caption: `` },
               { label: "Final App Demo on Android Studio", url: "https://drive.google.com/file/d/1dud9MK9SSJxy-l8havk64FbzTLObogrC/view?usp=sharing" },
 
@@ -671,7 +673,7 @@ const PROJECT_DATA = [
             <br>
             <p><b>Final Product:</b> A completed and functional Hotel Reservation Web Application, which follows closely the Hi-Fi design, planned and designed in Adobe XD </p>`,
             icon: "cloud", iconLabel: "CLD",
-            tags: ["AWS", "JavaScript", "Postman"],
+            tags: ["AWS", "JavaScript", "Postman", "AWS S3", "AWS DynamoDB"],
             image: "assets/images/CADV-eleganceia.png",
             githubLink: "",
             extraLinks: [
@@ -721,7 +723,7 @@ const PROJECT_DATA = [
               <li>Alerts will also be sent to the owner if the pool's quality is not up to standard (when the levels are too low or too high) which may harm the swimmer when swimming.</li>
             </ul>`,
             icon: "iot", iconLabel: "IOT",
-            tags: ["IoT", "AWS", "JavaScript"],
+            tags: ["IoT", "AWS", "JavaScript", "AWS DynamoDB"],
             image: "assets/images/ITAD-ArchitecturalDiagram.png",
             githubLink: "",
             extraLinks: [
@@ -757,6 +759,7 @@ const PROJECT_DATA = [
             image: "assets/images/DVOPS-Dogtopia.jpeg",
             githubLink: "https://github.com/tri-o-na/DVOPS-Dogtopia",
             extraLinks: [
+              { label: "Adobe XD: Hi-Fidelity Prototype", url: "https://xd.adobe.com/view/a39c56d9-6d58-4598-bf48-a616b9b13b29-f6cf/" , caption: `` },
               { label: "Final Presentation Part 1", url: "https://drive.google.com/file/d/17viQfFaV68SmszEzVbfx3mhyNTVEfl-O/view?usp=sharing" , caption: `` },
               { label: "Final Presentation Part 2", url: "https://drive.google.com/file/d/1u6FpFOLgEhiwAk1dnEJAmSfAHU5IQwpK/view?usp=sharing" , caption: `` },
             ],
