@@ -15,10 +15,8 @@
 
 <main class="page page-standalone" id="page-home">
 
+  <!-- Left: all text content -->
   <div class="hero-left">
-    <div class="hero-photo-wrap">
-      <img src="assets/images/profile.jpg" alt="">
-    </div>
     <div class="hero-eyebrow"></div>
     <h1 class="hero-name"></h1>
     <p class="hero-title"></p>
@@ -30,10 +28,17 @@
     </div>
   </div>
 
+  <!-- Right: tall photo strip with vertical links -->
   <div class="hero-right">
-    <div class="hero-stat-grid"></div>
-    <div class="hero-links"></div>
+    <div class="hero-photo-pill">
+      <img src="assets/images/profile.jpg" alt="" id="hero-photo-img">
+      <div class="hero-photo-fallback"></div>
+    </div>
+    <div class="hero-vertical-links" id="hero-vertical-links"></div>
   </div>
+
+  <!-- Bottom: stats bar spans full width -->
+  <div class="hero-stats-bar" id="hero-stats-bar"></div>
 
 </main>
 

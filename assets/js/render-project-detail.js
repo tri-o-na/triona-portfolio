@@ -112,57 +112,53 @@ document.addEventListener("DOMContentLoaded", () => {
     const linksEl   = document.getElementById("detail-sidebar-links");
     linksWrap.style.display = "block";
 
+    // ── First pass: populate sidebar links ─────────────────────
+    project.extraLinks.forEach(link => {
+      if (!link.url || !link.label) return;
+      linksEl.insertAdjacentHTML("beforeend", `
+        <a class="detail-sidebar-link" href="${link.url}" target="_blank" rel="noreferrer">
+          ${link.label} &rarr;
+        </a>`);
+    });
+
+    // ── Second pass: render embeds below description ────────────
     project.extraLinks.forEach(link => {
       if (!link.url) return;
 
-      const urlLower   = link.url.toLowerCase();
-      const embedUrl   = driveEmbedUrl(link.url);
-      const fileId     = driveFileId(link.url);
+      const urlLower    = link.url.toLowerCase();
+      const embedUrl    = driveEmbedUrl(link.url);
+      const fileId      = driveFileId(link.url);
       const isDriveFile = !!fileId && link.url.includes("drive.google.com");
-      const isVideo    = urlLower.endsWith('.mp4') || urlLower.endsWith('.webm');
-      const isImage    = urlLower.endsWith('.jpg') || urlLower.endsWith('.jpeg') ||
-                         urlLower.endsWith('.png') || urlLower.endsWith('.gif') ||
-                         urlLower.endsWith('.webp');
-
-      if (link.label) {
-        linksEl.insertAdjacentHTML("beforeend", `
-          <a class="detail-sidebar-link" href="${link.url}" target="_blank" rel="noreferrer">
-            ${link.label} &rarr;
-          </a>`);
-      }
+      const isVideo     = urlLower.endsWith('.mp4') || urlLower.endsWith('.webm');
+      const isImage     = urlLower.endsWith('.jpg') || urlLower.endsWith('.jpeg') ||
+                          urlLower.endsWith('.png') || urlLower.endsWith('.gif') ||
+                          urlLower.endsWith('.webp');
+      const isSlides    = link.url.includes("presentation");
 
       const captionHtml = link.caption ? `<p class="detail-embed-caption">${link.caption}</p>` : "";
       const labelHtml   = link.label   ? `<div class="detail-section-label">${link.label}</div>` : "";
 
       if (isDriveFile) {
-        // Drive video/file: use /preview with allow="autoplay" so the
-        // built-in Drive player works inline without needing a separate tab.
         const previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
         embedsContainer.insertAdjacentHTML("beforeend", `
           <div class="detail-embed-block">
             ${labelHtml}
-            <div class="detail-embed-wrap">
-              <iframe
-                src="${previewUrl}"
-                class="detail-embed-frame"
-                allow="autoplay; fullscreen"
-                allowfullscreen
-                loading="lazy"
-                title="${link.label || ''}">
-              </iframe>
+            <div class="detail-embed-wrap detail-embed-wrap--slides">
+              <iframe src="${previewUrl}" class="detail-embed-frame"
+                allow="autoplay; fullscreen" allowfullscreen loading="lazy"
+                title="${link.label || ''}"></iframe>
             </div>
             ${captionHtml}
           </div>`);
 
       } else if (embedUrl) {
-        // Google Docs / Slides / Sheets
+        const wrapClass = isSlides ? "detail-embed-wrap detail-embed-wrap--slides" : "detail-embed-wrap";
         embedsContainer.insertAdjacentHTML("beforeend", `
           <div class="detail-embed-block">
             ${labelHtml}
-            <div class="detail-embed-wrap">
+            <div class="${wrapClass}">
               <iframe src="${embedUrl}" class="detail-embed-frame"
-                allowfullscreen loading="lazy" title="${link.label || ''}">
-              </iframe>
+                allowfullscreen loading="lazy" title="${link.label || ''}"></iframe>
             </div>
             ${captionHtml}
           </div>`);
@@ -171,10 +167,9 @@ document.addEventListener("DOMContentLoaded", () => {
         embedsContainer.insertAdjacentHTML("beforeend", `
           <div class="detail-embed-block">
             ${labelHtml}
-            <div class="detail-embed-wrap">
+            <div class="detail-embed-wrap detail-embed-wrap--video">
               <video controls class="detail-embed-frame" style="background:#000;">
                 <source src="${link.url}" type="video/mp4">
-                Your browser does not support the video tag.
               </video>
             </div>
             ${captionHtml}
@@ -202,9 +197,13 @@ document.addEventListener("DOMContentLoaded", () => {
     `${yearLabels[project.year] || project.year}, ${project.term}`;
   document.getElementById("detail-sidebar-type").textContent = project.type;
 
+  // ── GitHub button (header, below tags) ─────────────────────
   if (project.githubLink) {
-    document.getElementById("detail-sidebar-github-wrap").style.display = "block";
-    document.getElementById("detail-sidebar-github").href = project.githubLink;
+    const githubBtn = document.getElementById("detail-github-btn");
+    if (githubBtn) {
+      githubBtn.href = project.githubLink;
+      githubBtn.style.display = "inline-flex";
+    }
   }
 
   // ── Header image (next to title) ──────────────────────────

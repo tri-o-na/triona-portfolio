@@ -78,7 +78,7 @@ nav {
   height: 58px;
   padding: 0 48px;
   border-bottom: 1px solid var(--border);
-  background: var(--accent-light);
+  background: var(--accent-pale);
   backdrop-filter: blur(12px);
 }
 
@@ -281,7 +281,7 @@ nav {
   top: 58px;
   left: 0;
   right: 0;
-  background: var(--accent-light);
+  background: var(--accent-pale);
   border-bottom: 1px solid var(--border);
   z-index: 99;
   flex-direction: column;
