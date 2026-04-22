@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
       : PORTFOLIO.projects.filter(p => p.icon === filter);
 
     if (!filtered.length) {
-      grid.innerHTML = `<p style="color:var(--ink-faint);font-family:var(--mono);font-size:12px;margin-top:24px;">No projects in this category yet.</p>`;
+      grid.innerHTML = `<p style="color:var(--forest-light);font-family:var(--mono);font-size:12px;margin-top:24px;">No projects in this category yet.</p>`;
       return;
     }
 

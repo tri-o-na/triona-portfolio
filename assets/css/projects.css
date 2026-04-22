@@ -11,7 +11,7 @@
 
 .era-label {
   white-space: nowrap;
-  color: var(--accent);
+  color: var(--forest-mid);
   font-family: var(--mono);
   font-size: 10.5px;
   letter-spacing: 0.18em;
@@ -25,7 +25,7 @@
 }
 
 .era-count {
-  color: var(--ink-faint);
+  color: var(--forest-light);
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.1em;
@@ -38,7 +38,7 @@
 .type-label {
   margin-bottom: 12px;
   padding-left: 2px;
-  color: var(--ink-muted);
+  color: var(--forest-mid);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -144,7 +144,7 @@
 }
 
 .thumb-upload-hint {
-  color: var(--ink-faint);
+  color: var(--forest-light);
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 0.1em;
@@ -157,7 +157,7 @@
 
 .project-number {
   margin-bottom: 4px;
-  color: var(--ink-faint);
+  color: var(--forest-light);
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 0.08em;
@@ -165,7 +165,7 @@
 
 .project-title {
   margin-bottom: 6px;
-  color: var(--ink);
+  color: var(--forest-deep);
   font-family: var(--serif);
   font-size: 18px;
   font-weight: 400;
@@ -174,7 +174,7 @@
 
 .project-desc {
   margin-bottom: 12px;
-  color: var(--ink-muted);
+  color: var(--forest-mid);
   font-size: 12.5px;
   line-height: 1.65;
 }
@@ -188,8 +188,8 @@
 .tag {
   padding: 3px 8px;
   border-radius: 2px;
-  background: var(--accent-pale);
-  color: var(--accent);
+  background: var(--cream);
+  color: var(--forest-mid);
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.05em;
@@ -202,7 +202,7 @@
 
 .tag.placeholder {
   background: var(--cream);
-  color: var(--ink-faint);
+  color: var(--forest-light);
 }
 
 /* ── Project school & year tabs ───────────────────────────────── */
@@ -210,7 +210,7 @@
   display: flex;
   gap: 0;
   margin-bottom: 28px;
-  border-bottom: 2px solid var(--border-strong);
+  border-bottom: 2px solid var(--stone);
 }
 
 .proj-school-btn {
@@ -218,7 +218,7 @@
   border: none;
   border-bottom: 3px solid transparent;
   background: none;
-  color: var(--ink-muted);
+  color: var(--forest-mid);
   cursor: pointer;
   font-family: var(--sans);
   font-size: 12.5px;
@@ -228,11 +228,11 @@
   margin-bottom: -2px;
 }
 
-.proj-school-btn:hover { color: var(--accent-warm); }
+.proj-school-btn:hover { color: var(--forest-light); }
 
 .proj-school-btn.active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  color: var(--forest-mid);
+  border-bottom-color: var(--forest-mid);
   font-weight: 500;
 }
 
@@ -247,10 +247,10 @@
 
 .proj-year-btn {
   padding: 6px 18px;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--stone);
   border-radius: 2px;
   background: transparent;
-  color: var(--ink-muted);
+  color: var(--forest-mid);
   cursor: pointer;
   font-family: var(--mono);
   font-size: 10.5px;
@@ -260,13 +260,13 @@
 }
 
 .proj-year-btn:hover {
-  border-color: var(--accent-warm);
-  color: var(--accent-warm);
+  border-color: var(--forest-light);
+  color: var(--forest-light);
 }
 
 .proj-year-btn.active {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--forest-mid);
+  border-color: var(--forest-mid);
   color: #fff;
 }
 
@@ -299,10 +299,10 @@ a.project-card {
   align-items: center;
   gap: 6px;
   padding: 6px 16px;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--stone);
   border-radius: 20px;
   background: transparent;
-  color: var(--ink-muted);
+  color: var(--forest-mid);
   cursor: pointer;
   font-family: var(--mono);
   font-size: 10.5px;
@@ -312,13 +312,13 @@ a.project-card {
 }
 
 .proj-filter-btn:hover {
-  border-color: var(--accent-warm);
-  color: var(--accent-warm);
+  border-color: var(--forest-light);
+  color: var(--forest-light);
 }
 
 .proj-filter-btn.active {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--forest-mid);
+  border-color: var(--forest-mid);
   color: #fff;
 }
 
@@ -347,7 +347,7 @@ a.project-card {
 
 .type-count {
   margin-left: auto;
-  color: var(--ink-faint);
+  color: var(--forest-light);
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -379,7 +379,7 @@ a.project-card {
   border-radius: 2px;
 }
 
-.card-school-badge.sit  { background: var(--accent-light); color: var(--forest-mid); }
+.card-school-badge.sit  { background: var(--leaf); color: var(--forest-mid); }
 .card-school-badge.tp   { background: var(--border); color: var(--forest-deep); }
 /* ── Project detail page ──────────────────────────────────────── */
 .detail-breadcrumb {
@@ -393,14 +393,14 @@ a.project-card {
 }
 
 .breadcrumb-back {
-  color: var(--accent);
+  color: var(--forest-mid);
   text-decoration: none;
   transition: color 0.2s;
 }
-.breadcrumb-back:hover { color: var(--accent-warm); }
+.breadcrumb-back:hover { color: var(--forest-light); }
 
-.breadcrumb-sep { color: var(--ink-faint); }
-.breadcrumb-current { color: var(--ink-muted); }
+.breadcrumb-sep { color: var(--forest-light); }
+.breadcrumb-current { color: var(--forest-mid); }
 
 /* ── Detail header: two-col when image present ────────────────── */
 .detail-header {
@@ -474,7 +474,7 @@ a.project-card {
 }
 
 .detail-id {
-  color: var(--ink-faint);
+  color: var(--forest-light);
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.1em;
@@ -483,8 +483,8 @@ a.project-card {
 .detail-school-badge {
   padding: 3px 10px;
   border-radius: 2px;
-  background: var(--accent-pale);
-  color: var(--accent);
+  background: var(--cream);
+  color: var(--forest-mid);
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -495,7 +495,7 @@ a.project-card {
   display: inline-flex;
   padding: 3px 10px;
   border-radius: 2px;
-  background: var(--accent-light);
+  background: var(--leaf);
   color: var(--forest-mid);
   font-family: var(--mono);
   font-size: 10px;
@@ -505,7 +505,7 @@ a.project-card {
 
 .detail-title {
   margin-bottom: 8px;
-  color: var(--ink);
+  color: var(--forest-deep);
   font-family: var(--serif);
   font-size: clamp(26px, 3vw, 38px);
   font-weight: 300;
@@ -514,7 +514,7 @@ a.project-card {
 
 .detail-module {
   margin-bottom: 16px;
-  color: var(--ink-muted);
+  color: var(--forest-mid);
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.1em;
@@ -571,7 +571,7 @@ a.project-card {
 
 .detail-section-label {
   margin-bottom: 10px;
-  color: var(--accent);
+  color: var(--forest-mid);
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0.18em;
@@ -580,7 +580,7 @@ a.project-card {
 }
 
 .detail-full-desc {
-  color: var(--ink-soft);
+  color: var(--forest-deep);
   font-size: 14.5px;
   line-height: 1.85;
 }
@@ -631,20 +631,20 @@ a.project-card {
 }
 
 .detail-sidebar-value {
-  color: var(--ink-soft);
+  color: var(--forest-deep);
   font-size: 14px;
   font-weight: 500;
 }
 
 .detail-sidebar-link {
   display: block;
-  color: var(--accent);
+  color: var(--forest-mid);
   font-size: 14px;
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.detail-sidebar-link:hover { color: var(--accent-warm); }
+.detail-sidebar-link:hover { color: var(--forest-light); }
 
 /* ── Responsive ───────────────────────────────────────────────── */
 @media (max-width: 900px) {
@@ -668,7 +668,7 @@ a.project-card {
 /* ── Module name on project card ──────────────────────────────── */
 .project-module {
   margin-bottom: 4px;
-  color: var(--accent-warm);
+  color: var(--forest-light);
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -697,10 +697,10 @@ a.project-card {
   align-items: center;
   justify-content: center;
 }
-.detail-feature-wall.placeholder.backend      { background: var(--accent-pale); }
+.detail-feature-wall.placeholder.backend      { background: var(--cream); }
 .detail-feature-wall.placeholder.design   { background: #e8ede8; }
-.detail-feature-wall.placeholder.ai     { background: var(--accent-light); }
-.detail-feature-wall.placeholder.data     { background: var(--accent-light); }
+.detail-feature-wall.placeholder.ai     { background: var(--leaf); }
+.detail-feature-wall.placeholder.data     { background: var(--leaf); }
 .detail-feature-wall.placeholder.systems  { background: #e4ecf0; }
 .detail-feature-wall.placeholder.embedded { background: #dde8e0; }
 .detail-feature-wall.placeholder.cloud    { background: #e0eae8; }
@@ -721,7 +721,7 @@ a.project-card {
 }
 
 .wall-placeholder-hint {
-  color: var(--ink-faint);
+  color: var(--forest-light);
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.12em;
@@ -764,10 +764,10 @@ a.project-card {
   gap: 6px;
   margin-top: 14px;
   padding: 8px 18px;
-  border: 1.2px dashed var(--border-strong);
+  border: 1.2px dashed var(--stone);
   border-radius: 2px;
   background: var(--warm-white);
-  color: var(--ink-muted);
+  color: var(--forest-mid);
   font-family: var(--mono);
   font-size: 10.5px;
   letter-spacing: 0.08em;
@@ -776,7 +776,7 @@ a.project-card {
   text-transform: uppercase;
 }
 .detail-github-btn:hover {
-  border-color: var(--accent);
+  border-color: var(--forest-mid);
   border-style: solid;
   color: #fff;
   background-color: var(--forest-deep);
@@ -793,7 +793,7 @@ a.project-card {
 /* ── Embed caption ────────────────────────────────────────────── */
 .detail-embed-caption {
   margin-top: 10px;
-  color: var(--ink-muted);
+  color: var(--forest-mid);
   font-size: 15px;
   line-height: 1.6;
 }

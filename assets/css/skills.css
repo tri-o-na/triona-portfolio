@@ -27,7 +27,7 @@
 }
 
 .skill-group:hover {
-  border-color: var(--border-strong);
+  border-color: var(--stone);
   box-shadow: 0 2px 12px rgba(47, 62, 70, 0.06);
 }
 
@@ -42,7 +42,7 @@
 }
 
 .skill-group-icon {
-  color: var(--accent);
+  color: var(--forest-mid);
   font-size: 14px;
   line-height: 1;
   flex-shrink: 0;
@@ -50,7 +50,7 @@
 
 .skill-group-title {
   flex: 1;
-  color: var(--ink);
+  color: var(--forest-deep);
   font-family: var(--mono);
   font-size: 12px;
   font-weight: 400;
@@ -59,7 +59,7 @@
 }
 
 .skill-group-count {
-  color: var(--ink-faint);
+  color: var(--forest-deep);
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.06em;
@@ -93,7 +93,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--ink-soft);
+  color: var(--forest-deep);
   font-size: 13px;
   line-height: 1.4;
 }
@@ -108,7 +108,7 @@
   border-radius: 50%;
 }
 
-.skill-dot.languages { background: var(--accent); }
+.skill-dot.languages { background: var(--forest-mid); }
 .skill-dot.databases { background: var(--stone); }
 .skill-dot.design    { background: var(--pastelpurple ); }
 .skill-dot.ai        { background: var(--pastelpink); }

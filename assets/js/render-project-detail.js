@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="detail-embed-block">
             ${labelHtml}
             <div class="detail-embed-wrap detail-embed-wrap--video">
-              <video controls class="detail-embed-frame" style="background:#000;">
+              <video controls class="detail-embed-frame" style="background:var(--forest-deep);">
                 <source src="${link.url}" type="video/mp4">
               </video>
             </div>

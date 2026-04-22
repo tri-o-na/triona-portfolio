@@ -6,7 +6,7 @@
 
 .contact-intro {
   margin-bottom: 36px;
-  color: var(--ink-soft);
+  color: var(--forest-deep);
   font-size: 14px;
   line-height: 1.8;
 }
@@ -40,7 +40,7 @@
 
 .contact-label {
   width: 72px;
-  color: var(--ink-faint);
+  color: var(--forest-light);
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0.15em;
@@ -50,17 +50,17 @@
 
 .contact-value {
   flex: 1;
-  color: var(--ink-soft);
+  color: var(--forest-deep);
   font-size: 15px;
 }
 
 .contact-arrow {
-  color: var(--ink-faint);
+  color: var(--forest-light);
   font-size: 13px;
 }
 
 .contact-item:hover .contact-arrow {
-  color: var(--accent-warm);
+  color: var(--forest-light);
 }
 
 .contact-arrow--muted {
@@ -74,7 +74,7 @@
   padding: 40px;
   border: 1px solid var(--border);
   border-radius: 4px;
-  background: var(--ink-muted);
+  background: var(--forest-deep);
 }
 
 .contact-availability {
@@ -116,7 +116,7 @@
 }
 
 .contact-location {
-  color: var(--accent-light);
+  color: var(--leaf);
   font-family: var(--mono);
   font-size: 10.5px;
   letter-spacing: 0.1em;

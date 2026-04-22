@@ -43,7 +43,7 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 24px;
-  color: var(--accent-warm);
+  color: var(--forest-light);
   font-family: var(--mono);
   font-size: 10.5px;
   letter-spacing: 0.22em;
@@ -55,14 +55,14 @@
   display: inline-block;
   width: 32px;
   height: 1px;
-  background: var(--accent-warm);
+  background: var(--forest-light);
   flex-shrink: 0;
 }
 
 /* ── Name ────────────────────────────────────────────────────── */
 .hero-name {
   margin-bottom: 10px;
-  color: var(--ink);
+  color: var(--forest-deep);
   font-family: var(--serif);
   font-size: clamp(52px, 6vw, 80px);
   font-weight: 300;
@@ -72,13 +72,13 @@
 
 .hero-name em {
   font-style: italic;
-  color: var(--accent);
+  color: var(--forest-mid);
 }
 
 /* ── Title ───────────────────────────────────────────────────── */
 .hero-title {
   margin-bottom: 22px;
-  color: var(--ink-faint);
+  color: var(--forest-light);
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.14em;
@@ -89,7 +89,7 @@
 .hero-bio {
   max-width: 420px;
   margin-bottom: 36px;
-  color: var(--ink-soft);
+  color: var(--forest-deep);
   font-size: 14px;
   line-height: 1.85;
 }
@@ -124,31 +124,31 @@
   color: #fff;
 }
 .btn-primary:hover {
-  background: var(--accent-warm);
+  background: var(--forest-light);
   transform: translateY(-1px);
 }
 
 .btn-outline {
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--stone);
   background: transparent;
-  color: var(--ink);
+  color: var(--forest-deep);
   font-weight: 400;
 }
 .btn-outline:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--forest-mid);
+  color: var(--forest-mid);
   transform: translateY(-1px);
 }
 
 .btn-ghost {
-  border: 1px dashed var(--border-strong);
+  border: 1px dashed var(--stone);
   background: transparent;
-  color: var(--ink-muted);
+  color: var(--forest-mid);
 }
 .btn-ghost:hover {
-  border-color: var(--accent);
+  border-color: var(--forest-mid);
   border-style: solid;
-  color: var(--accent);
+  color: var(--forest-mid);
   transform: translateY(-1px);
 }
 
@@ -185,7 +185,7 @@
   border-radius: 110px 110px 0 0;
   overflow: hidden;
   flex-shrink: 0;
-  background: var(--accent);
+  background: var(--forest-mid);
 }
 
 .hero-photo-pill img {

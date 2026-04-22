@@ -3,21 +3,9 @@
   --cream: #dce8d5;           /* richer sage — card/panel backgrounds */
   --warm-white: #f5f7f2;      /* crisp white with subtle green tint — page background */
  
-  /* ── Ink / text ──────────────────────────────────────────────── */
-  --ink: #1a2e28;             /* deep forest — primary text (richer than before) */
-  --ink-soft: #1a2e28;        /* deep forest — body copy */
-  --ink-muted: #2d4a40;       /* forest mid — secondary text, nav links */
-  --ink-faint: #52796f;       /* warmer sage — timestamps, subtitles */
- 
-  /* ── Accents ─────────────────────────────────────────────────── */
-  --accent: #2d4a40;          /* deep forest teal — primary accent */
-  --accent-warm: #52796f;     /* warmer forest green — hover, highlights */
-  --accent-light: #b5cba8;    /* mid leaf — hover backgrounds */
-  --accent-pale: #dce8d5;     /* palest sage — chip/tag backgrounds */
- 
-  /* ── Borders ─────────────────────────────────────────────────── */
+  /* ── Ink / Borders  ──────────────────────────────────────────────── */
+  --ink: #000;             /* deep forest — primary text (richer than before) */
   --border: #c2d4bb;          /* sage mist — slightly richer */
-  --border-strong: #7a9e8e;   /* deeper sage */
  
   /* ── Extended palette (used in component CSS) ────────────────── */
   --forest-deep: #1a2e28;     /* darkest — hover states, hero right panel */
@@ -55,7 +43,7 @@ body {
   height: 100vh;
   overflow: hidden;
   background: var(--warm-white);
-  color: var(--ink);
+  color: var(--forest-deep);
   font-family: var(--sans);
   font-size: 15px;
   line-height: 1.7;
@@ -78,7 +66,7 @@ nav {
   height: 58px;
   padding: 0 48px;
   border-bottom: 1px solid var(--border);
-  background: var(--accent-pale);
+  background: var(--cream);
   backdrop-filter: blur(12px);
 }
 
@@ -88,7 +76,7 @@ nav {
   padding: 0;
   border: 0;
   background: none;
-  color: var(--ink);
+  color: var(--forest-deep);
   cursor: pointer;
   font-family: var(--serif);
   font-size: 18px;
@@ -119,7 +107,7 @@ nav {
   border: 0;
   border-bottom: 2px solid transparent;
   background: none;
-  color: var(--ink-muted);
+  color: var(--forest-mid);
   cursor: pointer;
   font-family: var(--sans);
   font-size: 12px;
@@ -137,8 +125,8 @@ nav {
 
 .nav-tabs a.active,
 .nav-tabs button.active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  color: var(--forest-mid);
+  border-bottom-color: var(--forest-mid);
 }
 
 .pages {
@@ -186,7 +174,7 @@ nav {
   align-items: center;
   gap: 12px;
   margin-bottom: 10px;
-  color: var(--accent);
+  color: var(--forest-mid);
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.2em;
@@ -198,12 +186,12 @@ nav {
   flex: 1;
   max-width: 60px;
   height: 1px;
-  background: var(--accent);
+  background: var(--forest-mid);
 }
 
 .section-title {
   margin-bottom: 40px;
-  color: var(--ink);
+  color: var(--forest-deep);
   font-family: var(--serif);
   font-size: clamp(30px, 3.5vw, 44px);
   font-weight: 300;
@@ -221,7 +209,7 @@ nav {
 
 .page::-webkit-scrollbar-thumb {
   border-radius: 2px;
-  background: var(--border-strong);
+  background: var(--stone);
 }
 
 @media (max-width: 900px) {
@@ -263,7 +251,7 @@ nav {
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--ink);
+  background: var(--forest-deep);
   border-radius: 2px;
   transition: transform 0.25s, opacity 0.2s;
   transform-origin: center;
@@ -281,7 +269,7 @@ nav {
   top: 58px;
   left: 0;
   right: 0;
-  background: var(--accent-pale);
+  background: var(--cream);
   border-bottom: 1px solid var(--border);
   z-index: 99;
   flex-direction: column;
@@ -293,7 +281,7 @@ nav {
 
 .nav-mobile-menu a {
   padding: 12px 24px;
-  color: var(--ink-muted);
+  color: var(--forest-mid);
   font-family: var(--sans);
   font-size: 13px;
   font-weight: 400;
@@ -305,7 +293,7 @@ nav {
 
 .nav-mobile-menu a:hover,
 .nav-mobile-menu a.active {
-  color: var(--accent);
+  color: var(--forest-mid);
   background: rgba(53, 79, 82, 0.06);
 }
 
