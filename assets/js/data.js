@@ -13,6 +13,7 @@ var PORTFOLIO = {
   tagline: "UI/UX enthusiast with a background in Full-stack development and Mobile optimization.",
   bio: "Computing Science undergraduate at Singapore Institute of Technology × University of Glasgow, building practical, high-impact software. UI/UX enthusiast with a background in Full-stack development and Mobile optimization.",
   availability: "Available for opportunities",
+  internship: "Internship: 31 Aug 2025 — 9 Apr 2026",
   location: "Singapore",
   phoneNumber: "+65 9766 6962",
   languages: ["English", "Chinese"],
