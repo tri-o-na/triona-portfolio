@@ -10,10 +10,11 @@ var PORTFOLIO = {
     last: "Lee",
   },
   title: "Computing Science Undergraduate",
-  tagline: "UI/UX enthusiast with a background in Full-stack development and Mobile optimization.",
-  bio: "Computing Science undergraduate at Singapore Institute of Technology × University of Glasgow, building practical, high-impact software. UI/UX enthusiast with a background in Full-stack development and Mobile optimization.",
+  roles: ["Full-Stack Dev", "Mobile Dev", "AI / ML", "Cloud & DevOps", "UI/UX"],
+  tagline: "Computing Science undergraduate at SIT × UofG, building practical, high-impact software with a focus on UI/UX, full-stack development, and mobile optimisation.",
+  bio: "Computing Science undergraduate at Singapore Institute of Technology × University of Glasgow, building practical, high-impact software with a focus on UI/UX, full-stack development, and mobile optimisation.",
   availability: "Available for opportunities",
-  internship: "Internship: 31 Aug 2025 — 9 Apr 2026",
+  internship: "Internship: 31 Aug 2026 — 9 Apr 2027",
   location: "Singapore",
   phoneNumber: "+65 9766 6962",
   languages: ["English", "Chinese"],
@@ -22,8 +23,7 @@ var PORTFOLIO = {
 
   // ── Stats (home page hero) ─────────────────────────────────
   stats: [
-    { num: "5+",  label: "Years Study" },
-    { num: "1+",  label: "Industry Roles" },
+    { num: "5+",  label: "Years of Study" },
     { num: "19+", label: "Technologies" },
     { num: "SG",  label: "Based in" },
   ],
@@ -33,7 +33,7 @@ var PORTFOLIO = {
     email:    "triona.lee13@gmail.com",
     linkedin: { label: "triona-lee",  url: "https://www.linkedin.com/in/triona-lee/" },
     github:   { label: "tri-o-na",    url: "https://github.com/tri-o-na" },
-    resume:{ label: "My latest works",   url: "https://drive.google.com/file/d/1X8TIW7_S29HYqqIbf_HZNZqXRUOZY9up/view" },
+    resume:{ label: "View PDF",   url: "https://drive.google.com/file/d/1X8TIW7_S29HYqqIbf_HZNZqXRUOZY9up/view" },
   },
 
   // ── Education ──────────────────────────────────────────────
@@ -97,10 +97,10 @@ var PORTFOLIO = {
     { school:"sit", year:"y2", term:"T2", title:"Internet of Things (Protocols & Networks)",subtitle:"Arduino, .ino" },
     { school:"sit", year:"y2", term:"T2", title:"Mobile App Development",                  subtitle:"Android Studio, Kotlin, CI" },
     { school:"sit", year:"y2", term:"T2", title:"Data Analytics",                          subtitle:"Python, Charts, Data Analytics" },
-    { school:"sit", year:"y2", term:"T3", title:"Information Visualisation",               subtitle:"Upcoming" },
-    { school:"sit", year:"y2", term:"T3", title:"Machine Learning",                        subtitle:"Upcoming" },
-    { school:"sit", year:"y2", term:"T3", title:"Special Topics in Emerging Technologies", subtitle:"Upcoming" },
-    { school:"sit", year:"y2", term:"T3", title:"Cyber Security Fundamentals",             subtitle:"Upcoming" },
+    { school:"sit", year:"y2", term:"T3", title:"Information Visualisation",               subtitle:"In Progress" },
+    { school:"sit", year:"y2", term:"T3", title:"Machine Learning",                        subtitle:"In Progress" },
+    { school:"sit", year:"y2", term:"T3", title:"Special Topics in Emerging Technologies", subtitle:"In Progress" },
+    { school:"sit", year:"y2", term:"T3", title:"Cyber Security Fundamentals",             subtitle:"In Progress" },
     // TP Year 1
     { school:"tp", year:"y1", term:"S1", title:"Computational Thinking",       subtitle:"Android Studio, Java, Adobe XD" },
     { school:"tp", year:"y1", term:"S1", title:"Network Technology",           subtitle:"Cisco Packet Tracer, IP Calculations" },
@@ -120,6 +120,7 @@ var PORTFOLIO = {
   experience: [
     {
       company: "DBS Bank",
+      companyDesc: "One of Asia's largest banks, headquartered in Singapore.",
       role: "AI & Machine Learning Engineering Intern",
       period: "Apr 2023 — Mar 2024",
       points: [

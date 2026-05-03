@@ -18,7 +18,32 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
   set(".hero-title",   d.title);
+
+  // Role pills
+  const rolePills = document.getElementById("hero-role-pills");
+  if (rolePills && Array.isArray(d.roles)) {
+    rolePills.innerHTML = d.roles.map(r => `<span class="hero-role-pill">${r}</span>`).join("");
+  }
+
   set(".hero-bio",     d.bio);
+
+  // Recruiter filter section
+  const ROLE_FILTERS = [
+    { label: "Full-Stack Dev",  filter: "backend",  icon: "▣" },
+    { label: "Front-End Dev",   filter: "design",   icon: "✦" },
+    { label: "Mobile Dev",      filter: "design",   icon: "✦" },
+    { label: "Cloud & DevOps",  filter: "cloud",    icon: "◎" },
+    { label: "AI / ML",         filter: "ai",       icon: "◈" },
+    { label: "Back-End Dev",    filter: "backend",  icon: "▣" },
+  ];
+  const recruiterBar = document.getElementById("hero-recruiter-bar");
+  if (recruiterBar) {
+    recruiterBar.innerHTML = `
+      <span class="recruiter-bar-label">Hiring for:</span>
+      ${ROLE_FILTERS.map(r =>
+        `<a class="recruiter-link" href="projects.html?filter=${r.filter}">${r.label}</a>`
+      ).join("")}`;
+  }
 
   // Resume button
   const resumeBtn = document.getElementById("hero-resume-btn");

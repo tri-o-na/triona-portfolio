@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const pages = [
     { label: "Home",       href: "index.html" },
-    { label: "Skills",     href: "skills.html" },
-    { label: "Experience", href: "experience.html" },
-    { label: "Education",  href: "education.html" },
     { label: "Projects",   href: "projects.html" },
+    { label: "Experience", href: "experience.html" },
+    { label: "Skills",     href: "skills.html" },
+    { label: "Education",  href: "education.html" },
     { label: "Contact",    href: "contact.html" },
   ];
 

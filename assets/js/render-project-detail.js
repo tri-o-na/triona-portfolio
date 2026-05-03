@@ -197,6 +197,33 @@ document.addEventListener("DOMContentLoaded", () => {
     `${yearLabels[project.year] || project.year}, ${project.term}`;
   document.getElementById("detail-sidebar-type").textContent = project.type;
 
+  if (project.relevantFor && project.relevantFor.length) {
+    const FULL_ROLE_NAMES = {
+      "Full-Stack Dev":  "Full-Stack Developer",
+      "Front-End Dev":   "Front-End Developer",
+      "Back-End Dev":    "Back-End Developer",
+      "Mobile Dev":      "Mobile Developer",
+      "Cloud & DevOps":  "Cloud & DevOps Engineer",
+      "AI / ML":         "AI / Machine Learning Engineer",
+      "UI/UX":           "UI/UX Designer",
+      "IoT Dev":         "IoT Developer",
+      "Embedded Dev":    "Embedded Systems Developer",
+      "Data Engineer":   "Data Engineer",
+      "Network Engineer":"Network Engineer",
+      "Systems Dev":     "Systems Developer",
+      "Web Dev":         "Web Developer",
+    };
+    const sidebar = document.querySelector(".detail-sidebar");
+    const block = document.createElement("div");
+    block.className = "detail-sidebar-block";
+    block.innerHTML = `
+      <div class="detail-sidebar-label">Relevant For</div>
+      <ul class="detail-relevant-list">${project.relevantFor.map(r =>
+        `<li>${FULL_ROLE_NAMES[r] || r}</li>`
+      ).join("")}</ul>`;
+    sidebar.insertBefore(block, sidebar.firstChild);
+  }
+
   // ── GitHub button (header, below tags) ─────────────────────
   if (project.githubLink) {
     const githubBtn = document.getElementById("detail-github-btn");

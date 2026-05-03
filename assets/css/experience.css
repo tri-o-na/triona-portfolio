@@ -53,6 +53,13 @@
   color: var(--leaf);
 }
 
+.exp-company-desc {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: rgba(181,203,168,0.5);
+  margin-top: 2px;
+}
+
 .exp-header-right {
   display: flex;
   flex-direction: column;

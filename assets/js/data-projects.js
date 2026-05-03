@@ -54,6 +54,7 @@ const PROJECT_DATA = [
             
             `,
             icon: "design", iconLabel: "WEB",
+            relevantFor: ["Full-Stack Dev", "Back-End Dev", "Web Dev"],
             tags: ["Client Project", "Python", "SQL"],
             image: "assets/images/PSD-chatbot.gif",
             githubLink: "https://github.com/tri-o-na/PSD-LearningJourneyBuddy",
@@ -86,6 +87,7 @@ const PROJECT_DATA = [
             <p>Working in groups, you will apply knowledge from Dell’s online courses to derive your own specification and design. Groups are responsible for dividing work and managing the project to deliver novel functionality and tangible outcomes.</p>
             `,
             icon: "cloud", iconLabel: "CLD",
+            relevantFor: ["Cloud & DevOps", "Full-Stack Dev", "Web Dev"],
             tags: ["HTML", "CSS", "JavaScript", "Docker", "Kubernetes", "Firebase", "Firestore"],
             image: "assets/images/CLOUD-ArchitecturalDiagram.png",
             githubLink: "https://github.com/tri-o-na/CLOUD-AuraLearn",
@@ -137,6 +139,7 @@ const PROJECT_DATA = [
             </ul>
             `,
             icon: "iot", iconLabel: "IOT",
+            relevantFor: ["Embedded Dev", "IoT Dev"],
             tags: ["C", "Raspberry Pi Pico", "IoT"],
             image: "assets/images/ESP-RobotCar.jpg",
             githubLink: "https://github.com/tri-o-na/ESP-RobotCar",
@@ -174,6 +177,7 @@ const PROJECT_DATA = [
             <p><b>Our group was selected for a showcase, however due to scheduling conflicts, were unable to make it.</b></p>
             `,
             icon: "design", iconLabel: "UX",
+            relevantFor: ["UI/UX", "Front-End Dev"],
             tags: ["UI/UX", "Adobe XD", "HCI"],
             image: "assets/images/SIP-SITogether.jpg",
             githubLink: "",
@@ -203,6 +207,7 @@ const PROJECT_DATA = [
             <p>The mobile application should be a 100% native Android application. (No hybrid applications or hybrid app frameworks). The form factor can be a phone, tablet or wearable (watch), or any combination of form factors.</p>
             `,
             icon: "design", iconLabel: "MOB",
+            relevantFor: ["Mobile Dev", "Front-End Dev"],
             tags: ["Kotlin", "Android", "CI/CD"],
             image: "assets/images/MAD-MorphLearn.jpg",
             githubLink: "https://github.com/tri-o-na/MAD-MorphLearn",
@@ -225,6 +230,7 @@ const PROJECT_DATA = [
             fullDesc: `<p>A machine learning pipeline for Ultra-Wideband (UWB) indoor localisation, tackling LOS/NLOS signal classification and distance estimation across 7 diverse indoor environments. </p>z
             <p> I focused on the Cross-Environment Validation and creating the final architectural diagram </p>`,
             icon: "data", iconLabel: "DA",
+            relevantFor: ["Data Engineer", "AI / ML"],
             tags: ["Python", "Data Analytics"],
             image: "",
             githubLink: "https://github.com/tri-o-na/DATA-UWBLocalisation",
@@ -255,6 +261,7 @@ const PROJECT_DATA = [
             </ul>
             `,
             icon: "iot", iconLabel: "IOT",
+            relevantFor: ["IoT Dev", "Embedded Dev"],
             tags: ["Arduino", "IoT"],
             image: "",
             githubLink: "https://github.com/tri-o-na/IOT-FastReact",
@@ -292,6 +299,7 @@ const PROJECT_DATA = [
               </blockquote>
             `,
             icon: "systems", iconLabel: "SYS",
+            relevantFor: ["Systems Dev", "Embedded Dev"],
             tags: ["C", "Assembly", "Raspberry Pi"],
             image: "",
             githubLink: "https://github.com/tri-o-na/COA-AssemblyRaspberryPi",
@@ -315,6 +323,7 @@ const PROJECT_DATA = [
               <p> <b>Conclusion:</b> A completed and functional Tic Tac Toe Application with a Graphic User Interface GUI. </p>
             `,
             icon: "systems", iconLabel: "SYS",
+            relevantFor: ["Systems Dev", "Back-End Dev"],
             tags: ["C"],
             image: "assets/images/PGM-TicTacToe.jpg",
             githubLink: "https://github.com/tri-o-na/PGM-TicTacToe",
@@ -338,6 +347,7 @@ const PROJECT_DATA = [
             <p> <b>Final Product</b>: A completed and functional pipe monitoring system that detects blockages, alerting the homeowner  </p>
             `,
             icon: "iot", iconLabel: "NET",
+            relevantFor: ["IoT Dev", "Network Engineer"],
             tags: ["Cisco", "IoT", "Networking", "Raspberry Pi"],
             image: "assets/images/CNET-FloodShield.png",
             githubLink: "",
@@ -364,6 +374,7 @@ const PROJECT_DATA = [
             </ul>
             `,
             icon: "data", iconLabel: "ALG",
+            relevantFor: ["Back-End Dev", "Data Engineer"],
             tags: ["Python", "Algorithms"],
             image: "assets/images/DSA-RouteRadar.jpg",
             githubLink: "https://github.com/tri-o-na/DSA-RouteRadar",
@@ -381,6 +392,7 @@ const PROJECT_DATA = [
             desc: "Design and implementation of a Hospital Management System using the object-oriented programming paradigm in Java.",
             fullDesc: "This project involved the design and implementation of a Hospital Management System using the object-oriented programming paradigm in Java. Working within a large group of 12 that was subdivided into two six-student programming teams, the project was split into two phases. Phase 1 focused on individual teams developing an automatically assigned core module of the system, including producing a detailed technical report with usage explanation and Javadoc documentation. Phase 2 required the two programming teams in the larger group to consolidate their work into a single main program and integrate two additional modules selected from four modules provided by other groups in an executable object format. This emphasized real-world software development challenges, such as integrating black-box components, effective communication, and collaborative design.",
             icon: "backend", iconLabel: "OOP",
+            relevantFor: ["Back-End Dev", "Full-Stack Dev"],
             tags: ["Java", "OOP"],
             image: "", githubLink: "https://github.com/tri-o-na/OOP-Hospital-Management",
             extraLinks: [
@@ -397,6 +409,7 @@ const PROJECT_DATA = [
             desc: "Develop a Bug Tracking System using Rust and the Actix Web framework with SQLite, emphasizing robust design, security, and scalability.",
             fullDesc: "This project involved developing a Bug Tracking System using Rust and the Actix Web framework with SQLite for data storage, emphasizing robust design, security, and scalability. My main responsibility was implementing the core functionality of Project List State Management, which required designing a mechanism to hold a mutable, shared list of project names (such as 'Project A,' 'Project B,' etc.) across the application. This task required the correct application of Rust's concurrency primitives, such as the Arc (Atomically Reference Counted) and Mutex (Mutual Exclusion) wrappers, to ensure thread-safe read and write access to the shared project data by multiple, concurrent server processes. This hands-on experience demonstrated my ability to apply advanced concurrency and state management concepts in a modern, high-performance web framework.",
             icon: "design", iconLabel: "WEB",
+            relevantFor: ["Back-End Dev", "Full-Stack Dev", "Web Dev"],
             tags: ["Rust", "Actix", "SQLite"],
             image: "",
             githubLink: "https://github.com/tri-o-na/WEB-BugTracker",
@@ -414,6 +427,7 @@ const PROJECT_DATA = [
             desc: "Design and develop a full-stack database application integrating both a relational (SQL) and non-relational (NoSQL) database, offering practical experience in modern data architecture.",
             fullDesc: "This group project involved the design and development of a full-stack database application that integrates both a relational (SQL) and a non-relational (NoSQL) database as its back-end, offering practical experience in complex, modern data architecture. My responsibilities included constructing the conceptual Entity-Relationship (ER) diagram and relational schema, implementing core functionalities using advanced SQL features (like nested queries and triggers), and designing and implementing the NoSQL component with appropriate data models. The final application, preferably with a GUI, demonstrated the system's ability to manage and query data across these two distinct technologies, requiring a detailed justification of the dual-backend modeling choices.",
             icon: "backend", iconLabel: "DB",
+            relevantFor: ["Back-End Dev", "Full-Stack Dev"],
             tags: ["Rust", "TypeScript", "SQL", "NoSQL"],
             image: "assets/images/DB-ArchitecturalDiagram.png",
             githubLink: "https://github.com/tri-o-na/DB-CRYpt",
@@ -433,6 +447,7 @@ const PROJECT_DATA = [
             desc: "Comprehensive programming assignment that required developing solutions for several tasks using two distinct scripting environments: Linux Bash shell script and Python.",
             fullDesc: "My primary contribution to this Operating Systems project was Question 2, a comprehensive programming assignment that required developing solutions for several tasks using two distinct scripting environments: Linux Bash shell script and Python. I was responsible for creating the required programs, such as one to check if a user-keyed-in number is prime, in both a self-developed Bash script and a self-developed Python function. The core of the project involved a rigorous, comparative analysis of these programming approaches—specifically, assessing the similarities, differences, advantages, and weaknesses between the codes I developed versus those generated by Generative AI (GenAI), evaluating factors like code structure, efficiency, and the time spent on development. This comparative study reinforced my understanding of OS command automation and high-level language capabilities, and provided valuable insights into the effective use of AI tools in software development.",
             icon: "systems", iconLabel: "SYS",
+            relevantFor: ["Systems Dev", "Back-End Dev"],
             tags: ["Bash", "Python"],
             image: "",
             githubLink: "https://github.com/tri-o-na/OS-UnderstandAI",
@@ -460,6 +475,7 @@ const PROJECT_DATA = [
               <p style="padding-left: 20px;"><b>Proposed Solution:</b> The final design features a power-efficient facility capable of handling regular parcels and high-priority medical packages for hospitals. Key innovations include a specialized parcel sorting facility designed for rapid processing and high accuracy, ensuring a viable and future-proof logistics solution for the region.</p>
             `,
             icon: "design", iconLabel: "OIP",
+            relevantFor: ["UI/UX"],
             tags: ["Design Thinking", "HCI", "OIP", "Glasgow"],
             image: "assets/images/DI-FuturAir-Map-Layout.png",
             githubLink: "",
@@ -496,6 +512,7 @@ const PROJECT_DATA = [
               </ul>
               <p><b>Final Product:</b>  A completed and functional Music Player application, which follows closely the Hi-Fi design, planned and designed in Adobe XD.</p>`,
             icon: "design", iconLabel: "MOB",
+            relevantFor: ["Mobile Dev", "UI/UX"],
             tags: ["Java", "Adobe XD", "Android Studio"],
             image: "assets/images/COMT-Clarity.jpeg",
             githubLink: "https://github.com/tri-o-na/COMT-Clarity",
@@ -516,6 +533,7 @@ const PROJECT_DATA = [
             desc: "Design and implement an application with an SQL database.",
             fullDesc: `I made a restaurant review website consisting of a list of restaurants that users can add reviews to, authentication, the add to favourites function and more.`,
             icon: "design", iconLabel: "WEB",
+            relevantFor: ["Full-Stack Dev", "Front-End Dev", "Web Dev"],
             tags: ["HTML", "CSS", "SQL", "JavaScript"],
             image: "assets/images/CDEV-Review.hut.jpeg",
             githubLink: "https://github.com/tri-o-na/CDEV-ReviewHut",
@@ -547,6 +565,7 @@ const PROJECT_DATA = [
                 <li>Implement the network configuration ensuring hosts from each country are able to communicate with each other.</li>
               </ul>`,
             icon: "iot", iconLabel: "NET",
+            relevantFor: ["Network Engineer", "IoT Dev"],
             tags: ["Cisco Packet Tracer", "Networking"],
             image: "assets/images/NETY-NetworkDiagram.jpg",
             githubLink: "",
@@ -577,6 +596,7 @@ const PROJECT_DATA = [
             
             **Improve the current project's accuracy of detecting the correct error from a screenshot`,
             icon: "ai", iconLabel: "AI",
+            relevantFor: ["AI / ML", "Back-End Dev"],
             tags: ["NLP", "LLMs", "Python", "ML"],
             image: "assets/images/DBS-HelpLah!.png",
             githubLink: "",
@@ -616,6 +636,7 @@ const PROJECT_DATA = [
                 <li>A completed and functional Book Review application, which follows closely the Hi-Fi design, planned and designed in Adobe XD.</li>
               </ul>`,
             icon: "design", iconLabel: "MOB",
+            relevantFor: ["Mobile Dev", "Front-End Dev", "UI/UX"],
             tags: ["Flutter", "Dart", "Adobe XD", "Android Studio"],
             image: "assets/images/MBAP-Readium.jpeg",
             githubLink: "https://github.com/tri-o-na/MBAP-Readium",
@@ -642,6 +663,7 @@ const PROJECT_DATA = [
                 <li>A completed and functional Clothing E-commerce Web Application, which follows closely the Hi-Fi design, planned and designed in Adobe XD.</li>
               </ul>`,
             icon: "design", iconLabel: "WEB",
+            relevantFor: ["Full-Stack Dev", "Front-End Dev", "Web Dev"],
             tags: ["HTML", "CSS", "MongoDB", "Angular", "Node.js"],
             image: "assets/images/FWEB-Clotho.jpeg",
             githubLink: "https://github.com/tri-o-na/FWEB-Clotho",
@@ -673,6 +695,7 @@ const PROJECT_DATA = [
             <br>
             <p><b>Final Product:</b> A completed and functional Hotel Reservation Web Application, which follows closely the Hi-Fi design, planned and designed in Adobe XD </p>`,
             icon: "cloud", iconLabel: "CLD",
+            relevantFor: ["Cloud & DevOps", "Full-Stack Dev", "Web Dev"],
             tags: ["AWS", "JavaScript", "Postman", "AWS S3", "AWS DynamoDB"],
             image: "assets/images/CADV-eleganceia.png",
             githubLink: "https://github.com/tri-o-na/CADV-Eleganceia",
@@ -723,6 +746,7 @@ const PROJECT_DATA = [
               <li>Alerts will also be sent to the owner if the pool's quality is not up to standard (when the levels are too low or too high) which may harm the swimmer when swimming.</li>
             </ul>`,
             icon: "iot", iconLabel: "IOT",
+            relevantFor: ["IoT Dev", "Cloud & DevOps"],
             tags: ["IoT", "AWS", "JavaScript", "AWS DynamoDB"],
             image: "assets/images/ITAD-ArchitecturalDiagram.png",
             githubLink: "",
@@ -755,6 +779,7 @@ const PROJECT_DATA = [
             <br>
             <p><b>Final Product:</b> A completed and functional Dog Review Web Application</p>`,
             icon: "backend", iconLabel: "DEV",
+            relevantFor: ["Cloud & DevOps", "Back-End Dev"],
             tags: ["Jenkins", "Selenium", "Jira", "Eclipse", "JUnit"],
             image: "assets/images/DVOPS-Dogtopia.jpeg",
             githubLink: "https://github.com/tri-o-na/DVOPS-Dogtopia",
@@ -785,6 +810,7 @@ const PROJECT_DATA = [
 
             <p><b>Final Product: </b> A completed and functional Diamond Prediction Web Application, which predicts the price of a diamond with the given specifications.</p>`,
             icon: "ai", iconLabel: "ML",
+            relevantFor: ["AI / ML", "Data Engineer"],
             tags: ["Python", "JupyterLab", "ML", "HTML", "CSS"],
             image: "assets/images/MLDP-RadiantRocks.png",
             githubLink: "",

@@ -23,7 +23,7 @@
   padding: 16px 0;
   border-bottom: 1px solid var(--border);
   text-decoration: none;
-  transition: padding-right 0.9s;
+  transition: padding-right 0.2s;
 }
 
 .contact-item:hover {
@@ -125,5 +125,9 @@
 @media (max-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-right {
+    padding: 24px;
   }
 }

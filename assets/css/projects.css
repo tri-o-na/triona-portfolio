@@ -205,6 +205,30 @@
   color: var(--forest-light);
 }
 
+.project-relevant {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--forest-light);
+  line-height: 1.5;
+}
+
+.relevant-label {
+  color: var(--forest-mid);
+  font-weight: 500;
+}
+
+.detail-relevant-list {
+  margin: 6px 0 0 0;
+  padding-left: 16px;
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--forest-mid);
+  line-height: 1.8;
+}
+
 /* ── Project school & year tabs ───────────────────────────────── */
 .proj-school-tabs {
   display: flex;

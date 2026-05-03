@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { key: "ai",       label: "AI & ML" },
     { key: "backend",  label: "Back-End Development" },
     { key: "cloud",    label: "Cloud" },
-    { key: "data",     label: "Data Algo" },
+    { key: "data",     label: "Data & Algorithms" },
     { key: "iot",      label: "IoT & Networking" },
     { key: "systems",  label: "Systems" },
   ];
@@ -37,6 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function projectCard(p) {
     const displayId  = getDisplayId(p);
     const tags       = p.tags.map(t => `<span class="tag">${t}</span>`).join("");
+    const relevantFor = (p.relevantFor && p.relevantFor.length)
+      ? `<div class="project-relevant"><span class="relevant-label">Relevant for:</span> ${p.relevantFor.join(", ")}</div>`
+      : "";
     const ongoingTag = p.ongoing ? `<span class="tag ongoing">Ongoing</span>` : "";
     const schoolBadge = `<span class="card-school-badge ${p.school}">${schoolLabels[p.school] || p.school}</span>`;
     const moduleLabel = p.moduleName
@@ -70,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="project-title">${p.title}</div>
           <div class="project-desc">${p.desc}</div>
           <div class="project-tags">${ongoingTag}${tags}</div>
+          ${relevantFor}
         </div>
       </a>`;
   }
@@ -107,7 +111,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ── Filter bar ───────────────────────────────────────────
-  renderAll("all");
+  const urlFilter = new URLSearchParams(window.location.search).get("filter") || "all";
+  const initialBtn = document.querySelector(`.proj-filter-btn[data-filter="${urlFilter}"]`);
+
+  document.querySelectorAll(".proj-filter-btn").forEach(b => b.classList.remove("active"));
+  if (initialBtn) initialBtn.classList.add("active");
+  renderAll(urlFilter);
 
   document.querySelectorAll(".proj-filter-btn").forEach(btn => {
     btn.addEventListener("click", () => {

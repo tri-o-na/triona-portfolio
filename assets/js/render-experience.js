@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="exp-header-left">
           <div class="exp-role">${job.role}</div>
           <div class="exp-company">${job.company}</div>
+          ${job.companyDesc ? `<div class="exp-company-desc">${job.companyDesc}</div>` : ""}
         </div>
         <div class="exp-header-right">
           <div class="exp-period">${job.period}</div>
