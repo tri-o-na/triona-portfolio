@@ -1,14 +1,20 @@
 // render-projects.js
 document.addEventListener("DOMContentLoaded", () => {
   const ICON_GROUPS = [
-    { key: "design",   label: "Front-End & Design" },
-    { key: "ai",       label: "AI & ML" },
-    { key: "backend",  label: "Back-End Development" },
-    { key: "cloud",    label: "Cloud" },
-    { key: "data",     label: "Data & Algorithms" },
-    { key: "iot",      label: "IoT & Networking" },
-    { key: "systems",  label: "Systems" },
+    { key: "design",    label: "Front-End & Design" },
+    { key: "fullstack", label: "Full-Stack Development" },
+    { key: "backend",   label: "Back-End Development" },
+    { key: "ai",        label: "AI & ML" },
+    { key: "cloud",     label: "Cloud" },
+    { key: "data",      label: "Data & Algorithms" },
+    { key: "iot",       label: "IoT & Networking" },
+    { key: "systems",   label: "Systems" },
   ];
+
+  // Returns all filter keys a project belongs to (filters[] takes priority over icon)
+  function projectFilters(p) {
+    return (p.filters && p.filters.length) ? p.filters : [p.icon];
+  }
 
   const schoolLabels = {
     sit: "SIT × UofG",
@@ -84,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const filtered = filter === "all"
       ? PORTFOLIO.projects
-      : PORTFOLIO.projects.filter(p => p.icon === filter);
+      : PORTFOLIO.projects.filter(p => projectFilters(p).includes(filter));
 
     if (!filtered.length) {
       grid.innerHTML = `<p style="color:var(--forest-light);font-family:var(--mono);font-size:12px;margin-top:24px;">No projects in this category yet.</p>`;
@@ -92,12 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const groupsToShow = filter === "all"
-      ? ICON_GROUPS.filter(g => filtered.some(p => p.icon === g.key))
+      ? ICON_GROUPS.filter(g => filtered.some(p => projectFilters(p).includes(g.key)))
       : ICON_GROUPS.filter(g => g.key === filter);
 
     grid.innerHTML = groupsToShow.map(group => {
-      const cards = filtered.filter(p => p.icon === group.key).map(projectCard).join("");
-      const count = filtered.filter(p => p.icon === group.key).length;
+      const inGroup = filtered.filter(p => projectFilters(p).includes(group.key));
+      const cards = inGroup.map(projectCard).join("");
+      const count = inGroup.length;
       return `
         <div class="project-type-group" data-group="${group.key}">
           <div class="type-label-row">
@@ -112,17 +119,69 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ── Filter bar ───────────────────────────────────────────
   const urlFilter = new URLSearchParams(window.location.search).get("filter") || "all";
-  const initialBtn = document.querySelector(`.proj-filter-btn[data-filter="${urlFilter}"]`);
 
-  document.querySelectorAll(".proj-filter-btn").forEach(b => b.classList.remove("active"));
-  if (initialBtn) initialBtn.classList.add("active");
-  renderAll(urlFilter);
+  function activateFilter(filter) {
+    document.querySelectorAll(".proj-filter-btn").forEach(b => b.classList.remove("active"));
+    const btn = document.querySelector(`.proj-filter-btn[data-filter="${filter}"]`);
+    if (btn) btn.classList.add("active");
+
+    const optEl = document.querySelector(`#pcs-dropdown .pcs-option[data-filter="${filter}"]`);
+    if (optEl) {
+      document.querySelectorAll("#pcs-dropdown .pcs-option").forEach(o => o.classList.remove("selected"));
+      optEl.classList.add("selected");
+      const lbl = document.getElementById("pcs-label");
+      if (lbl) lbl.textContent = optEl.textContent.trim();
+      const dot = document.querySelector("#proj-custom-select .pcs-dot");
+      if (dot) dot.className = `pcs-dot pcs-dot-${filter}`;
+    }
+
+    const params = filter === "all" ? "" : `?filter=${filter}`;
+    history.replaceState(null, "", location.pathname + params);
+
+    renderAll(filter);
+  }
+
+  activateFilter(urlFilter);
 
   document.querySelectorAll(".proj-filter-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".proj-filter-btn").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      renderAll(btn.dataset.filter);
-    });
+    btn.addEventListener("click", () => activateFilter(btn.dataset.filter));
   });
+
+  // Custom mobile dropdown
+  const customBtn   = document.getElementById("proj-custom-select");
+  const customDropdown = document.getElementById("pcs-dropdown");
+  const pcsLabel    = document.getElementById("pcs-label");
+
+  if (customBtn && customDropdown) {
+    customBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = customDropdown.classList.toggle("open");
+      customBtn.setAttribute("aria-expanded", isOpen);
+    });
+
+    document.addEventListener("click", () => {
+      customDropdown.classList.remove("open");
+      customBtn.setAttribute("aria-expanded", "false");
+    });
+
+    customDropdown.querySelectorAll(".pcs-option").forEach(opt => {
+      opt.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const filter = opt.dataset.filter;
+
+        customDropdown.querySelectorAll(".pcs-option").forEach(o => o.classList.remove("selected"));
+        opt.classList.add("selected");
+
+        if (pcsLabel) pcsLabel.textContent = opt.textContent.trim();
+        const triggerDot = customBtn.querySelector(".pcs-dot");
+        if (triggerDot) {
+          triggerDot.className = `pcs-dot pcs-dot-${filter}`;
+        }
+
+        customDropdown.classList.remove("open");
+        customBtn.setAttribute("aria-expanded", "false");
+        activateFilter(filter);
+      });
+    });
+  }
 });

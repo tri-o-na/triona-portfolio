@@ -4,24 +4,25 @@
   --warm-white: #f5f7f2;      /* crisp white with subtle green tint — page background */
  
   /* ── Ink / Borders  ──────────────────────────────────────────────── */
-  --ink: #000;             /* deep forest — primary text (richer than before) */
+  --ink: #000;             
   --border: #c2d4bb;          /* sage mist — slightly richer */
  
   /* ── Extended palette (used in component CSS) ────────────────── */
   --forest-deep: #1a2e28;     /* darkest — hover states, hero right panel */
   --forest-mid: #2d4a40;      /* primary accent alias */
   --forest-light: #52796f;    /* secondary accent alias */
-  --leaf: #b5cba8;            /* highlight backgrounds */
   --stone: #7a9e8e;           /* icons, tags, neutral mid-green */
+  --leaf: #b5cba8;            /* highlight backgrounds */
 
   /* ── Pastel Rainbow ────────────────────────────────────── */
+  --pastelpurple: #d1c1f0; 
   --pastelred:    #f1b3b3;
   --pastelpink:   #f7c5d2;
   --pastelorange: #f7c5a0;
   --pastelyellow: #f9e8a5; 
   --pastelgreen:  #b8e1c4; 
   --pastelblue:   #b0d7f5; 
-  --pastelpurple: #d1c1f0; 
+  --pastelmauve:  #e8b8e8;
 
   /* ── Typography ──────────────────────────────────────────────── */
   --serif: 'Cormorant Garamond', Georgia, serif;

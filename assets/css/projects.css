@@ -308,6 +308,26 @@ a.project-card {
   .projects-row {
     grid-template-columns: 1fr;
   }
+
+  .project-card,
+  a.project-card {
+    flex-direction: column;
+  }
+
+  .project-thumb {
+    flex: none;
+    width: 100%;
+    height: 160px;
+    margin: 0;
+    border-radius: 3px 3px 0 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    align-self: auto;
+  }
+
+  .project-body {
+    width: 100%;
+  }
 }
 
 /* ── Filter bar ───────────────────────────────────────────────── */
@@ -316,6 +336,11 @@ a.project-card {
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 36px;
+}
+
+/* Mobile dropdown (hidden on desktop) */
+.proj-filter-select-wrap {
+  display: none;
 }
 
 .proj-filter-btn {
@@ -378,8 +403,9 @@ a.project-card {
 }
 
 /* Dot colours matching icon types (using the green palette) */
+.filter-dot.design,    .type-dot.design       { background: var(--pastelpurple); }
+.filter-dot.fullstack, .type-dot.fullstack    { background: var(--pastelmauve); }
 .filter-dot.backend,   .type-dot.backend      { background: var(--pastelred); }
-.filter-dot.design,.type-dot.design   { background: var(--pastelpurple); }
 .filter-dot.ai,  .type-dot.ai     { background: var(--pastelpink); }
 .filter-dot.data,  .type-dot.data     { background: var(--pastelyellow); }
 .filter-dot.systems,.type-dot.systems { background: var(--pastelblue); }
@@ -681,13 +707,106 @@ a.project-card {
     padding-top: 24px;
   }
   .proj-filter-bar {
-    gap: 6px;
+    display: none;
   }
-  .proj-filter-btn {
-    padding: 5px 12px;
-    font-size: 9.5px;
+
+  .proj-filter-select-wrap {
+    display: block;
+    position: relative;
+    margin-bottom: 28px;
   }
 }
+
+/* ── Custom mobile filter dropdown ───────────────────────────── */
+.proj-custom-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--stone);
+  border-radius: 4px;
+  background: var(--forest-mid);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: left;
+}
+
+.pcs-arrow {
+  margin-left: auto;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.proj-custom-select[aria-expanded="true"] .pcs-arrow {
+  transform: rotate(180deg);
+}
+
+.pcs-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 100;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  border: 1px solid var(--stone);
+  border-radius: 4px;
+  background: var(--warm-white);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  overflow: hidden;
+}
+
+.pcs-dropdown.open {
+  display: block;
+}
+
+.pcs-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--forest-mid);
+  cursor: pointer;
+}
+
+.pcs-option:hover {
+  background: rgba(181,203,168,0.35);
+}
+
+.pcs-option.selected {
+  background: var(--forest-mid);
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Dot in trigger button and options */
+.pcs-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pcs-dot-all      { display: none; }
+.pcs-dot-fullstack { background: var(--pastelmauve); }
+.pcs-dot-design   { background: var(--pastelpurple); }
+.pcs-dot-ai       { background: var(--pastelpink); }
+.pcs-dot-backend  { background: var(--pastelred); }
+.pcs-dot-cloud    { background: var(--pastelorange); }
+.pcs-dot-data     { background: var(--pastelyellow); }
+.pcs-dot-iot      { background: var(--pastelgreen); }
+.pcs-dot-systems  { background: var(--pastelblue); }
 
 /* ── Module name on project card ──────────────────────────────── */
 .project-module {

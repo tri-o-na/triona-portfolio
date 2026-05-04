@@ -23,17 +23,40 @@
     <div class="section-label">Portfolio</div>
     <h1 class="section-title">Projects</h1>
 
+    <!-- Mobile filter dropdown (custom) -->
+    <div class="proj-filter-select-wrap" id="proj-filter-select-wrap">
+      <button class="proj-custom-select" id="proj-custom-select" aria-haspopup="listbox" aria-expanded="false">
+        <span class="pcs-dot pcs-dot-all"></span>
+        <span class="pcs-label" id="pcs-label">All</span>
+        <svg class="pcs-arrow" width="11" height="7" viewBox="0 0 11 7" fill="none"><path d="M1 1l4.5 4.5L10 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <ul class="pcs-dropdown" id="pcs-dropdown" role="listbox">
+        <li class="pcs-option" data-filter="all"><span class="pcs-dot pcs-dot-all"></span>All</li>
+        <li class="pcs-option" data-filter="design"><span class="pcs-dot pcs-dot-design"></span>Front-End &amp; Design</li>
+        <li class="pcs-option" data-filter="fullstack"><span class="pcs-dot pcs-dot-fullstack"></span>Full-Stack</li>
+        <li class="pcs-option" data-filter="backend"><span class="pcs-dot pcs-dot-backend"></span>Back-End Dev</li>
+        <li class="pcs-option" data-filter="ai"><span class="pcs-dot pcs-dot-ai"></span>AI &amp; ML</li>
+        <li class="pcs-option" data-filter="cloud"><span class="pcs-dot pcs-dot-cloud"></span>Cloud</li>
+        <li class="pcs-option" data-filter="data"><span class="pcs-dot pcs-dot-data"></span>Data &amp; Algo</li>
+        <li class="pcs-option" data-filter="iot"><span class="pcs-dot pcs-dot-iot"></span>IoT &amp; Networks</li>
+        <li class="pcs-option" data-filter="systems"><span class="pcs-dot pcs-dot-systems"></span>Systems</li>
+      </ul>
+    </div>
+
     <!-- Icon-type filter pills -->
     <div class="proj-filter-bar">
       <button class="proj-filter-btn active" data-filter="all">All</button>
       <button class="proj-filter-btn" data-filter="design">
         <span class="filter-dot design"></span>Front-End &amp; Design
       </button>
-      <button class="proj-filter-btn" data-filter="ai">
-        <span class="filter-dot ai"></span>AI &amp; ML
+      <button class="proj-filter-btn" data-filter="fullstack">
+        <span class="filter-dot fullstack"></span>Full-Stack
       </button>
       <button class="proj-filter-btn" data-filter="backend">
         <span class="filter-dot backend"></span>Back-End Dev
+      </button>
+      <button class="proj-filter-btn" data-filter="ai">
+        <span class="filter-dot ai"></span>AI &amp; ML
       </button>
       <button class="proj-filter-btn" data-filter="cloud">
         <span class="filter-dot cloud"></span>Cloud

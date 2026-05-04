@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Recruiter filter section
   const ROLE_FILTERS = [
-    { label: "Full-Stack Dev",  filter: "backend",  icon: "▣" },
+    { label: "Full-Stack Dev",  filter: "fullstack", icon: "▣" },
     { label: "Front-End Dev",   filter: "design",   icon: "✦" },
     { label: "Mobile Dev",      filter: "design",   icon: "✦" },
     { label: "Cloud & DevOps",  filter: "cloud",    icon: "◎" },
