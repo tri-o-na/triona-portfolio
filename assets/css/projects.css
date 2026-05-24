@@ -377,6 +377,33 @@ a.project-card {
   }
 }
 
+/* ── Tech search bar ──────────────────────────────────────────── */
+.proj-search-wrap {
+  margin-bottom: 20px;
+}
+
+.proj-tech-search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--forest-deep);
+  background: var(--dark-cream);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.proj-tech-search::placeholder {
+  color: var(--forest-light);
+}
+
+.proj-tech-search:focus {
+  border-color: var(--forest-mid);
+}
+
 /* ── Filter bar ───────────────────────────────────────────────── */
 .proj-filter-bar {
   display: flex;

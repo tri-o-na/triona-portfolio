@@ -12,9 +12,36 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // Returns all filter keys a project belongs to (filters[] takes priority over icon)
+  // Also auto-adds "design" if project uses Adobe XD or CSS in its tech stack
   function projectFilters(p) {
-    return (p.filters && p.filters.length) ? p.filters : [p.icon];
+    const base = (p.filters && p.filters.length) ? [...p.filters] : [p.icon];
+    const tech = p.tech || {};
+    const allTechValues = Object.values(tech).flat();
+    const hasDesignTech = allTechValues.some(v =>
+      v === "Adobe XD" || v === "CSS"
+    );
+    if (hasDesignTech && !base.includes("design")) base.push("design");
+    return base;
   }
+
+  // Sort key: school priority (dbs > sit > tp), then year desc, then term desc
+  const SCHOOL_ORDER = { dbs: 3, sit: 2, tp: 1 };
+  const YEAR_ORDER   = { y2: 2, y1: 1, intern: 3 };
+  function termOrder(term) {
+    if (!term) return 0;
+    const t = term.toString().toLowerCase();
+    if (t.includes("3") || t === "sem 2") return 3;
+    if (t.includes("2") || t === "sem 1") return 2;
+    return 1;
+  }
+  function sortKey(p) {
+    return (
+      (SCHOOL_ORDER[p.school] || 0) * 1000 +
+      (YEAR_ORDER[p.year]     || 0) * 10 +
+      termOrder(p.term)
+    );
+  }
+  const sortedProjects = [...PORTFOLIO.projects].sort((a, b) => sortKey(b) - sortKey(a));
 
   const schoolLabels = {
     sit: "SIT × UofG",
@@ -84,73 +111,151 @@ document.addEventListener("DOMContentLoaded", () => {
       </a>`;
   }
 
-  // ── Render grouped by icon ────────────────────────────────
-  function renderAll(filter) {
-    const grid = document.getElementById("projects-grid");
+  // ── State ─────────────────────────────────────────────────
+  let activeFilters = new Set(); // empty = "all"
+  let currentQuery  = "";
 
-    const filtered = filter === "all"
-      ? PORTFOLIO.projects
-      : PORTFOLIO.projects.filter(p => projectFilters(p).includes(filter));
+  function techMatches(p, query) {
+    if (!query) return true;
+    const q = query.toLowerCase();
+    const tech = p.tech || {};
+    return Object.values(tech).some(arr =>
+      Array.isArray(arr) && arr.some(v => v.toLowerCase().includes(q))
+    );
+  }
+
+  function projectMatchesFilters(p) {
+    if (!activeFilters.size) return true;
+    return [...activeFilters].some(f => projectFilters(p).includes(f));
+  }
+
+  // ── Render ────────────────────────────────────────────────
+  function renderAll() {
+    const grid = document.getElementById("projects-grid");
+    const isAll = !activeFilters.size;
+
+    const source = isAll ? sortedProjects : PORTFOLIO.projects;
+    const filtered = source
+      .filter(p => projectMatchesFilters(p))
+      .filter(p => techMatches(p, currentQuery));
 
     if (!filtered.length) {
-      grid.innerHTML = `<p style="color:var(--forest-light);font-family:var(--mono);font-size:12px;margin-top:24px;">No projects in this category yet.</p>`;
+      const msg = currentQuery
+        ? `No projects match "${currentQuery}"${!isAll ? " in the selected categories" : ""}.`
+        : "No projects in this category yet.";
+      grid.innerHTML = `<p style="color:var(--forest-light);font-family:var(--mono);font-size:12px;margin-top:24px;">${msg}</p>`;
       return;
     }
 
-    const groupsToShow = filter === "all"
-      ? ICON_GROUPS.filter(g => filtered.some(p => projectFilters(p).includes(g.key)))
-      : ICON_GROUPS.filter(g => g.key === filter);
-
-    grid.innerHTML = groupsToShow.map(group => {
-      const inGroup = filtered.filter(p => projectFilters(p).includes(group.key));
-      const cards = inGroup.map(projectCard).join("");
-      const count = inGroup.length;
-      return `
-        <div class="project-type-group" data-group="${group.key}">
-          <div class="type-label-row">
-            <span class="type-dot ${group.key}"></span>
-            <span class="type-label">${group.label}</span>
-            <span class="type-count">${count}</span>
-          </div>
-          <div class="projects-row">${cards}</div>
-        </div>`;
-    }).join("");
+    if (isAll) {
+      // Flat list in data order, no group headers
+      grid.innerHTML = `<div class="projects-row">${filtered.map(projectCard).join("")}</div>`;
+    } else {
+      // Group by category, only show selected groups
+      const groupsToShow = ICON_GROUPS.filter(g => activeFilters.has(g.key));
+      grid.innerHTML = groupsToShow.map(group => {
+        const inGroup = filtered.filter(p => projectFilters(p).includes(group.key));
+        if (!inGroup.length) return "";
+        return `
+          <div class="project-type-group" data-group="${group.key}">
+            <div class="type-label-row">
+              <span class="type-dot ${group.key}"></span>
+              <span class="type-label">${group.label}</span>
+              <span class="type-count">${inGroup.length}</span>
+            </div>
+            <div class="projects-row">${inGroup.map(projectCard).join("")}</div>
+          </div>`;
+      }).join("");
+    }
   }
 
-  // ── Filter bar ───────────────────────────────────────────
-  const urlFilter = new URLSearchParams(window.location.search).get("filter") || "all";
+  // ── Sync button UI ────────────────────────────────────────
+  function syncButtonUI() {
+    const isAll = !activeFilters.size;
+    document.querySelectorAll(".proj-filter-btn").forEach(b => {
+      const f = b.dataset.filter;
+      if (f === "all") {
+        b.classList.toggle("active", isAll);
+      } else {
+        b.classList.toggle("active", activeFilters.has(f));
+      }
+    });
 
-  function activateFilter(filter) {
-    document.querySelectorAll(".proj-filter-btn").forEach(b => b.classList.remove("active"));
-    const btn = document.querySelector(`.proj-filter-btn[data-filter="${filter}"]`);
-    if (btn) btn.classList.add("active");
+    // Mobile dropdown: mark selected options
+    document.querySelectorAll("#pcs-dropdown .pcs-option").forEach(o => {
+      const f = o.dataset.filter;
+      if (f === "all") {
+        o.classList.toggle("selected", isAll);
+      } else {
+        o.classList.toggle("selected", activeFilters.has(f));
+      }
+    });
 
-    const optEl = document.querySelector(`#pcs-dropdown .pcs-option[data-filter="${filter}"]`);
-    if (optEl) {
-      document.querySelectorAll("#pcs-dropdown .pcs-option").forEach(o => o.classList.remove("selected"));
-      optEl.classList.add("selected");
-      const lbl = document.getElementById("pcs-label");
-      if (lbl) lbl.textContent = optEl.textContent.trim();
-      const dot = document.querySelector("#proj-custom-select .pcs-dot");
-      if (dot) dot.className = `pcs-dot pcs-dot-${filter}`;
+    // Mobile trigger label
+    const lbl = document.getElementById("pcs-label");
+    const dot = document.querySelector("#proj-custom-select .pcs-dot");
+    if (lbl) {
+      if (isAll) {
+        lbl.textContent = "All";
+        if (dot) dot.className = "pcs-dot pcs-dot-all";
+      } else if (activeFilters.size === 1) {
+        const key = [...activeFilters][0];
+        const opt = document.querySelector(`#pcs-dropdown .pcs-option[data-filter="${key}"]`);
+        lbl.textContent = opt ? opt.textContent.trim() : key;
+        if (dot) dot.className = `pcs-dot pcs-dot-${key}`;
+      } else {
+        lbl.textContent = `${activeFilters.size} categories`;
+        if (dot) dot.className = "pcs-dot pcs-dot-all";
+      }
     }
 
-    const params = filter === "all" ? "" : `?filter=${filter}`;
+    // URL param
+    const params = isAll ? "" : `?filter=${[...activeFilters].join(",")}`;
     history.replaceState(null, "", location.pathname + params);
-
-    renderAll(filter);
   }
 
-  activateFilter(urlFilter);
+  // ── Toggle a category filter ──────────────────────────────
+  function toggleFilter(key) {
+    if (key === "all") {
+      activeFilters.clear();
+    } else {
+      if (activeFilters.has(key)) {
+        activeFilters.delete(key);
+      } else {
+        activeFilters.add(key);
+      }
+    }
+    syncButtonUI();
+    renderAll();
+  }
 
+  // ── Init from URL ─────────────────────────────────────────
+  const urlParam = new URLSearchParams(window.location.search).get("filter");
+  if (urlParam) {
+    urlParam.split(",").forEach(f => {
+      if (f !== "all") activeFilters.add(f);
+    });
+  }
+  syncButtonUI();
+  renderAll();
+
+  // ── Desktop filter buttons ────────────────────────────────
   document.querySelectorAll(".proj-filter-btn").forEach(btn => {
-    btn.addEventListener("click", () => activateFilter(btn.dataset.filter));
+    btn.addEventListener("click", () => toggleFilter(btn.dataset.filter));
   });
 
-  // Custom mobile dropdown
-  const customBtn   = document.getElementById("proj-custom-select");
+  // ── Tech search input ─────────────────────────────────────
+  const searchInput = document.getElementById("proj-tech-search");
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      currentQuery = searchInput.value.trim();
+      renderAll();
+    });
+  }
+
+  // ── Custom mobile dropdown ────────────────────────────────
+  const customBtn      = document.getElementById("proj-custom-select");
   const customDropdown = document.getElementById("pcs-dropdown");
-  const pcsLabel    = document.getElementById("pcs-label");
 
   if (customBtn && customDropdown) {
     customBtn.addEventListener("click", (e) => {
@@ -167,20 +272,12 @@ document.addEventListener("DOMContentLoaded", () => {
     customDropdown.querySelectorAll(".pcs-option").forEach(opt => {
       opt.addEventListener("click", (e) => {
         e.stopPropagation();
-        const filter = opt.dataset.filter;
-
-        customDropdown.querySelectorAll(".pcs-option").forEach(o => o.classList.remove("selected"));
-        opt.classList.add("selected");
-
-        if (pcsLabel) pcsLabel.textContent = opt.textContent.trim();
-        const triggerDot = customBtn.querySelector(".pcs-dot");
-        if (triggerDot) {
-          triggerDot.className = `pcs-dot pcs-dot-${filter}`;
+        toggleFilter(opt.dataset.filter);
+        // keep dropdown open for multi-select; close only on All
+        if (opt.dataset.filter === "all") {
+          customDropdown.classList.remove("open");
+          customBtn.setAttribute("aria-expanded", "false");
         }
-
-        customDropdown.classList.remove("open");
-        customBtn.setAttribute("aria-expanded", "false");
-        activateFilter(filter);
       });
     });
   }

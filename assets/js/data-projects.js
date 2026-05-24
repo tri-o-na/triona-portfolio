@@ -18,7 +18,7 @@ const PROJECT_DATA = [
         projects: [
           {
             type: "Web, Database & OS",
-            id: "SIT · Y2 · T1/2", term: "Trimester 1/2",
+            id: "SIT · Y2 · T1/2", term: "Tri 1/2",
             title: "Learning Journey Buddy",
             moduleName: "Professional Software Development & Team Project",
             moduleCode: "PSD",
@@ -72,7 +72,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Cloud",
-            id: "SIT · Y2 · T1", term: "Trimester 1",
+            id: "SIT · Y2 · T1", term: "Tri 1",
             title: "AuraLearn: Cloud-based Webapp",
             moduleName: "Cloud and Distributed Computing",
             moduleCode: "CLOUD",
@@ -101,7 +101,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Networks & IoT",
-            id: "SIT · Y2 · T1", term: "Trimester 1",
+            id: "SIT · Y2 · T1", term: "Tri 1",
             title: "Intelligent Autonomous Line-Following Robot",
             moduleName: "Embedded Systems Programming",
             moduleCode: "ESP",
@@ -155,7 +155,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Social Innovation & UI/UX",
-            id: "SIT · Y2 · T1/2", term: "Trimester 1/2",
+            id: "SIT · Y2 · T1/2", term: "Tri 1/2",
             title: "SITogether",
             moduleName: "Social Innovation Project",
             moduleCode: "SIP",
@@ -192,7 +192,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Mobile & Design",
-            id: "SIT · Y2 · T2", term: "Trimester 2",
+            id: "SIT · Y2 · T2", term: "Tri 2",
             title: "MorphLearn: AI-driven Mobile App",
             moduleName: "Mobile App Development",
             moduleCode: "MAD",
@@ -227,7 +227,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Data & IoT",
-            id: "SIT · Y2 · T2", term: "Trimester 2",
+            id: "SIT · Y2 · T2", term: "Tri 2",
             title: "UWB Localisation",
             moduleName: "Data Analytics",
             moduleCode: "DATA",
@@ -251,7 +251,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Networks & IoT",
-            id: "SIT · Y2 · T2", term: "Trimester 2",
+            id: "SIT · Y2 · T2", term: "Tri 2",
             title: "Fast React: Distributed Multi-Hop Wireless Button Game System",
             moduleName: "Internet of Things (Protocols & Networks)",
             moduleCode: "IOT",
@@ -290,7 +290,7 @@ const PROJECT_DATA = [
         projects: [
           {
             type: "Backend Dev & DevOps",
-            id: "SIT · Y1 · T1", term: "Trimester 1",
+            id: "SIT · Y1 · T1", term: "Tri 1",
             title: "Assembly Language with Raspberry Pi",
             moduleName: "Computer Organisation and Architecture",
             moduleCode: "COA",
@@ -322,7 +322,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Backend Dev & DevOps",
-            id: "SIT · Y1 · T1", term: "Trimester 1",
+            id: "SIT · Y1 · T1", term: "Tri 1",
             title: "Tic Tac Toe Game Program",
             moduleName: "Programming Methodology",
             moduleCode: "PGM",
@@ -350,7 +350,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Networks & IoT",
-            id: "SIT · Y1 · T2", term: "Trimester 2",
+            id: "SIT · Y1 · T2", term: "Tri 2",
             title: "FloodShield: IoT-based Underground Pipe Monitoring System",
             moduleName: "Computer Networks",
             moduleCode: "CNET",
@@ -375,7 +375,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Algorithms",
-            id: "SIT · Y1 · T2", term: "Trimester 2",
+            id: "SIT · Y1 · T2", term: "Tri 2",
             title: "Route Radar: Flight Map Routing Project",
             moduleName: "Data Structures and Algorithms",
             moduleCode: "DSA",
@@ -402,7 +402,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Web, Database & OS",
-            id: "SIT · Y1 · T2", term: "Trimester 2",
+            id: "SIT · Y1 · T2", term: "Tri 2",
             title: "Hospital Management System",
             moduleName: "Object Oriented Programming",
             moduleCode: "OOP",
@@ -411,7 +411,7 @@ const PROJECT_DATA = [
             icon: "backend", iconLabel: "OOP",
             relevantFor: ["Back-End Dev", "Full-Stack Dev"],
             tags: ["Group Project", "OOP"],
-            tech: { languages: ["Java"], infra: ["Eclipse IDE"] },
+            tech: { languages: ["Java Programming"], infra: ["Eclipse IDE"] },
             myRole: ``,
             image: "", githubLink: "https://github.com/tri-o-na/OOP-Hospital-Management",
             extraLinks: [
@@ -421,7 +421,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Web, Database & OS",
-            id: "SIT · Y1 · T3", term: "Trimester 3",
+            id: "SIT · Y1 · T3", term: "Tri 3",
             title: "BugTracker: Rust-based Webapp",
             moduleName: "Web Programming",
             moduleCode: "WEB",
@@ -442,7 +442,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Web, Database & OS",
-            id: "SIT · Y1 · T3", term: "Trimester 3",
+            id: "SIT · Y1 · T3", term: "Tri 3",
             title: "CRYpt: Cryptocurrency Webapp",
             moduleName: "Database Systems",
             moduleCode: "DB",
@@ -465,7 +465,7 @@ const PROJECT_DATA = [
           },
           {
             type: "OS",
-            id: "SIT · Y1 · T3", term: "Trimester 3",
+            id: "SIT · Y1 · T3", term: "Tri 3",
             title: "Understanding use of AI",
             moduleName: "Operating Systems",
             moduleCode: "OS",
@@ -487,7 +487,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Design Innovation (Glasgow)",
-            id: "SIT · Y1 · T3", term: "Trimester 3",
+            id: "SIT · Y1 · T3", term: "Tri 3",
             title: "FuturAir - Harthill Logistics Drone Port serving the Scottish Central Belt",
             moduleName: "Design Innovation (Glasgow, Scotland)",
             moduleCode: "DI",
@@ -529,7 +529,7 @@ const PROJECT_DATA = [
         projects: [
           {
             type: "Mobile & Design",
-            id: "TP · Y1 · S1", term: "Semester 1",
+            id: "TP · Y1 · S1", term: "Sem 1",
             title: "Clarity Music App",
             moduleName: "Computational Thinking",
             moduleCode: "COMT",
@@ -543,7 +543,7 @@ const PROJECT_DATA = [
             icon: "design", iconLabel: "MOB",
             relevantFor: ["Mobile Dev", "UI/UX"],
             tags: ["Individual Project"],
-            tech: { languages: ["Java"], infra: ["Android Studio"], tools: ["Adobe XD"] },
+            tech: { languages: ["Java Programming"], infra: ["Android Studio"], tools: ["Adobe XD"] },
             myRole: ``,
             image: "assets/images/COMT-Clarity.jpeg",
             githubLink: "https://github.com/tri-o-na/COMT-Clarity",
@@ -557,7 +557,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Web, Database & OS",
-            id: "TP · Y1 · S2", term: "S2",
+            id: "TP · Y1 · S2", term: "Sem 2",
             title: "Review.Hut: Restaurant Review Webapp",
             moduleName: "Coding / Database Development",
             moduleCode: "CDEV",
@@ -582,7 +582,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Systems & Networking",
-            id: "TP · Y1 · S1", term: "Semester 1",
+            id: "TP · Y1 · S1", term: "Sem 1",
             title: "Company Network Setup",
             moduleName: "Network Technology",
             moduleCode: "NETY",
@@ -669,7 +669,7 @@ const PROJECT_DATA = [
         projects: [
           {
             type: "Mobile & Design",
-            id: "TP · Y2 · S1", term: "Semester 1",
+            id: "TP · Y2 · S1", term: "Sem 1",
             title: "Readium: Book Review Mobile App",
             moduleName: "Mobile App Development",
             moduleCode: "MBAP",
@@ -705,7 +705,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Web, Database & OS",
-            id: "TP · Y2 · S1", term: "Semester 1",
+            id: "TP · Y2 · S1", term: "Sem 1",
             title: "Clotho: E-commerce Webapp",
             moduleName: "Full Stack Web Development",
             moduleCode: "FWEB",
@@ -737,7 +737,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Cloud",
-            id: "TP · Y2 · S2", term: "S2",
+            id: "TP · Y2 · S2", term: "Sem 2",
             title: "Eleganceia: Hotel Reservation Webapp",
             moduleName: "Cloud Application Development",
             moduleCode: "CADV",
@@ -782,7 +782,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Networks & IoT",
-            id: "TP · Y2 · S2", term: "S2",
+            id: "TP · Y2 · S2", term: "Sem 2",
             title: "Pool Water TPC Sensor",
             moduleName: "IoT Application Development",
             moduleCode: "ITAD",
@@ -822,7 +822,7 @@ const PROJECT_DATA = [
           },
           {
             type: "Backend Dev & DevOps",
-            id: "TP · Y2 · S2", term: "S2",
+            id: "TP · Y2 · S2", term: "Sem 2",
             title: "Dogtopia: Dog Review Web Application",
             moduleName: "DevOps (Development Operations)",
             moduleCode: "DVOPS",
@@ -846,7 +846,7 @@ const PROJECT_DATA = [
             filters: ["fullstack", "backend", "cloud"],
             relevantFor: ["Cloud & DevOps", "Back-End Dev", "UI/UX"],
             tags: ["Pair Project", "DevOps"],
-            tech: { languages: ["Java", "CSS"], infra: ["Eclipse IDE"], tools: ["Jenkins", "Selenium", "Jira", "JUnit", "Adobe XD"] },
+            tech: { languages: ["Java Programming", "CSS"], infra: ["Eclipse IDE"], tools: ["Jenkins", "Selenium", "Jira", "JUnit", "Adobe XD"] },
             myRole: ``,
             image: "assets/images/DVOPS-Dogtopia.jpeg",
             githubLink: "https://github.com/tri-o-na/DVOPS-Dogtopia",
@@ -858,7 +858,7 @@ const PROJECT_DATA = [
           },
           {
             type: "AI & Machine Learning",
-            term: "S2",
+            term: "Sem 2",
             title: "RadiantRocks: Diamond Price Prediction Webapp",
             moduleName: "Machine Learning",
             moduleCode: "MLDP",
