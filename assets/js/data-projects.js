@@ -599,10 +599,20 @@ const PROJECT_DATA = [
 
             <p><b>Purpose:</b> Solve code errors quickly and efficiently with GenAI. </p>
             
-            **Improve the current project's accuracy of detecting the correct error from a screenshot`,
+            **Improve the current project's accuracy of detecting the correct error from a screenshot
+
+            <br>
+            <br>
+
+            <p>An AI-powered error resolution tool built as a Django web application. Users submit screenshots of error messages, which are processed through OCR and NLP to extract and clean the error text, summarised by an LLM, then matched against internal Confluence documentation via LlamaIndex before a second LLM generates a resolution. Solutions and user feedback are stored in SQLite. The project was inherited from a previous team and improved end-to-end in accuracy and performance. </p>
+            
+            
+            `
+            
+            ,
             icon: "ai", iconLabel: "AI",
             relevantFor: ["AI / ML", "Back-End Dev"],
-            tags: ["NLP", "LLMs", "Python", "ML"],
+            tags: ["NLP", "LLMs", "Python", "Django", "SQLite", "ML"],
             image: "assets/images/DBS-HelpLah!.png",
             githubLink: "",
             extraLinks: [
