@@ -56,7 +56,7 @@ const PROJECT_DATA = [
             icon: "design", iconLabel: "WEB",
             filters: ["fullstack", "design", "backend"],
             relevantFor: ["Full-Stack Dev", "Back-End Dev", "Web Dev", "UI/UX"],
-            tags: ["Client Project", "Python", "SQL"],
+            tags: ["Client Project", "Python", "Gemini API", "SQL"],
             image: "assets/images/PSD-chatbot.gif",
             githubLink: "https://github.com/tri-o-na/PSD-LearningJourneyBuddy",
             extraLinks: [
