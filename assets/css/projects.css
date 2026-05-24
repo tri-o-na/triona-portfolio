@@ -229,6 +229,53 @@
   line-height: 1.8;
 }
 
+.detail-tech-group {
+  margin-bottom: 10px;
+}
+
+.detail-tech-category {
+  display: block;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--forest-light);
+  margin-bottom: 2px;
+}
+
+.detail-tech-list {
+  margin: 0;
+  padding-left: 14px;
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--forest-mid);
+  line-height: 1.8;
+}
+
+.detail-my-role {
+  color: var(--forest-deep);
+  font-size: 14.5px;
+  line-height: 1.85;
+}
+
+.detail-my-role ul {
+  padding-left: 2rem;
+  margin: 1rem 0;
+  list-style-position: outside;
+}
+
+.detail-my-role ol {
+  padding-left: 2rem;
+  margin: 1rem 0;
+  list-style-position: outside;
+}
+
+.detail-my-role li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
 /* ── Project school & year tabs ───────────────────────────────── */
 .proj-school-tabs {
   display: flex;

@@ -56,7 +56,9 @@ const PROJECT_DATA = [
             icon: "design", iconLabel: "WEB",
             filters: ["fullstack", "design", "backend"],
             relevantFor: ["Full-Stack Dev", "Back-End Dev", "Web Dev", "UI/UX"],
-            tags: ["Client Project", "Python", "Gemini API", "SQL"],
+            tags: ["Client Project", "Group Project"],
+            tech: { languages: ["Python"], frameworks: ["Node.js"], apis: ["Gemini API"], databases: ["SQL"] },
+            myRole: ``,
             image: "assets/images/PSD-chatbot.gif",
             githubLink: "https://github.com/tri-o-na/PSD-LearningJourneyBuddy",
             extraLinks: [
@@ -74,23 +76,18 @@ const PROJECT_DATA = [
             title: "AuraLearn: Cloud-based Webapp",
             moduleName: "Cloud and Distributed Computing",
             moduleCode: "CLOUD",
-            desc: "Design and implement a cloud-based distributed system.",
+            desc: "Design and implement a cloud-based distributed system using Google's Firebase platform.",
             fullDesc: `
             <p>Design and implement a smart, intelligent, reliable, and secure cloud-based distributed system incorporating cloud native frameworks such as containers and/or Kubernetes. The system must demonstrate an original contribution documented in a research article format, comparing it to related research or industrial work.</p>
-
-            <p>You may choose one of two problem statements from Lion Befrienders or propose your own idea, such as:</p>
-            <ul>
-              <li>A distributed application utilizing cloud computing.</li>
-              <li>An integrated system employing AI, cloud computing, and embedded systems.</li>
-              <li>A distributed data collection and analytic framework for environmental monitoring.</li>
-            </ul>
 
             <p>Working in groups, you will apply knowledge from Dell’s online courses to derive your own specification and design. Groups are responsible for dividing work and managing the project to deliver novel functionality and tangible outcomes.</p>
             `,
             icon: "cloud", iconLabel: "CLD",
             filters: ["fullstack", "cloud", "design"],
             relevantFor: ["Cloud & DevOps", "Full-Stack Dev", "Web Dev", "UI/UX"],
-            tags: ["HTML", "CSS", "JavaScript", "Docker", "Kubernetes", "Firebase", "Firestore"],
+            tags: ["Group Project"],
+            tech: { languages: ["JavaScript", "HTML", "CSS"], databases: ["Firestore"], apis: ["Firebase"], infra: ["Docker", "Kubernetes"] },
+            myRole: ``,
             image: "assets/images/CLOUD-ArchitecturalDiagram.png",
             githubLink: "https://github.com/tri-o-na/CLOUD-AuraLearn",
             extraLinks: [
@@ -142,7 +139,9 @@ const PROJECT_DATA = [
             `,
             icon: "iot", iconLabel: "IOT",
             relevantFor: ["Embedded Dev", "IoT Dev"],
-            tags: ["C", "Raspberry Pi Pico", "IoT"],
+            tags: ["Group Project", "IoT"],
+            tech: { languages: ["C"], apis: ["MQTT"], infra: ["Raspberry Pi Pico"] },
+            myRole: ``,
             image: "assets/images/ESP-RobotCar.jpg",
             githubLink: "https://github.com/tri-o-na/ESP-RobotCar",
             extraLinks: [
@@ -180,7 +179,9 @@ const PROJECT_DATA = [
             `,
             icon: "design", iconLabel: "UX",
             relevantFor: ["UI/UX", "Front-End Dev"],
-            tags: ["UI/UX", "Adobe XD", "HCI"],
+            tags: ["Group Project", "UI/UX", "HCI"],
+            tech: { tools: ["Adobe XD"] },
+            myRole: ``,
             image: "assets/images/SIP-SITogether.jpg",
             githubLink: "",
             extraLinks: [
@@ -210,7 +211,9 @@ const PROJECT_DATA = [
             `,
             icon: "design", iconLabel: "MOB",
             relevantFor: ["Mobile Dev", "Front-End Dev", "UI/UX"],
-            tags: ["Kotlin", "Android", "CI/CD"],
+            tags: ["Group Project", "Agile"],
+            tech: { languages: ["Kotlin"], frameworks: ["Jetpack Compose"], apis: ["Firebase Auth", "Firestore"], infra: ["Android SDK"], tools: ["CI/CD"] },
+            myRole: ``,
             image: "assets/images/MAD-MorphLearn.jpg",
             githubLink: "https://github.com/tri-o-na/MAD-MorphLearn",
             extraLinks: [
@@ -233,7 +236,9 @@ const PROJECT_DATA = [
             <p> I focused on the Cross-Environment Validation and creating the final architectural diagram </p>`,
             icon: "data", iconLabel: "DA",
             relevantFor: ["Data Engineer", "AI / ML"],
-            tags: ["Python", "Data Analytics"],
+            tags: ["Group Project", "Data Analytics"],
+            tech: { languages: ["Python"], frameworks: ["scikit-learn"] },
+            myRole: ``,
             image: "",
             githubLink: "https://github.com/tri-o-na/DATA-UWBLocalisation",
             extraLinks: [
@@ -264,7 +269,9 @@ const PROJECT_DATA = [
             `,
             icon: "iot", iconLabel: "IOT",
             relevantFor: ["IoT Dev", "Embedded Dev"],
-            tags: ["Arduino", "IoT"],
+            tags: ["Group Project", "IoT"],
+            tech: { languages: ["C++"], infra: ["Arduino"] },
+            myRole: ``,
             image: "",
             githubLink: "https://github.com/tri-o-na/IOT-FastReact",
             extraLinks: [
@@ -302,7 +309,9 @@ const PROJECT_DATA = [
             `,
             icon: "systems", iconLabel: "SYS",
             relevantFor: ["Systems Dev", "Embedded Dev"],
-            tags: ["C", "Assembly", "Raspberry Pi"],
+            tags: ["Individual Project"],
+            tech: { languages: ["C", "Assembly"], infra: ["Raspberry Pi"] },
+            myRole: ``,
             image: "",
             githubLink: "https://github.com/tri-o-na/COA-AssemblyRaspberryPi",
             extraLinks: [
@@ -326,7 +335,9 @@ const PROJECT_DATA = [
             `,
             icon: "systems", iconLabel: "SYS",
             relevantFor: ["Systems Dev", "Back-End Dev", "UI/UX"],
-            tags: ["C"],
+            tags: ["Individual Project"],
+            tech: { languages: ["C"] },
+            myRole: ``,
             image: "assets/images/PGM-TicTacToe.jpg",
             githubLink: "https://github.com/tri-o-na/PGM-TicTacToe",
             extraLinks: [
@@ -350,7 +361,9 @@ const PROJECT_DATA = [
             `,
             icon: "iot", iconLabel: "NET",
             relevantFor: ["IoT Dev", "Network Engineer"],
-            tags: ["Cisco", "IoT", "Networking", "Raspberry Pi"],
+            tags: ["Group Project", "IoT", "Networking"],
+            tech: { infra: ["Raspberry Pi", "Cisco Packet Tracer"] },
+            myRole: ``,
             image: "assets/images/CNET-FloodShield.png",
             githubLink: "",
             extraLinks: [
@@ -377,7 +390,9 @@ const PROJECT_DATA = [
             `,
             icon: "data", iconLabel: "ALG",
             relevantFor: ["Back-End Dev", "Data Engineer"],
-            tags: ["Python", "Algorithms"],
+            tags: ["Group Project", "Algorithms"],
+            tech: { languages: ["Python"], frameworks: ["Kivy"], tools: ["JSON"] },
+            myRole: ``,
             image: "assets/images/DSA-RouteRadar.jpg",
             githubLink: "https://github.com/tri-o-na/DSA-RouteRadar",
             extraLinks: [
@@ -395,7 +410,9 @@ const PROJECT_DATA = [
             fullDesc: "This project involved the design and implementation of a Hospital Management System using the object-oriented programming paradigm in Java. Working within a large group of 12 that was subdivided into two six-student programming teams, the project was split into two phases. Phase 1 focused on individual teams developing an automatically assigned core module of the system, including producing a detailed technical report with usage explanation and Javadoc documentation. Phase 2 required the two programming teams in the larger group to consolidate their work into a single main program and integrate two additional modules selected from four modules provided by other groups in an executable object format. This emphasized real-world software development challenges, such as integrating black-box components, effective communication, and collaborative design.",
             icon: "backend", iconLabel: "OOP",
             relevantFor: ["Back-End Dev", "Full-Stack Dev"],
-            tags: ["Java", "OOP"],
+            tags: ["Group Project", "OOP"],
+            tech: { languages: ["Java"], infra: ["Eclipse IDE"] },
+            myRole: ``,
             image: "", githubLink: "https://github.com/tri-o-na/OOP-Hospital-Management",
             extraLinks: [
               { label: "Phase 1 Report (team of 6)", url: "https://docs.google.com/document/d/163U--2pIx-x_klNpg4zraARYNlEW9gFVsg9fBfXDtzY/edit?usp=sharing" , caption: `` },
@@ -413,7 +430,9 @@ const PROJECT_DATA = [
             icon: "design", iconLabel: "WEB",
             filters: ["fullstack", "design", "backend"],
             relevantFor: ["Back-End Dev", "Full-Stack Dev", "Web Dev"],
-            tags: ["Rust", "Actix", "SQLite"],
+            tags: ["Group Project"],
+            tech: { languages: ["Rust"], frameworks: ["Actix"], databases: ["SQLite"] },
+            myRole: ``,
             image: "",
             githubLink: "https://github.com/tri-o-na/WEB-BugTracker",
             extraLinks: [
@@ -432,7 +451,9 @@ const PROJECT_DATA = [
             icon: "backend", iconLabel: "DB",
             filters: ["fullstack", "backend"],
             relevantFor: ["Back-End Dev", "Full-Stack Dev", "UI/UX"],
-            tags: ["Rust", "TypeScript", "SQL", "NoSQL"],
+            tags: ["Group Project"],
+            tech: { languages: ["Rust", "TypeScript"], frameworks: ["Next.js", "Actix"], databases: ["SQL", "NoSQL", "MongoDB", "ClickHouse"] },
+            myRole: ``,
             image: "assets/images/DB-ArchitecturalDiagram.png",
             githubLink: "https://github.com/tri-o-na/DB-CRYpt",
             extraLinks: [
@@ -452,7 +473,9 @@ const PROJECT_DATA = [
             fullDesc: "My primary contribution to this Operating Systems project was Question 2, a comprehensive programming assignment that required developing solutions for several tasks using two distinct scripting environments: Linux Bash shell script and Python. I was responsible for creating the required programs, such as one to check if a user-keyed-in number is prime, in both a self-developed Bash script and a self-developed Python function. The core of the project involved a rigorous, comparative analysis of these programming approaches—specifically, assessing the similarities, differences, advantages, and weaknesses between the codes I developed versus those generated by Generative AI (GenAI), evaluating factors like code structure, efficiency, and the time spent on development. This comparative study reinforced my understanding of OS command automation and high-level language capabilities, and provided valuable insights into the effective use of AI tools in software development.",
             icon: "systems", iconLabel: "SYS",
             relevantFor: ["Systems Dev", "Back-End Dev"],
-            tags: ["Bash", "Python"],
+            tags: ["Individual Project"],
+            tech: { languages: ["Python", "Bash"] },
+            myRole: ``,
             image: "",
             githubLink: "https://github.com/tri-o-na/OS-UnderstandAI",
             extraLinks: [
@@ -480,7 +503,9 @@ const PROJECT_DATA = [
             `,
             icon: "design", iconLabel: "OIP",
             relevantFor: ["UI/UX"],
-            tags: ["Design Thinking", "HCI", "OIP", "Glasgow"],
+            tags: ["Group Project", "Design Thinking", "HCI", "OIP"],
+            tech: { tools: ["Design Thinking"] },
+            myRole: ``,
             image: "assets/images/DI-FuturAir-Map-Layout.png",
             githubLink: "",
             extraLinks: [
@@ -517,7 +542,9 @@ const PROJECT_DATA = [
               <p><b>Final Product:</b>  A completed and functional Music Player application, which follows closely the Hi-Fi design, planned and designed in Adobe XD.</p>`,
             icon: "design", iconLabel: "MOB",
             relevantFor: ["Mobile Dev", "UI/UX"],
-            tags: ["Java", "Adobe XD", "Android Studio"],
+            tags: ["Individual Project"],
+            tech: { languages: ["Java"], infra: ["Android Studio"], tools: ["Adobe XD"] },
+            myRole: ``,
             image: "assets/images/COMT-Clarity.jpeg",
             githubLink: "https://github.com/tri-o-na/COMT-Clarity",
             extraLinks: [
@@ -539,7 +566,9 @@ const PROJECT_DATA = [
             icon: "design", iconLabel: "WEB",
             filters: ["fullstack", "design", "backend"],
             relevantFor: ["Full-Stack Dev", "Front-End Dev", "Web Dev", "UI/UX"],
-            tags: ["HTML", "CSS", "SQL", "JavaScript"],
+            tags: ["Individual Project"],
+            tech: { languages: ["JavaScript", "HTML", "CSS"], databases: ["SQL"], tools: ["Adobe XD"] },
+            myRole: ``,
             image: "assets/images/CDEV-Review.hut.jpeg",
             githubLink: "https://github.com/tri-o-na/CDEV-ReviewHut",
             extraLinks: [
@@ -571,7 +600,9 @@ const PROJECT_DATA = [
               </ul>`,
             icon: "iot", iconLabel: "NET",
             relevantFor: ["Network Engineer", "IoT Dev"],
-            tags: ["Cisco Packet Tracer", "Networking"],
+            tags: ["Individual Project", "Networking"],
+            tech: { infra: ["Cisco Packet Tracer"] },
+            myRole: ``,
             image: "assets/images/NETY-NetworkDiagram.jpg",
             githubLink: "",
             extraLinks: [
@@ -612,7 +643,15 @@ const PROJECT_DATA = [
             ,
             icon: "ai", iconLabel: "AI",
             relevantFor: ["AI / ML", "Back-End Dev"],
-            tags: ["NLP", "LLMs", "Python", "Django", "SQLite", "ML"],
+            tags: ["Pair Project", "NLP", "ML"],
+            tech: { languages: ["Python"], frameworks: ["Django", "LlamaIndex"], databases: ["SQLite"], apis: ["LLMs", "OCR"] },
+            myRole: `<ul>
+              <li>Took over the system from the original development team alongside one other intern, conducting a full audit of the existing architecture to understand and document the end-to-end pipeline.</li>
+              <li>Led NLP preprocessing improvements, reducing noise in OCR-extracted text and handling out-of-vocabulary tokens to improve input quality for downstream LLM processing.</li>
+              <li>Identified training data size as the root cause of excessive processing times (1–3 hours), resolving the issue by right-sizing the dataset from ~400–500 samples down to ~100.</li>
+              <li>Evaluated and selected an updated LLM for the solution generation stage, leveraging newer models that were unavailable when the original system was built.</li>
+              <li>Validated model accuracy using text similarity scoring on a held-out test set from an 80/20 train-test split.</li>
+            </ul>`,
             image: "assets/images/DBS-HelpLah!.png",
             githubLink: "",
             extraLinks: [
@@ -652,7 +691,9 @@ const PROJECT_DATA = [
               </ul>`,
             icon: "design", iconLabel: "MOB",
             relevantFor: ["Mobile Dev", "Front-End Dev", "UI/UX"],
-            tags: ["Flutter", "Dart", "Adobe XD", "Android Studio"],
+            tags: ["Individual Project"],
+            tech: { languages: ["Dart"], frameworks: ["Flutter"], apis: ["Firebase Auth", "Firestore"], infra: ["Android Studio"], tools: ["Adobe XD"] },
+            myRole: ``,
             image: "assets/images/MBAP-Readium.jpeg",
             githubLink: "https://github.com/tri-o-na/MBAP-Readium",
             extraLinks: [
@@ -680,7 +721,9 @@ const PROJECT_DATA = [
             icon: "design", iconLabel: "WEB",
             filters: ["fullstack", "design", "backend"],
             relevantFor: ["Full-Stack Dev", "Front-End Dev", "Web Dev", "UI/UX"],
-            tags: ["HTML", "CSS", "MongoDB", "Angular", "Node.js"],
+            tags: ["Individual Project"],
+            tech: { languages: ["JavaScript", "HTML", "CSS"], frameworks: ["Angular", "Node.js"], databases: ["MongoDB"], tools: ["Adobe XD"] },
+            myRole: ``,
             image: "assets/images/FWEB-Clotho.jpeg",
             githubLink: "https://github.com/tri-o-na/FWEB-Clotho",
             extraLinks: [
@@ -713,7 +756,9 @@ const PROJECT_DATA = [
             icon: "cloud", iconLabel: "CLD",
             filters: ["fullstack", "cloud", "design"],
             relevantFor: ["Cloud & DevOps", "Full-Stack Dev", "Web Dev", "UI/UX"],
-            tags: ["AWS", "JavaScript", "Postman", "AWS S3", "AWS DynamoDB"],
+            tags: ["Individual Project", "Cloud"],
+            tech: { languages: ["JavaScript"], databases: ["AWS DynamoDB"], apis: ["AWS S3", "AWS API Gateway"], infra: ["AWS"], tools: ["Adobe XD", "Postman"] },
+            myRole: ``,
             image: "assets/images/CADV-eleganceia.png",
             githubLink: "https://github.com/tri-o-na/CADV-Eleganceia",
             extraLinks: [
@@ -764,7 +809,9 @@ const PROJECT_DATA = [
             </ul>`,
             icon: "iot", iconLabel: "IOT",
             relevantFor: ["IoT Dev", "Cloud & DevOps"],
-            tags: ["IoT", "AWS", "JavaScript", "AWS DynamoDB"],
+            tags: ["Individual Project", "IoT", "Cloud"],
+            tech: { languages: ["JavaScript"], databases: ["AWS DynamoDB"], apis: ["AWS Lambda", "AWS SNS"], infra: ["AWS"] },
+            myRole: ``,
             image: "assets/images/ITAD-ArchitecturalDiagram.png",
             githubLink: "",
             extraLinks: [
@@ -798,7 +845,9 @@ const PROJECT_DATA = [
             icon: "backend", iconLabel: "DEV",
             filters: ["fullstack", "backend", "cloud"],
             relevantFor: ["Cloud & DevOps", "Back-End Dev", "UI/UX"],
-            tags: ["Jenkins", "Selenium", "Jira", "Eclipse", "JUnit"],
+            tags: ["Pair Project", "DevOps"],
+            tech: { languages: ["Java", "CSS"], infra: ["Eclipse IDE"], tools: ["Jenkins", "Selenium", "Jira", "JUnit", "Adobe XD"] },
+            myRole: ``,
             image: "assets/images/DVOPS-Dogtopia.jpeg",
             githubLink: "https://github.com/tri-o-na/DVOPS-Dogtopia",
             extraLinks: [
@@ -829,7 +878,9 @@ const PROJECT_DATA = [
             <p><b>Final Product: </b> A completed and functional Diamond Prediction Web Application, which predicts the price of a diamond with the given specifications.</p>`,
             icon: "ai", iconLabel: "ML",
             relevantFor: ["AI / ML", "Data Engineer"],
-            tags: ["Python", "JupyterLab", "ML", "HTML", "CSS"],
+            tags: ["Individual Project", "ML"],
+            tech: { languages: ["Python", "HTML", "CSS"], frameworks: ["scikit-learn"], tools: ["JupyterLab"] },
+            myRole: ``,
             image: "assets/images/MLDP-RadiantRocks.png",
             githubLink: "",
             extraLinks: [

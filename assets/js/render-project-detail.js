@@ -77,6 +77,14 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("detail-full-desc").innerHTML =
     project.fullDesc || project.desc;
 
+  // ── My Role ───────────────────────────────────────────────
+  if (project.myRole) {
+    const roleSection = document.getElementById("detail-my-role-section");
+    const roleEl      = document.getElementById("detail-my-role");
+    roleEl.innerHTML  = project.myRole;
+    roleSection.style.display = "block";
+  }
+
   // ── ⑤ Google Drive embeds ─────────────────────────────────
 
   // Extract Drive file ID from any sharing URL format
@@ -197,6 +205,30 @@ document.addEventListener("DOMContentLoaded", () => {
     `${yearLabels[project.year] || project.year}, ${project.term}`;
   document.getElementById("detail-sidebar-type").textContent = project.type;
 
+  // ── Tech Stack ────────────────────────────────────────────
+  if (project.tech && Object.keys(project.tech).length) {
+    const TECH_LABELS = {
+      languages:  "Languages",
+      frameworks: "Frameworks & Libraries",
+      databases:  "Databases",
+      apis:       "APIs & Services",
+      infra:      "Infrastructure",
+      tools:      "Tools",
+    };
+    const techWrap = document.getElementById("detail-sidebar-tech-wrap");
+    const techEl   = document.getElementById("detail-sidebar-tech");
+    techEl.innerHTML = Object.entries(project.tech)
+      .filter(([, vals]) => vals && vals.length)
+      .map(([key, vals]) =>
+        `<div class="detail-tech-group">
+          <span class="detail-tech-category">${TECH_LABELS[key] || key}</span>
+          <ul class="detail-tech-list">${vals.map(v => `<li>${v}</li>`).join("")}</ul>
+        </div>`
+      ).join("");
+    techWrap.style.display = "block";
+  }
+
+  // ── Relevant For ─────────────────────────────────────────
   if (project.relevantFor && project.relevantFor.length) {
     const FULL_ROLE_NAMES = {
       "Full-Stack Dev":  "Full-Stack Developer",
@@ -213,15 +245,11 @@ document.addEventListener("DOMContentLoaded", () => {
       "Systems Dev":     "Systems Developer",
       "Web Dev":         "Web Developer",
     };
-    const sidebar = document.querySelector(".detail-sidebar");
-    const block = document.createElement("div");
-    block.className = "detail-sidebar-block";
-    block.innerHTML = `
-      <div class="detail-sidebar-label">Relevant For</div>
-      <ul class="detail-relevant-list">${project.relevantFor.map(r =>
-        `<li>${FULL_ROLE_NAMES[r] || r}</li>`
-      ).join("")}</ul>`;
-    sidebar.insertBefore(block, sidebar.firstChild);
+    const relevantWrap = document.getElementById("detail-sidebar-relevant-wrap");
+    const relevantEl   = document.getElementById("detail-sidebar-relevant");
+    relevantEl.innerHTML = project.relevantFor
+      .map(r => `<li>${FULL_ROLE_NAMES[r] || r}</li>`).join("");
+    relevantWrap.style.display = "block";
   }
 
   // ── GitHub button (header, below tags) ─────────────────────

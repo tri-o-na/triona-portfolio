@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // ── Programming languages — EXACT match only ──────────────────
   const LANGUAGES = [
     "Python", "Java", "JavaScript", "TypeScript",
-    "Rust", "C", "Dart", "Kotlin", "HTML", "CSS",
-    "SQL", "Assembly", "Bash",
+    "Rust", "C", "C++", "Dart", "Kotlin", "HTML", "CSS",
+    "SQL", "Assembly", "Bash", "JSP",
   ];
 
-  // ── Category groups ───────────────────────────────────────────
+  // ── Category groups — keyword → display section mapping ───────
   const GROUPS = [
     {
       key: "design",
@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
       langs: ["HTML", "CSS", "JavaScript", "TypeScript", "Dart", "Kotlin"],
       tools: [
         "Angular", "React", "Vue", "Flutter", "Vite.js",
-        "Android", "Android Studio", "Adobe XD",
+        "Jetpack Compose",
+        "Android SDK", "Android Studio", "Adobe XD",
         "UI/UX", "HCI", "Design Thinking",
       ],
     },
@@ -25,9 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
       key: "backend",
       title: "Back-End Development",
       icon: "▣",
-      langs: ["Python", "Java", "Rust", "TypeScript", "SQL"],
+      langs: ["Python", "Java", "Rust", "TypeScript", "SQL", "JSP"],
       tools: [
-        "Node.js", "Actix", "Express", "Laravel", "PHP",
+        "Node.js", "Actix", "Next.js", "Django", "LlamaIndex", "Kivy", "Express", "Laravel", "PHP",
         "REST", "Postman",
       ],
     },
@@ -37,8 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
       icon: "◈",
       langs: ["Python"],
       tools: [
-        "NLP", "LLMs", "ML", "Machine Learning",
-        "JupyterLab",
+        "NLP", "LLMs", "ML", "Machine Learning", "OCR",
+        "scikit-learn", "JupyterLab",
       ],
     },
     {
@@ -47,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       icon: "◇",
       langs: ["Python"],
       tools: [
-        "Algorithms", "Data Analytics",
+        "Algorithms", "Data Analytics", "scikit-learn",
       ],
     },
     {
@@ -56,18 +57,17 @@ document.addEventListener("DOMContentLoaded", () => {
       icon: "◎",
       langs: [],
       tools: [
-        "AWS", "Docker", "Kubernetes", "Firebase",
-        "Jenkins", "Selenium", "Jira", "CI/CD",
+        "AWS", "Docker", "Kubernetes", "Firebase", "Firebase Auth", "Firestore",
+        "Jenkins", "Selenium", "Jira", "JUnit", "CI/CD", "DevOps",
       ],
     },
     {
       key: "iot",
       title: "IoT & Networking",
       icon: "⬡",
-      langs: ["C"],
+      langs: ["C", "C++"],
       tools: [
-        "Arduino", "Cisco", "Cisco Packet Tracer",
-        "Networking", "IoT",
+        "Arduino", "Cisco Packet Tracer", "MQTT",
         "Raspberry Pi", "Raspberry Pi Pico",
       ],
     },
@@ -75,48 +75,47 @@ document.addEventListener("DOMContentLoaded", () => {
       key: "systems",
       title: "Systems & Low-Level",
       icon: "⬢",
-      langs: ["C", "Assembly", "Rust", "Bash"],
-      tools: [],
+      langs: ["C", "C++", "Assembly", "Rust", "Bash"],
+      tools: ["Eclipse IDE"],
     },
   ];
 
-  // ── Databases group (explicit list, not derived from tags) ─────
-  const DATABASE_ITEMS = [
-    "SQL", "SQLite", "MySQL", "PostgreSQL",
-    "MongoDB", "NoSQL", "Firebase", "Firestore", "AWS S3", "AWS DynamoDB"
-  ];
-
-  // ── Tags to exclude from skills entirely ─────────────────────
-  const EXCLUDED_TAGS = ["Client Project", "OIP", "Glasgow"];
-
-  // ── Collect all unique tags from every project ────────────────
-  const allTags = [...new Set(PORTFOLIO.projects.flatMap(p => p.tags))]
-    .filter(t => !EXCLUDED_TAGS.some(ex => ex.toLowerCase() === t.toLowerCase()));
-
-  // ── Exact-match only for languages (no startsWith) ────────────
-  function isLanguage(tag) {
-    return LANGUAGES.some(l => tag.toLowerCase() === l.toLowerCase());
+  // ── Collect all tech values from every project's tech object ──
+  function collectTech(category) {
+    return [...new Set(
+      PORTFOLIO.projects
+        .flatMap(p => (p.tech && p.tech[category]) ? p.tech[category] : [])
+    )];
   }
 
-  function matchesAny(tag, keywords) {
-    return keywords.some(kw => tag.toLowerCase() === kw.toLowerCase());
+  const allLangs   = collectTech("languages");
+  const allFrames  = collectTech("frameworks");
+  const allDbs     = collectTech("databases");
+  const allApis    = collectTech("apis");
+  const allInfra   = collectTech("infra");
+  const allTools   = collectTech("tools");
+
+  // Everything except databases, combined for group matching
+  const allNonDb = [...new Set([...allLangs, ...allFrames, ...allApis, ...allInfra, ...allTools])];
+
+  function matchesAny(item, keywords) {
+    return keywords.some(kw => item.toLowerCase() === kw.toLowerCase());
   }
 
-  // ── Build language tags — exact match only ────────────────────
-  const langTags = allTags.filter(t => isLanguage(t));
+  // ── Build language tags — from tech.languages ─────────────────
+  const langTags = allLangs.filter(l =>
+    LANGUAGES.some(known => known.toLowerCase() === l.toLowerCase())
+  );
 
-  // ── Build database tags — from allTags + explicit list ────────
-  const dbTags = [...new Set([
-    ...allTags.filter(t => matchesAny(t, DATABASE_ITEMS)),
-    ...DATABASE_ITEMS.filter(d => allTags.some(t => t.toLowerCase() === d.toLowerCase())),
-  ])];
+  // ── Build database tags — from tech.databases ─────────────────
+  const dbTags = allDbs;
 
-  // ── Build category groups ─────────────────────────────────────
+  // ── Build category groups from all non-db tech values ─────────
   const categoryGroups = GROUPS.map(group => {
-    const relevantLangs = allTags.filter(t => matchesAny(t, group.langs));
-    const relevantTools = allTags.filter(t => matchesAny(t, group.tools));
-    const tags = [...new Set([...relevantLangs, ...relevantTools])];
-    return { ...group, tags };
+    const matched = allNonDb.filter(t =>
+      matchesAny(t, group.langs) || matchesAny(t, group.tools)
+    );
+    return { ...group, tags: [...new Set(matched)] };
   }).filter(g => g.tags.length > 0);
 
   // ── Render helper ─────────────────────────────────────────────

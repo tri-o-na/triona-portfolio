@@ -70,16 +70,34 @@
             <p class="detail-full-desc" id="detail-full-desc"></p>
           </div>
 
+          <!-- My Role section (shown only for group/pair projects) -->
+          <div class="detail-section" id="detail-my-role-section" style="display:none;">
+            <div class="detail-section-label">My Role</div>
+            <div class="detail-my-role" id="detail-my-role"></div>
+          </div>
+
           <!-- ⑤ Embedded Google Drive previews (reports, slides, etc.) -->
           <div id="detail-embeds"></div>
         </div>
 
         <aside class="detail-sidebar">
 
+          <!-- Tech stack (rendered by JS) -->
+          <div class="detail-sidebar-block" id="detail-sidebar-tech-wrap" style="display:none;">
+            <div class="detail-sidebar-label">Tech Stack</div>
+            <div id="detail-sidebar-tech"></div>
+          </div>
+
           <!-- Extra links listed in sidebar too (open in new tab) -->
           <div class="detail-sidebar-block" id="detail-sidebar-links-wrap" style="display:none;">
             <div class="detail-sidebar-label">Documents</div>
             <div id="detail-sidebar-links"></div>
+          </div>
+
+          <!-- Relevant For (rendered by JS) -->
+          <div class="detail-sidebar-block" id="detail-sidebar-relevant-wrap" style="display:none;">
+            <div class="detail-sidebar-label">Relevant For</div>
+            <ul class="detail-relevant-list" id="detail-sidebar-relevant"></ul>
           </div>
 
           <div class="detail-sidebar-block">
