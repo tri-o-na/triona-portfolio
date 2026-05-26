@@ -43,6 +43,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   const sortedProjects = [...PORTFOLIO.projects].sort((a, b) => sortKey(b) - sortKey(a));
 
+  // Debug: Log IoT projects order
+  console.log("IoT projects in sorted order:",
+    sortedProjects
+      .filter(p => p.icon === "iot" || (p.filters && p.filters.includes("iot")))
+      .map(p => ({ title: p.title, term: p.term, school: p.school, year: p.year, sortKey: sortKey(p) }))
+  );
+
   const schoolLabels = {
     sit: "SIT × UofG",
     tp:  "Temasek Poly",
@@ -134,8 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const grid = document.getElementById("projects-grid");
     const isAll = !activeFilters.size;
 
-    const source = isAll ? sortedProjects : PORTFOLIO.projects;
-    const filtered = source
+    const filtered = sortedProjects
       .filter(p => projectMatchesFilters(p))
       .filter(p => techMatches(p, currentQuery));
 

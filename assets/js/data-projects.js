@@ -58,7 +58,17 @@ const PROJECT_DATA = [
             relevantFor: ["Full-Stack Dev", "Back-End Dev", "Web Dev", "UI/UX"],
             tags: ["Client Project", "Group Project"],
             tech: { languages: ["Python"], frameworks: ["Node.js"], apis: ["Gemini API"], databases: ["SQL"] },
-            myRole: ``,
+            myRole: `<ul>
+              <li>Led the reflections feature with two main components:
+                <ul>
+                  <li>Chatbot reflections: Engineered Gemini API prompts so the bot only offers guiding questions when students ask for help with reflections, rather than giving direct answers.</li>
+                  <li>Reflections CRUD: Built the full create, read, update, and delete flow so users can write, edit, and delete reflections on the website, with grammar checking powered by the Gemini API.</li>
+                </ul>
+              </li>
+              <li>Worked on user experience and interface design: Ensured intuitive navigation between pages for a smooth user journey.</li>              </li>
+              <li>Served as team lead, dividing work fairly across members, tracking deadlines, liaising with the client, and coordinating with the other team lead to deliver a complete working product.</li>
+              <li>Note: The project remained in development phase without unit testing or production deployment.</li>
+            </ul>`,
             image: "assets/images/PSD-chatbot.gif",
             githubLink: "https://github.com/tri-o-na/PSD-LearningJourneyBuddy",
             extraLinks: [
@@ -87,7 +97,11 @@ const PROJECT_DATA = [
             relevantFor: ["Cloud & DevOps", "Full-Stack Dev", "Web Dev", "UI/UX"],
             tags: ["Group Project"],
             tech: { languages: ["JavaScript", "HTML", "CSS"], databases: ["Firestore"], apis: ["Firebase"], infra: ["Docker", "Kubernetes"] },
-            myRole: ``,
+            myRole: `<ul>
+              <li>Owned the flashcards feature end to end, building create, read, update, and delete functions along with skip, flip, and completion interactions.</li>
+              <li>Designed the flashcard user interface and experience, ensuring smooth transitions and clear visual feedback.</li>
+              <li>Built a real time collaboration system using WebSockets so two users can share decks and compete to finish each others cards faster.</li>
+            </ul>`,
             image: "assets/images/CLOUD-ArchitecturalDiagram.png",
             githubLink: "https://github.com/tri-o-na/CLOUD-AuraLearn",
             extraLinks: [
@@ -141,7 +155,11 @@ const PROJECT_DATA = [
             relevantFor: ["Embedded Dev", "IoT Dev"],
             tags: ["Group Project", "IoT"],
             tech: { languages: ["C"], apis: ["MQTT"], infra: ["Raspberry Pi Pico"] },
-            myRole: ``,
+            myRole: `<ul>
+              <li>Wrote the core line following logic to keep the robot centered on track using sensor feedback and motor control.</li>
+              <li>Served as the main mechanical engineer, assembling the parts, mounting sensors, and wiring components together.</li>
+              <li>Attempted to add barcode scanning for turn commands, but found the infrared reflectance sensor lacked the resolution to distinguish thin and thick bars reliably.</li>
+            </ul>`,
             image: "assets/images/ESP-RobotCar.jpg",
             githubLink: "https://github.com/tri-o-na/ESP-RobotCar",
             extraLinks: [
@@ -180,14 +198,18 @@ const PROJECT_DATA = [
             icon: "design", iconLabel: "UX",
             relevantFor: ["UI/UX", "Front-End Dev"],
             tags: ["Group Project", "UI/UX", "HCI"],
-            tech: { tools: ["Adobe XD"] },
-            myRole: ``,
+            tech: { tools: ["Figma"] },
+            myRole: `<ul>
+              <li>Ran surveys with SIT students to gauge interest and gather feedback on potential app features.</li>
+              <li>Designed the user interface and experience for the application, creating wireframes and prototypes in Figma.</li>
+            </ul>`,
             image: "assets/images/SIP-SITogether.jpg",
             githubLink: "",
             extraLinks: [
               { label: "Project Proposal Plan", url: "https://drive.google.com/file/d/19tYuC4qRGbdz4RUVRAK26NAirdFgv1EV/view?usp=sharing" , caption: `` },
               { label: "Final Poster", url: "https://drive.google.com/file/d/1emV1cVgbIU6zewwGt_ifoA6_2GIgxTpB/view?usp=sharing" , caption: `` },
               { label: "Final Video", url: "https://drive.google.com/file/d/1tDv5nuL4x_iamu6nclsLEQzJS_XFTsc3/view?usp=sharing" , caption: `` },
+              { label: "Figma: High Fidelity Prototype", url: "https://sorted-deaf-54450685.figma.site/" , caption: `Best viewd on mobile devices` },
             ],
           },
           {
@@ -213,7 +235,11 @@ const PROJECT_DATA = [
             relevantFor: ["Mobile Dev", "Front-End Dev", "UI/UX"],
             tags: ["Group Project", "Agile"],
             tech: { languages: ["Kotlin"], frameworks: ["Jetpack Compose"], apis: ["Firebase Auth", "Firestore"], infra: ["Android SDK"], tools: ["CI/CD"] },
-            myRole: ``,
+            myRole: `<ul>
+              <li>Researched and built the onboarding quiz that identifies a users learning style using the VARK model (Visual, Aural, Read/write, Kinesthetic).</li>
+              <li>Implemented the dashboard charts (radar and line graphs) so users can track their progress across different quiz attempts.</li>
+              <li>Developed the flashcard quiz feature, leveraging prior experience from <a href="project-detail.html?id=SIT%20·%20Y2%20·%20Tri%201%20·%20CLOUD">AuraLearn</a> to adapt the interaction patterns for visual learners.</li>
+            </ul>`,
             image: "assets/images/MAD-MorphLearn.jpg",
             githubLink: "https://github.com/tri-o-na/MAD-MorphLearn",
             extraLinks: [
@@ -238,7 +264,11 @@ const PROJECT_DATA = [
             relevantFor: ["Data Engineer", "AI / ML"],
             tags: ["Group Project", "Data Analytics"],
             tech: { languages: ["Python"], frameworks: ["scikit-learn"] },
-            myRole: ``,
+            myRole: `<ul>
+              <li>Led cross environment validation and visualization, comparing model performance between regression and classification approaches.</li>
+              <li>Ran experiments across all seven environments, rotating each one as the test set to measure how well the model generalizes to completely new spaces versus familiar ones.</li>
+              <li>Built the final architecture diagram to illustrate system components and data flow.</li>
+            </ul>`,
             image: "",
             githubLink: "https://github.com/tri-o-na/DATA-UWBLocalisation",
             extraLinks: [
@@ -295,7 +325,12 @@ const PROJECT_DATA = [
             moduleName: "Computer Organisation and Architecture",
             moduleCode: "COA",
             desc: "C programming and Assembly with Raspberry Pi.",
-            fullDesc: `
+            fullDesc: ``,
+            icon: "systems", iconLabel: "SYS",
+            relevantFor: ["Systems Dev", "Embedded Dev"],
+            tags: ["Individual Project"],
+            tech: { languages: ["C", "Assembly"], infra: ["Raspberry Pi"] },
+            myRole: `
               <p>Developed Assembly language code on the Raspberry Pi platform to calculate DRAM capacity based on user inputs:</p>
               <ul>
                 <li><b>Input 1:</b> Number of row address bits.</li>
@@ -307,11 +342,6 @@ const PROJECT_DATA = [
                 <b>Example:</b> 11 row bits, 11 column bits, 4 data bits = 2,097,152 bytes.
               </blockquote>
             `,
-            icon: "systems", iconLabel: "SYS",
-            relevantFor: ["Systems Dev", "Embedded Dev"],
-            tags: ["Individual Project"],
-            tech: { languages: ["C", "Assembly"], infra: ["Raspberry Pi"] },
-            myRole: ``,
             image: "",
             githubLink: "https://github.com/tri-o-na/COA-AssemblyRaspberryPi",
             extraLinks: [
@@ -337,7 +367,10 @@ const PROJECT_DATA = [
             relevantFor: ["Systems Dev", "Back-End Dev", "UI/UX"],
             tags: ["Individual Project"],
             tech: { languages: ["C"] },
-            myRole: ``,
+            myRole: `<ul>
+              <li>Designed the graphical interface for all screens, focusing on the home screen layout and visual hierarchy.</li>
+              <li>Implemented light and dark mode themes to support user preference and accessibility.</li>
+            </ul>`,
             image: "assets/images/PGM-TicTacToe.jpg",
             githubLink: "https://github.com/tri-o-na/PGM-TicTacToe",
             extraLinks: [
@@ -363,7 +396,11 @@ const PROJECT_DATA = [
             relevantFor: ["IoT Dev", "Network Engineer"],
             tags: ["Group Project", "IoT", "Networking"],
             tech: { infra: ["Raspberry Pi", "Cisco Packet Tracer"] },
-            myRole: ``,
+            myRole: `<ul>
+              <li>Sourced and tested hardware components to ensure compatibility and reliability for the sensor network.</li>
+              <li>Built the physical prototype, wiring sensors to the motherboard and Raspberry Pi for data collection.</li>
+              <li>Designed the project poster and drew the network diagram showing device connections and data flow.</li>
+            </ul>`,
             image: "assets/images/CNET-FloodShield.png",
             githubLink: "",
             extraLinks: [
@@ -392,7 +429,10 @@ const PROJECT_DATA = [
             relevantFor: ["Back-End Dev", "Data Engineer"],
             tags: ["Group Project", "Algorithms"],
             tech: { languages: ["Python"], frameworks: ["Kivy"], tools: ["JSON"] },
-            myRole: ``,
+            myRole: `<ul>
+              <li>Designed a custom shortest path algorithm inspired by Floyd Warshall that ranks routes by distance, price, and layover count.</li>
+              <li>The algorithm finds optimal paths for both direct flights and multi stop connections while factoring in seasonal price changes.</li>
+            </ul>`,
             image: "assets/images/DSA-RouteRadar.jpg",
             githubLink: "https://github.com/tri-o-na/DSA-RouteRadar",
             extraLinks: [
@@ -412,7 +452,11 @@ const PROJECT_DATA = [
             relevantFor: ["Back-End Dev", "Full-Stack Dev"],
             tags: ["Group Project", "OOP"],
             tech: { languages: ["Java Programming"], infra: ["Eclipse IDE"] },
-            myRole: ``,
+            myRole: `<ul>
+              <li>Developed the admin appointment system with filtering by date, doctor, and patient to simplify scheduling queries.</li>
+              <li>Coordinated integration of our module with emergency services, radiography, and surgery teams from other groups for phase two.</li>
+              <li>Ensured smooth navigation by linking surgery and radiography rooms and doctors into the appointment flow so admins can book both standard visits and procedures from one interface.</li>
+            </ul>`,
             image: "", githubLink: "https://github.com/tri-o-na/OOP-Hospital-Management",
             extraLinks: [
               { label: "Phase 1 Report (team of 6)", url: "https://docs.google.com/document/d/163U--2pIx-x_klNpg4zraARYNlEW9gFVsg9fBfXDtzY/edit?usp=sharing" , caption: `` },
@@ -453,7 +497,11 @@ const PROJECT_DATA = [
             relevantFor: ["Back-End Dev", "Full-Stack Dev", "UI/UX"],
             tags: ["Group Project"],
             tech: { languages: ["Rust", "TypeScript"], frameworks: ["Next.js", "Actix"], databases: ["SQL", "NoSQL", "MongoDB", "ClickHouse"] },
-            myRole: ``,
+            myRole: `<ul>
+              <li>Designed the dashboard using ClickHouse DB, delivering real time cryptocurrency tables with price, daily change percentage, and sparkline graphs for one day and seven day trends.</li>
+              <li>Built dedicated coin pages with live pricing, twenty four hour performance, interactive candlestick charts, and market metrics.</li>
+              <li>Created market overview sections including top gainers and losers, liquidation graphs, and twenty four hour trading volume visualizations.</li>
+            </ul>`,
             image: "assets/images/DB-ArchitecturalDiagram.png",
             githubLink: "https://github.com/tri-o-na/DB-CRYpt",
             extraLinks: [
@@ -470,12 +518,12 @@ const PROJECT_DATA = [
             moduleName: "Operating Systems",
             moduleCode: "OS",
             desc: "Comprehensive programming assignment that required developing solutions for several tasks using two distinct scripting environments: Linux Bash shell script and Python.",
-            fullDesc: "My primary contribution to this Operating Systems project was Question 2, a comprehensive programming assignment that required developing solutions for several tasks using two distinct scripting environments: Linux Bash shell script and Python. I was responsible for creating the required programs, such as one to check if a user-keyed-in number is prime, in both a self-developed Bash script and a self-developed Python function. The core of the project involved a rigorous, comparative analysis of these programming approaches—specifically, assessing the similarities, differences, advantages, and weaknesses between the codes I developed versus those generated by Generative AI (GenAI), evaluating factors like code structure, efficiency, and the time spent on development. This comparative study reinforced my understanding of OS command automation and high-level language capabilities, and provided valuable insights into the effective use of AI tools in software development.",
+            fullDesc: "",
             icon: "systems", iconLabel: "SYS",
             relevantFor: ["Systems Dev", "Back-End Dev"],
             tags: ["Individual Project"],
             tech: { languages: ["Python", "Bash"] },
-            myRole: ``,
+            myRole: "My primary contribution to this Operating Systems project was Question 2, a comprehensive programming assignment that required developing solutions for several tasks using two distinct scripting environments: Linux Bash shell script and Python. I was responsible for creating the required programs, such as one to check if a user-keyed-in number is prime, in both a self-developed Bash script and a self-developed Python function. The core of the project involved a rigorous, comparative analysis of these programming approaches. Specifically, assessing the similarities, differences, advantages, and weaknesses between the codes I developed versus those generated by Generative AI (GenAI), evaluating factors like code structure, efficiency, and the time spent on development. This comparative study reinforced my understanding of OS command automation and high-level language capabilities, and provided valuable insights into the effective use of AI tools in software development.",
             image: "",
             githubLink: "https://github.com/tri-o-na/OS-UnderstandAI",
             extraLinks: [
@@ -505,7 +553,11 @@ const PROJECT_DATA = [
             relevantFor: ["UI/UX"],
             tags: ["Group Project", "Design Thinking", "HCI", "OIP"],
             tech: { tools: ["Design Thinking"] },
-            myRole: ``,
+            myRole: `<ul>
+              <li>Researched security camera system requirements and industry standards for airport surveillance.</li>
+              <li>Designed the security camera layout for the drone port, selecting camera types, specifications, and optimal placement locations.</li>
+              <li>Determined storage strategy balancing onsite and offsite footage retention based on security needs and cost.</li>
+            </ul>`,
             image: "assets/images/DI-FuturAir-Map-Layout.png",
             githubLink: "",
             extraLinks: [
@@ -847,7 +899,11 @@ const PROJECT_DATA = [
             relevantFor: ["Cloud & DevOps", "Back-End Dev", "UI/UX"],
             tags: ["Pair Project", "DevOps"],
             tech: { languages: ["Java Programming", "CSS"], infra: ["Eclipse IDE"], tools: ["Jenkins", "Selenium", "Jira", "JUnit", "Adobe XD"] },
-            myRole: ``,
+            myRole: `<ul>
+              <li>Designed the user interface for the entire website, ensuring consistent styling and clear navigation.</li>
+              <li>Built the create, read, update, and delete functions for dog reviews, validating each endpoint with JUnit tests to ensure reliability.</li>
+              <li>Applied source code management best practices by working with branches, pull requests, and resolving merge conflicts in GitHub.</li>
+            </ul>`,
             image: "assets/images/DVOPS-Dogtopia.jpeg",
             githubLink: "https://github.com/tri-o-na/DVOPS-Dogtopia",
             extraLinks: [
