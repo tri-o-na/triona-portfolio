@@ -809,7 +809,7 @@ const PROJECT_DATA = [
             filters: ["fullstack", "cloud", "design"],
             relevantFor: ["Cloud & DevOps", "Full-Stack Dev", "Web Dev", "UI/UX"],
             tags: ["Individual Project", "Cloud"],
-            tech: { languages: ["JavaScript"], databases: ["AWS DynamoDB"], apis: ["AWS S3", "AWS API Gateway"], infra: ["AWS"], tools: ["Adobe XD", "Postman"] },
+            tech: { languages: ["JavaScript"], databases: ["AWS DynamoDB", "AWS S3"], apis: ["AWS S3", "AWS API Gateway"], infra: ["AWS"], tools: ["Adobe XD", "Postman"] },
             myRole: ``,
             image: "assets/images/CADV-eleganceia.png",
             githubLink: "https://github.com/tri-o-na/CADV-Eleganceia",

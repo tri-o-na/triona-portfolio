@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       icon: "◎",
       langs: [],
       tools: [
-        "AWS", "Docker", "Kubernetes", "Firebase", "Firebase Auth", "Firestore",
+        "AWS", "AWS S3", "Docker", "Kubernetes", "Firebase", "Firebase Auth", "Firestore",
         "Jenkins", "Selenium", "Jira", "JUnit", "CI/CD", "DevOps",
       ],
     },

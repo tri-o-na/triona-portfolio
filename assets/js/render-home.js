@@ -13,9 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const eyebrow = document.querySelector(".hero-eyebrow");
   if (eyebrow) {
     eyebrow.innerHTML = `
-      <span class="hero-eyebrow-avail">${d.availability}</span>
-      ${d.internship ? `<span class="hero-eyebrow-sep">·</span><span class="hero-eyebrow-intern">${d.internship}</span>` : ""}
-    `;
+      <span class="hero-eyebrow-avail">${d.availability}</span>`;
   }
   set(".hero-title",   d.title);
 
