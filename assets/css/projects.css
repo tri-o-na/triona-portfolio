@@ -258,8 +258,8 @@
 }
 
 .tag {
-  padding: 3px 8px;
-  border-radius: 2px;
+  padding: 3px 10px;
+  border-radius: 20px;
   background: var(--cream);
   color: var(--forest-mid);
   font-family: var(--mono);
@@ -1167,8 +1167,6 @@ a.project-card {
   color: #fff;
   background-color: var(--forest-deep);
 }
-
-
 
 /* ── Responsive ───────────────────────────────────────────────── */
 @media (max-width: 900px) {
