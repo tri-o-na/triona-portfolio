@@ -19,13 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Role pills - clickable links to filtered projects
   const ROLE_FILTERS = [
-    { label: "Full-Stack Dev",  filter: "fullstack", icon: "▣" },
-    { label: "Front-End Dev",   filter: "design",   icon: "✦" },
-    { label: "Mobile Dev",      filter: "design",   icon: "✦" },
-    { label: "Cloud & DevOps",  filter: "cloud",    icon: "◎" },
-    { label: "AI / ML",         filter: "ai",       icon: "◈" },
-    { label: "Back-End Dev",    filter: "backend",  icon: "▣" },
-    { label: "UI/UX",           filter: "design",   icon: "✦" },
+    { label: "frontend & uiux",  filter: "design",   icon: "✦" },
+    { label: "Full-Stack Dev",   filter: "fullstack", icon: "▣" },
+    { label: "Back-End Dev",     filter: "backend",  icon: "▣" },
+    { label: "AI / ML",          filter: "ai",       icon: "◈" },
+    { label: "Cloud & DevOps",   filter: "cloud",    icon: "◎" },
   ];
   const rolePills = document.getElementById("hero-role-pills");
   if (rolePills && Array.isArray(d.roles)) {
