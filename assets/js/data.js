@@ -121,8 +121,11 @@ var PORTFOLIO = {
     {
       company: "Panasonic Industrial Devices Singapore",
       companyDesc: "Leading manufacturer of electronic components and industrial devices.",
-      role: "Software & Development Engineering Intern (Ongoing)",
+      role: "Software & Development Engineering Intern",
       period: "31 Aug 2026 — 9 Apr 2027",
+      start: "2026-08-31",
+      type: "tech",
+      current: true,
       points: [
         "Conducted usability testing on the knowledge graph visualization interface as a new team member, leveraging a fresh eyes perspective to identify 12 UX issues affecting how users discovered project gaps and insights.",
         "Built the frontend from scratch in React for a generative UI pipeline, enabling the AI to dynamically render context specific components (charts, tables, detail panels) alongside a fixed daily factory overview dashboard, based on manager queries.",
@@ -133,6 +136,9 @@ var PORTFOLIO = {
       companyDesc: "One of Asia's largest banks, headquartered in Singapore.",
       role: "AI & Machine Learning Engineering Intern",
       period: "Apr 2023 — Mar 2024",
+      start: "2023-04-01",
+      type: "tech",
+      current: false,
       points: [
         "Contributed to all stages of software development — from requirements gathering and design through to implementation, testing, and deployment — resulting in on-time delivery of a fully functional application.",
         "Took ownership of application performance and reliability, identifying areas for improvement and implementing solutions that enhanced accuracy and reduced vulnerabilities.",
@@ -144,6 +150,9 @@ var PORTFOLIO = {
       company: "Uniqlo Singapore",
       role: "Part-Time Retail Sales Worker",
       period: "May 2024 — Aug 2024",
+      start: "2024-05-01",
+      type: "retail",
+      current: false,
       points: [
         "Utilised RFID-based inventory management systems and POS terminals to maintain stock accuracy and streamline checkout operations, improving floor efficiency and customer throughput.",
         "Facilitated customer inquiries regarding product specifications and availability, demonstrating clear communication and a user-first approach to problem-solving in a high-volume environment.",
@@ -153,6 +162,9 @@ var PORTFOLIO = {
       company: "Challenger Technologies Limited",
       role: "Part-Time Retail Sales Worker",
       period: "Sep 2022 — Oct 2022",
+      start: "2022-09-01",
+      type: "retail",
+      current: false,
       points: [
         "Managed visual merchandising, ensuring product displays were organised to enhance customer interaction with hardware.",
         "Collaborated with team members to resolve operational bottlenecks, utilising strong communication skills to coordinate floor layouts and inventory updates in a fast-paced retail setting.",
@@ -162,6 +174,9 @@ var PORTFOLIO = {
       company: "Bata Singapore",
       role: "Part-Time Retail Sales Worker",
       period: "Dec 2019 — Mar 2020",
+      start: "2019-12-01",
+      type: "retail",
+      current: false,
       points: [
         "Demonstrated strong communication skills when liaising with colleagues and customers in a clear and professional manner, improving team efficiency.",
         "Emphasised teamwork by ensuring all team members attended to customers across different store sections, providing seamless service and increasing store productivity.",
