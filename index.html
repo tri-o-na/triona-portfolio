@@ -13,38 +13,39 @@
 <link rel="icon" type="image/png" href="assets/images/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/home3.css">
 </head>
 <body>
 <nav id="main-nav"></nav>
 
 <main class="page page-standalone" id="page-home">
 
-  <!-- Left: all text content -->
-  <div class="hero-left">
-    <div class="hero-eyebrow"></div>
-    <h1 class="hero-name"></h1>
-    <p class="hero-title"></p>
-    <div class="hero-role-pills" id="hero-role-pills"></div>
-    <p class="hero-bio"></p>
-    <div class="hero-cta">
-      <a class="btn-primary" href="projects.html">View Projects &rarr;</a>
-      <a class="btn-outline" href="contact.html">Get in Touch</a>
-      <a class="btn-ghost" id="hero-resume-btn" href="#" target="_blank" rel="noreferrer">&#8595; Resume</a>
+  <!-- Centered Hero -->
+  <div class="hero-container">
+    <div class="hero-photo-wrapper">
+      <div class="hero-photo">
+        <img src="assets/images/profile.jpg" alt="" id="hero-photo-img">
+      </div>
     </div>
-    <div class="hero-recruiter-bar" id="hero-recruiter-bar"></div>
+    
+    <div class="hero-content">
+      <div class="hero-eyebrow"></div>
+      <h1 class="hero-name"></h1>
+      <p class="hero-title"></p>
+      <div class="hero-role-pills" id="hero-role-pills"></div>
+      <p class="hero-bio"></p>
+      
+      <div class="hero-cta">
+        <a class="btn-primary" href="projects.html">View Projects &rarr;</a>
+        <a class="btn-outline" href="contact.html">Get in Touch</a>
+      </div>
+    </div>
   </div>
 
-  <!-- Right: tall photo strip with vertical links -->
-  <div class="hero-right">
-    <div class="hero-photo-pill">
-      <img src="assets/images/profile.jpg" alt="" id="hero-photo-img">
-      <div class="hero-photo-fallback"></div>
-    </div>
-    <div class="hero-vertical-links" id="hero-vertical-links"></div>
-  </div>
+  <!-- Floating Action Links -->
+  <div class="floating-links" id="floating-links"></div>
 
-  <!-- Bottom: stats bar spans full width -->
+  <!-- Stats Bar -->
   <div class="hero-stats-bar" id="hero-stats-bar"></div>
 
 </main>

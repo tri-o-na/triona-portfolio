@@ -10,7 +10,7 @@ var PORTFOLIO = {
     last: "Lee",
   },
   title: "Computing Science Undergraduate",
-  roles: ["Full-Stack Dev", "Mobile Dev", "AI / ML", "Cloud & DevOps", "UI/UX"],
+  roles: ["UI/UX", "Full-Stack Dev", "Mobile Dev", "AI / ML", "Cloud & DevOps"],
   tagline: "Computing Science undergraduate at SIT × UofG, building practical, high-impact software with a focus on UI/UX, full-stack development, and mobile optimisation.",
   bio: "Computing Science undergraduate at Singapore Institute of Technology × University of Glasgow, building practical, high-impact software with a focus on UI/UX, full-stack development, and mobile optimisation.",
   availability: "Available for opportunities after 9 Apr 2027",
