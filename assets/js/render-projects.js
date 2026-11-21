@@ -77,9 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function projectCard(p) {
     const displayId  = getDisplayId(p);
     const tags       = p.tags.map(t => `<span class="tag">${t}</span>`).join("");
-    const relevantFor = (p.relevantFor && p.relevantFor.length)
-      ? `<div class="project-relevant"><span class="relevant-label">Relevant for:</span> ${p.relevantFor.join(", ")}</div>`
-      : "";
     const ongoingTag = p.ongoing ? `<span class="tag ongoing">Ongoing</span>` : "";
     const schoolBadge = `<span class="card-school-badge ${p.school}">${schoolLabels[p.school] || p.school}</span>`;
     const moduleLabel = p.moduleName
@@ -95,6 +92,32 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="thumb-icon ${p.icon}">${p.iconLabel}</div>
         </div>`;
 
+    // Category dots for top left of card
+    const filters = projectFilters(p);
+    const categoryIcons = {
+      design: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>',
+      fullstack: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
+      backend: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="5" rx="1"/><rect x="2" y="10" width="20" height="5" rx="1"/><rect x="2" y="18" width="20" height="5" rx="1"/><line x1="6" y1="4.5" x2="6.01" y2="4.5"/><line x1="6" y1="12.5" x2="6.01" y2="12.5"/><line x1="6" y1="20.5" x2="6.01" y2="20.5"/></svg>',
+      ai: '<img src="assets/icons/icons8-robot-100.png" alt="AI" style="width: 12px; height: 12px; object-fit: contain;">',
+      cloud: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>',
+      data: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>',
+      iot: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><circle cx="12" cy="20" r="1"/></svg>',
+      systems: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>',
+      mobile: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="20" x2="12.01" y2="20"/><circle cx="12" cy="18" r="1"/></svg>'
+    };
+    const categoryDots = filters.map(f => {
+      const group = ICON_GROUPS.find(g => g.key === f);
+      const label = group ? group.label : f;
+      const icon = categoryIcons[f] || '';
+      return `<span class="card-category-dot ${f}" data-tooltip="${label}">${icon}</span>`;
+    }).join("");
+
+    // Add mobile dot if project is relevant for mobile dev
+    const mobileDot = (p.relevantFor && p.relevantFor.some(r => r.toLowerCase().includes("mobile")))
+      ? `<span class="card-category-dot mobile" data-tooltip="Mobile Dev">${categoryIcons.mobile}</span>`
+      : "";
+    const allDots = categoryDots + mobileDot;
+
     // No more inline floating image
     const inlineImage = "";
 
@@ -102,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return `
       <a class="project-card" href="${detailUrl}" data-icon="${p.icon}">
+        <div class="card-category-dots">${allDots}</div>
         <div class="project-thumb">${thumb}</div>
         <div class="project-body">
           ${inlineImage}
@@ -113,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="project-title">${p.title}</div>
           <div class="project-desc">${p.desc}</div>
           <div class="project-tags">${ongoingTag}${tags}</div>
-          ${relevantFor}
         </div>
       </a>`;
   }
@@ -139,7 +162,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // ── Render ────────────────────────────────────────────────
   function renderAll() {
     const grid = document.getElementById("projects-grid");
-    const isAll = !activeFilters.size;
 
     const filtered = sortedProjects
       .filter(p => projectMatchesFilters(p))
@@ -147,32 +169,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!filtered.length) {
       const msg = currentQuery
-        ? `No projects match "${currentQuery}"${!isAll ? " in the selected categories" : ""}.`
+        ? `No projects match "${currentQuery}"${activeFilters.size ? " in the selected categories" : ""}.`
         : "No projects in this category yet.";
       grid.innerHTML = `<p style="color:var(--forest-light);font-family:var(--mono);font-size:12px;margin-top:24px;">${msg}</p>`;
       return;
     }
 
-    if (isAll) {
-      // Flat list in data order, no group headers
-      grid.innerHTML = `<div class="projects-row">${filtered.map(projectCard).join("")}</div>`;
-    } else {
-      // Group by category, only show selected groups
-      const groupsToShow = ICON_GROUPS.filter(g => activeFilters.has(g.key));
-      grid.innerHTML = groupsToShow.map(group => {
-        const inGroup = filtered.filter(p => projectFilters(p).includes(group.key));
-        if (!inGroup.length) return "";
-        return `
-          <div class="project-type-group" data-group="${group.key}">
-            <div class="type-label-row">
-              <span class="type-dot ${group.key}"></span>
-              <span class="type-label">${group.label}</span>
-              <span class="type-count">${inGroup.length}</span>
-            </div>
-            <div class="projects-row">${inGroup.map(projectCard).join("")}</div>
-          </div>`;
-      }).join("");
-    }
+    // Always show flat list, sorted by latest to newest
+    grid.innerHTML = `<div class="projects-row">${filtered.map(projectCard).join("")}</div>`;
   }
 
   // ── Sync button UI ────────────────────────────────────────
@@ -252,8 +256,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ── Tech search input ─────────────────────────────────────
   const searchInput = document.getElementById("proj-tech-search");
+  const searchBtn = document.getElementById("proj-search-btn");
   if (searchInput) {
     searchInput.addEventListener("input", () => {
+      currentQuery = searchInput.value.trim();
+      renderAll();
+    });
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        currentQuery = searchInput.value.trim();
+        renderAll();
+      }
+    });
+  }
+  if (searchBtn && searchInput) {
+    searchBtn.addEventListener("click", () => {
+      searchInput.focus();
       currentQuery = searchInput.value.trim();
       renderAll();
     });

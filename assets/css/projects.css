@@ -52,7 +52,7 @@
 }
 
 .project-card {
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid var(--border);
   border-radius: 4px;
   background: var(--warm-white);
@@ -61,6 +61,7 @@
   flex-direction: row;
   align-items: stretch;
   transition: box-shadow 0.25s, transform 0.2s;
+  position: relative;
 }
 
 .project-card:hover {
@@ -87,6 +88,77 @@
   border-radius: 3px;
   border: 1px solid var(--border);
 }
+
+/* ── Card category dots ───────────────────────────────────────── */
+.card-category-dots {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  gap: 4px;
+  z-index: 2;
+}
+
+.card-category-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  cursor: help;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-category-dot svg {
+  width: 12px;
+  height: 12px;
+  color: var(--forest-deep);
+}
+
+.card-category-dot img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.card-category-dot::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  background: var(--forest-deep);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 12px;
+  white-space: nowrap;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  pointer-events: none;
+  margin-bottom: 4px;
+  z-index: 1000;
+}
+
+.card-category-dot:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Category dot colors (same as filter dots) */
+.card-category-dot.design    { background: var(--pastelpurple); }
+.card-category-dot.fullstack { background: var(--pastelmauve); }
+.card-category-dot.backend   { background: var(--pastelred); }
+.card-category-dot.ai        { background: var(--pastelpink); }
+.card-category-dot.cloud     { background: var(--pastelorange); }
+.card-category-dot.data      { background: var(--pastelyellow); }
+.card-category-dot.iot       { background: var(--pastelgreen); }
+.card-category-dot.systems   { background: var(--pastelblue); }
+.card-category-dot.mobile    { background: #BEAFDA; }
 
 .project-thumb img {
   position: absolute;
@@ -377,15 +449,27 @@ a.project-card {
   }
 }
 
+/* ── Projects header row ───────────────────────────────────────── */
+.projects-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
 /* ── Tech search bar ──────────────────────────────────────────── */
 .proj-search-wrap {
-  margin-bottom: 20px;
+  position: relative;
+  width: 50%;
+  flex-shrink: 0;
+  margin-bottom: 35px;
 }
 
 .proj-tech-search {
   width: 100%;
   box-sizing: border-box;
-  padding: 10px 16px;
+  padding: 10px 40px 10px 16px;
   font-family: var(--sans);
   font-size: 13px;
   color: var(--forest-deep);
@@ -394,6 +478,33 @@ a.project-card {
   border-radius: 6px;
   outline: none;
   transition: border-color 0.15s;
+}
+
+.search-icon-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--forest-light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s;
+}
+
+.search-icon-btn:hover {
+  color: var(--forest-mid);
+}
+
+.search-icon-btn svg {
+  width: 16px;
+  height: 16px;
 }
 
 .proj-tech-search::placeholder {
@@ -409,7 +520,7 @@ a.project-card {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 
 /* Mobile dropdown (hidden on desktop) */
@@ -439,7 +550,56 @@ a.project-card {
   color: var(--forest-light);
 }
 
-.proj-filter-btn.active {
+/* Colored background for selected filters */
+.proj-filter-btn.active[data-filter="design"] {
+  background: var(--pastelpurple);
+  border-color: var(--pastelpurple);
+  color: var(--forest-deep);
+}
+
+.proj-filter-btn.active[data-filter="fullstack"] {
+  background: var(--pastelmauve);
+  border-color: var(--pastelmauve);
+  color: var(--forest-deep);
+}
+
+.proj-filter-btn.active[data-filter="backend"] {
+  background: var(--pastelred);
+  border-color: var(--pastelred);
+  color: var(--forest-deep);
+}
+
+.proj-filter-btn.active[data-filter="ai"] {
+  background: var(--pastelpink);
+  border-color: var(--pastelpink);
+  color: var(--forest-deep);
+}
+
+.proj-filter-btn.active[data-filter="cloud"] {
+  background: var(--pastelorange);
+  border-color: var(--pastelorange);
+  color: var(--forest-deep);
+}
+
+.proj-filter-btn.active[data-filter="data"] {
+  background: var(--pastelyellow);
+  border-color: var(--pastelyellow);
+  color: var(--forest-deep);
+}
+
+.proj-filter-btn.active[data-filter="iot"] {
+  background: var(--pastelgreen);
+  border-color: var(--pastelgreen);
+  color: var(--forest-deep);
+}
+
+.proj-filter-btn.active[data-filter="systems"] {
+  background: var(--pastelblue);
+  border-color: var(--pastelblue);
+  color: var(--forest-deep);
+}
+
+.proj-filter-btn.active[data-filter="all"] {
   background: var(--forest-mid);
   border-color: var(--forest-mid);
   color: #fff;
@@ -528,7 +688,7 @@ a.project-card {
 
 /* ── Detail header: two-col when image present ────────────────── */
 .detail-header {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   padding-bottom: 32px;
   border-bottom: 1px solid var(--border);
   display: flex;
@@ -866,10 +1026,19 @@ a.project-card {
 
 /* Dot in trigger button and options */
 .pcs-dot {
-  width: 8px;
-  height: 8px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pcs-dot svg {
+  width: 10px;
+  height: 10px;
+  color: var(--forest-deep);
 }
 
 .pcs-dot-all      { display: none; }

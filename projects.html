@@ -20,8 +20,23 @@
 
 <main class="page page-standalone" id="page-projects">
   <div class="inner-page">
-    <div class="section-label">Portfolio</div>
-    <h1 class="section-title">Projects</h1>
+    <div class="projects-header-row">
+      <div>
+        <div class="section-label">Portfolio</div>
+        <h1 class="section-title">Projects</h1>
+      </div>
+      <!-- Tech stack search -->
+      <div class="proj-search-wrap">
+        <input type="search" id="proj-tech-search" class="proj-tech-search"
+          placeholder="Search by tech stack (e.g. Python, React, AWS…)…" autocomplete="off" spellcheck="false">
+        <button class="search-icon-btn" id="proj-search-btn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
 
     <!-- Mobile filter dropdown (custom) -->
     <div class="proj-filter-select-wrap" id="proj-filter-select-wrap">
@@ -32,50 +47,28 @@
       </button>
       <ul class="pcs-dropdown" id="pcs-dropdown" role="listbox">
         <li class="pcs-option" data-filter="all"><span class="pcs-dot pcs-dot-all"></span>All</li>
-        <li class="pcs-option" data-filter="design"><span class="pcs-dot pcs-dot-design"></span>Front-End &amp; Design</li>
-        <li class="pcs-option" data-filter="fullstack"><span class="pcs-dot pcs-dot-fullstack"></span>Full-Stack</li>
-        <li class="pcs-option" data-filter="backend"><span class="pcs-dot pcs-dot-backend"></span>Back-End Dev</li>
-        <li class="pcs-option" data-filter="ai"><span class="pcs-dot pcs-dot-ai"></span>AI &amp; ML</li>
-        <li class="pcs-option" data-filter="cloud"><span class="pcs-dot pcs-dot-cloud"></span>Cloud</li>
-        <li class="pcs-option" data-filter="data"><span class="pcs-dot pcs-dot-data"></span>Data &amp; Algo</li>
-        <li class="pcs-option" data-filter="iot"><span class="pcs-dot pcs-dot-iot"></span>IoT &amp; Networks</li>
-        <li class="pcs-option" data-filter="systems"><span class="pcs-dot pcs-dot-systems"></span>Systems</li>
+        <li class="pcs-option" data-filter="design"><span class="pcs-dot pcs-dot-design"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></span>Front-End &amp; Design</li>
+        <li class="pcs-option" data-filter="fullstack"><span class="pcs-dot pcs-dot-fullstack"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>Full-Stack</li>
+        <li class="pcs-option" data-filter="backend"><span class="pcs-dot pcs-dot-backend"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="5" rx="1"/><rect x="2" y="10" width="20" height="5" rx="1"/><rect x="2" y="18" width="20" height="5" rx="1"/><line x1="6" y1="4.5" x2="6.01" y2="4.5"/><line x1="6" y1="12.5" x2="6.01" y2="12.5"/><line x1="6" y1="20.5" x2="6.01" y2="20.5"/></svg></span>Back-End Dev</li>
+        <li class="pcs-option" data-filter="ai"><span class="pcs-dot pcs-dot-ai"><img src="assets/icons/icons8-robot-100.png" alt="AI" style="width: 12px; height: 12px; object-fit: contain;"></span>AI &amp; ML</li>
+        <li class="pcs-option" data-filter="cloud"><span class="pcs-dot pcs-dot-cloud"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg></span>Cloud</li>
+        <li class="pcs-option" data-filter="data"><span class="pcs-dot pcs-dot-data"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>Data &amp; Algo</li>
+        <li class="pcs-option" data-filter="iot"><span class="pcs-dot pcs-dot-iot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><circle cx="12" cy="20" r="1"/></svg></span>IoT &amp; Networks</li>
+        <li class="pcs-option" data-filter="systems"><span class="pcs-dot pcs-dot-systems"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>Systems</li>
       </ul>
     </div>
 
     <!-- Icon-type filter pills -->
     <div class="proj-filter-bar">
       <button class="proj-filter-btn active" data-filter="all">All</button>
-      <button class="proj-filter-btn" data-filter="design">
-        <span class="filter-dot design"></span>Front-End &amp; Design
-      </button>
-      <button class="proj-filter-btn" data-filter="fullstack">
-        <span class="filter-dot fullstack"></span>Full-Stack
-      </button>
-      <button class="proj-filter-btn" data-filter="backend">
-        <span class="filter-dot backend"></span>Back-End Dev
-      </button>
-      <button class="proj-filter-btn" data-filter="ai">
-        <span class="filter-dot ai"></span>AI &amp; ML
-      </button>
-      <button class="proj-filter-btn" data-filter="cloud">
-        <span class="filter-dot cloud"></span>Cloud
-      </button>
-      <button class="proj-filter-btn" data-filter="data">
-        <span class="filter-dot data"></span>Data &amp; Algo
-      </button>
-      <button class="proj-filter-btn" data-filter="iot">
-        <span class="filter-dot iot"></span>IoT &amp; Networks
-      </button>
-      <button class="proj-filter-btn" data-filter="systems">
-        <span class="filter-dot systems"></span>Systems
-      </button>
-    </div>
-
-    <!-- Tech stack search -->
-    <div class="proj-search-wrap">
-      <input type="search" id="proj-tech-search" class="proj-tech-search"
-        placeholder="Search by tech stack (e.g. Python, React, AWS…)" autocomplete="off" spellcheck="false">
+      <button class="proj-filter-btn" data-filter="design">Front-End &amp; Design</button>
+      <button class="proj-filter-btn" data-filter="fullstack">Full-Stack</button>
+      <button class="proj-filter-btn" data-filter="backend">Back-End Dev</button>
+      <button class="proj-filter-btn" data-filter="ai">AI &amp; ML</button>
+      <button class="proj-filter-btn" data-filter="cloud">Cloud</button>
+      <button class="proj-filter-btn" data-filter="data">Data &amp; Algo</button>
+      <button class="proj-filter-btn" data-filter="iot">IoT &amp; Networks</button>
+      <button class="proj-filter-btn" data-filter="systems">Systems</button>
     </div>
 
     <!-- Cards injected here by render-projects.js, grouped by icon -->
