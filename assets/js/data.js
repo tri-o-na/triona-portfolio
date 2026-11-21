@@ -119,6 +119,16 @@ var PORTFOLIO = {
   // ── Work experience ────────────────────────────────────────
   experience: [
     {
+      company: "Panasonic Industrial Devices Singapore",
+      companyDesc: "Leading manufacturer of electronic components and industrial devices.",
+      role: "Software & Development Engineering Intern (Ongoing)",
+      period: "31 Aug 2026 — 9 Apr 2027",
+      points: [
+        "Conducted usability testing on the knowledge graph visualization interface as a new team member, leveraging a fresh eyes perspective to identify 12 UX issues affecting how users discovered project gaps and insights.",
+        "Built the frontend from scratch in React for a generative UI pipeline, enabling the AI to dynamically render context specific components (charts, tables, detail panels) alongside a fixed daily factory overview dashboard, based on manager queries.",
+      ],
+    },
+    {
       company: "DBS Bank",
       companyDesc: "One of Asia's largest banks, headquartered in Singapore.",
       role: "AI & Machine Learning Engineering Intern",
